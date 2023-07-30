@@ -1,0 +1,146 @@
+.screen {
+  background-color: #705cee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen .div {
+  background-color: #705cee;
+  border: 1px none;
+  height: 1822px;
+  position: relative;
+  width: 1805px;
+}
+
+.screen .view {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 10px;
+  left: 40px;
+  position: absolute;
+  top: 40px;
+}
+
+.screen .text-wrapper {
+  color: var(--x-9s-ICIR);
+  font-family: "Roboto Flex-SemiBold", Helvetica;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.screen .vector {
+  height: 2px;
+  left: 39px;
+  object-fit: cover;
+  position: absolute;
+  top: 166px;
+  width: 1727px;
+}
+
+.screen .frame {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 57px;
+  justify-content: center;
+  left: 539px;
+  position: absolute;
+  top: 404px;
+}
+
+.screen .view-2 {
+  height: 287px;
+  position: relative;
+  width: 720px;
+}
+
+.screen .h-1 {
+  color: #ffffff;
+  font-family: "Roboto Flex-SemiBold", Helvetica;
+  font-size: 64px;
+  font-weight: 600;
+  left: 6px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+  width: 709px;
+}
+
+.screen .p {
+  color: #c8c7c7;
+  font-family: var(--2-font-family);
+  font-size: var(--2-font-size);
+  font-style: var(--2-font-style);
+  font-weight: var(--2-font-weight);
+  height: 94px;
+  left: 0;
+  letter-spacing: var(--2-letter-spacing);
+  line-height: var(--2-line-height);
+  position: absolute;
+  top: 192px;
+  width: 720px;
+}
+
+.screen .div-wrapper {
+  height: 80px;
+  position: relative;
+  width: 720px;
+}
+
+.screen .overlap-group {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #cccccc;
+  border-radius: 20px;
+  height: 82px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 722px;
+}
+
+.screen .rectangle {
+  background-color: #eeeeee;
+  border: 1px solid;
+  border-color: #cccccc;
+  border-radius: 20px;
+  height: 82px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 102px;
+}
+
+.screen .overlap-group-wrapper {
+  height: 80px;
+}
+
+.screen .view-3 {
+  background-color: #8d82b5;
+  border-radius: 20px;
+  height: 79px;
+  position: relative;
+  width: 720px;
+}
+
+.screen .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Roboto Flex-Medium", Helvetica;
+  font-size: 40px;
+  font-weight: 500;
+  height: 47px;
+  left: 308px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+  white-space: nowrap;
+}
