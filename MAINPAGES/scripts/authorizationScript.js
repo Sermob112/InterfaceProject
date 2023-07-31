@@ -39,3 +39,8 @@ function highlightButton() {
 
 // Запускаем функцию с задержкой в 3 секунды после загрузки страницы
 setTimeout(highlightButton, 3000);
+// Функция для автоматического перехода по ссылке через 3 секунды
+function redirectToRent() {
+  window.location.href = 'Director.html';
+}
+setTimeout(redirectToRent, 4000);

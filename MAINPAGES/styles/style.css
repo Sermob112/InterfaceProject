@@ -26,6 +26,7 @@ body {
   background-image: url("../../img/backround.png"); /* Замените путь_к_вашей_картинке.jpg на путь к вашей картинке */
   background-repeat: no-repeat; /* Отключаем повторение картинки по вертикали и горизонтали */
   background-size: cover; /* Масштабируем картинку так, чтобы она заполняла весь задний фон */
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -85,28 +86,71 @@ border-radius: 10px; /* Скругление углов поля */
 .login-button-highlight {
   background-color: green; /* Новый цвет фона при подсветке */
 }
-
-
-
-Was this response better or worse?
-Better
-Worse
-Same
-
-
-
-
 .password-field {
   margin-top: 30px; /* Отступ сверху 30px */
 }
 
-/* Убираем отступы и границы для .screen */
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Страница директора*№№№№№№№№№№№№№№№№№№№/
 
+/* Стили для сайдбара */
+.sidebar {
+      width: 80px;
+      height: 100vh; /* Растягиваем сайдбар на всю высоту окна браузера */
+      background-color: #f0f0f0; /* Цвет фона сайдбара */
+      position: fixed; /* Фиксируем сайдбар */
+      left: 0; /* Располагаем слева */
+      top: 0; /* Располагаем вверху */
+      text-align: center; /* Выравнивание содержимого по центру */
+      padding-top: 40px; /* Отступ сверху */
+      background-image: url("../../img/Backround_2.png");
+      border-radius: 20px;
+    }
+.sidebar img {
+      width: 50px; /* Задаем ширину изображения */
+      height: 70px; /* Задаем высоту изображения */
+      margin-bottom: 20px; /* Отступ снизу изображения */
+    }
 
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc; /* Цвет серых кружков */
+  position: absolute;
+  top: 35%;
+  left: 25px;
 
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Устанавливаем z-index, чтобы кружки были под изображениями */
+}
 
+.icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
 
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  z-index: 1; /* Поднимаем изображения над фоновым кружком */
+}
 
+.sidebar-text {
+  display: none;
+   font-size: 20px; /* Устанавливаем размер шрифта 30px */
+  font-weight: bold; /* Делаем текст полужирным */
+  margin-left: 20px;
+  margin-top: -15px;
+  color: #444;
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили  карты завода*№№№№№№№№№№№№№№№№№№№/
 
 
 
