@@ -1,0 +1,113 @@
+.h-1 {
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 36px; /* Размер шрифта 36px */
+  color: white; /* Белый цвет шрифта */
+  text-align: center; /* Выравнивание текста по центру */
+  margin-top: 120px; /* Отступ от верха 320px */
+}
+.p {
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 24px; /* Размер шрифта 24px */
+  color: gray; /* Серый цвет шрифта */
+  text-align: center; /* Выравнивание текста по центру */
+  margin-top: 30px; /* Отступ от верхней надписи в 50px */
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-weight: 600; /* Полужирный (semibold) */
+  font-size: 40px; /* Размер шрифта 40px */
+  color: white; /* Белый цвет шрифта */
+}
+body {
+  background-image: url("../../img/backround.png"); /* Замените путь_к_вашей_картинке.jpg на путь к вашей картинке */
+  background-repeat: no-repeat; /* Отключаем повторение картинки по вертикали и горизонтали */
+  background-size: cover; /* Масштабируем картинку так, чтобы она заполняла весь задний фон */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+}
+
+.logo {
+  /* Укажите размеры вашего логотипа */
+  width: 50px;
+  height: 70px;
+  /* Добавляем отступы слева и сверху */
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.view-2 {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Выравнивание текста по центру */
+  margin-top: 30px; /* Отступ сверху 30px */
+
+}
+.login-field,
+.password-field {
+  display: block;
+  margin-top: 30px;
+  width: 300px; /* Задаем ширину полей ввода */
+  height: 30px; /* Задаем высоту полей ввода */
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 18px; /* Размер шрифта 18px */
+  padding: 5px 10px; /* Добавляем внутренние отступы для текста внутри поля */
+  border-radius: 10px; /* Скругление углов поля */
+
+}
+.login-button{
+margin-top: 30px;
+width: 320px; /* Задаем ширину полей ввода */
+height: 40px; /* Задаем высоту полей ввода */
+font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+font-size: 18px; /* Размер шрифта 18px */
+padding: 5px 10px; /* Добавляем внутренние отступы для текста внутри поля */
+border-radius: 10px; /* Скругление углов поля */
+/* Новые стили для кнопки "Вход" */
+  background-color: #aaa; /* Серый цвет фона */
+  color: #fff; /* Белый цвет текста */
+  border: none; /* Убираем границу */
+  cursor: pointer; /* Делаем курсор при наведении */
+
+}
+.login-button:hover {
+  background-color: green; /* Серый цвет фона при наведении */
+}
+/* ... Ваши стили ... */
+.login-button-highlight {
+  background-color: green; /* Новый цвет фона при подсветке */
+}
+
+
+
+Was this response better or worse?
+Better
+Worse
+Same
+
+
+
+
+.password-field {
+  margin-top: 30px; /* Отступ сверху 30px */
+}
+
+/* Убираем отступы и границы для .screen */
+
+
+
+
+
+
+
+
+
+
