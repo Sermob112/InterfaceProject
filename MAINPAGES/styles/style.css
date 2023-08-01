@@ -224,10 +224,8 @@ border-radius: 10px; /* Скругление углов поля */
 
 
 .workshop-map-container {
-  width: 100%;
   display: none;
-   position: relative;
-
+  position: relative;
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 10px;
