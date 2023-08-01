@@ -104,6 +104,7 @@ border-radius: 10px; /* Скругление углов поля */
       padding-top: 40px; /* Отступ сверху */
       background-image: url("../../img/Backround_2.png");
       border-radius: 20px;
+      transition: width 0.5s;
     }
 .sidebar img {
       width: 50px; /* Задаем ширину изображения */
@@ -122,6 +123,21 @@ border-radius: 10px; /* Скругление углов поля */
 
   transform: translate(-50%, -50%);
   z-index: -1; /* Устанавливаем z-index, чтобы кружки были под изображениями */
+}
+.circle-2 {
+
+  width: 220px;
+  height: 50px;
+  background-color: #ccc; /* Цвет серых кружков */
+  position: absolute;
+  border-radius: 20px;
+  bottom:7Px;
+  left: 5px;
+  z-index: -1;
+  opacity: 0; /* Начальное значение прозрачности 0 */
+  transition: opacity 0.4s; /* Плавный переход для изменения прозрачности */
+
+
 }
 
 .icon-container {
@@ -142,16 +158,175 @@ border-radius: 10px; /* Скругление углов поля */
 }
 
 .sidebar-text {
-  display: none;
    font-size: 20px; /* Устанавливаем размер шрифта 30px */
   font-weight: bold; /* Делаем текст полужирным */
   margin-left: 20px;
   margin-top: -15px;
   color: #444;
+  opacity: 0; /* Устанавливаем начальное значение прозрачности 0 */
+  transition: opacity 0.3s;
+
+
+}
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили пользователя*№№№№№№№№№№№№№№№№№№№*/
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-right: 30px;
 }
 
-/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили  карты завода*№№№№№№№№№№№№№№№№№№№/
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-family: "RobotoFlex", sans-serif;
+  font-size: 16px;
+  color: #fff; /* Цвет имени пользователя */
+}
+.chevron-icon {
+  width: 20px; /* Ширина иконки */
+  height: 20px; /* Высота иконки */
+  margin-left: 5px; /* Отступ слева от имени пользователя */
+}
+.settings-icon {
+  width: 20px; /* Ширина левого изображения */
+  height: 20px; /* Высота левого изображения */
+  margin-right: 15px; /* Отступ справа от левого изображения */
+}
+.search-input {
+  width: 200px; /* Ширина строки поиска */
+  height: 10px; /* Высота строки поиска */
+  padding: 5px; /* Внутренние отступы для текста внутри поля */
+  font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+  font-size: 14px; /* Размер шрифта */
+  border-radius: 10px; /* Скругление углов поля */
+  margin-right: 25px;
+}
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  width: 20px; /* Ширина картинки */
+  height: 20px; /* Высота картинки */
+  position: absolute;
+  right: 30px; /* Отступ справа от контейнера поиска */
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили  карты завода*№№№№№№№№№№№№№№№№№№№*/
 
 
+.workshop-map-container {
+  width: 100%;
+  display: none;
+   position: relative;
+
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-top: 10px;
+   max-width: 1920px; /* Максимальная ширина контейнера */
+  max-height: 1080px; /* Максимальная высота контейнера */
+   min-height: 640px; /* Максимальная высота контейнера */
+    min-widtht: 1480px; /* Максимальная высота контейнера */
+  width: 90%;
+  height: 80%;
+  margin-left: 100px; /* Ширина сайдбара + отступ слева */
+  margin-top: 20px; /* Отступ сверху */
+  transition: width 0.3s, height 0.3s;
+  border: 1px solid #ccc;
+
+}
+@media (max-width: 768px) {
+  #workshop-map-container {
+    width: 90%;
+    max-width: 100%; /* Максимальная ширина контейнера при сжатии окна */
+    margin-left: 5%;
+  }
+}
+
+/* Медиа-запрос для адаптации контейнера при увеличении размера страницы */
+@media (min-width: 1200px) {
+  #workshop-map-container {
+    width: 90%; /* Контейнер будет занимать 80% ширины страницы */
+  }
+}
+.workshop-map-container.open {
+  display: block;
+}
+
+/* стили цехов */
+
+.workshop {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc; /* Цвет квадрата цеха */
+  border: 2px solid #aaa;
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+}
+  /* Стили для надписи "Карта завода" */
+    .map-title {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    /* Стили для управляющих элементов */
+    .controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .control-btn {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #ccc;
+      border: 1px solid #999;
+      border-radius: 50%;
+      margin-left: 5px;
+      cursor: pointer;
+    }
 
 
+.workshop-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+   font-size: 18px;
+}
+
+.workshop-employees {
+  color: gray;
+  text-stroke: 1px white; /* Внешняя обводка */
+}
+.workshop-green {
+  background-color: green; /* Зеленый цех */
+}
+
+.workshop-red {
+  background-color: red; /* Красный цех */
+}
+
+.workshop-yellow {
+  background-color: yellow; /* Желтый цех */
+}
