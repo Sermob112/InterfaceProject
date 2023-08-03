@@ -22,12 +22,13 @@ function simulateTyping(element, text, speed = 100) {
 // Запускаем анимацию при загрузке страницы
 window.onload = function () {
   // Запускаем анимацию для поля логина
-  simulateTyping(loginField, loginValue);
-
+  setTimeout(function () {
+    simulateTyping(loginField, loginValue);
+  }, 1500); 
   // Запускаем анимацию для поля пароля после небольшой паузы
   setTimeout(function () {
     simulateTyping(passwordField, passwordValue);
-  }, 1500); // Измените эту паузу (в миллисекундах) в зависимости от вашего желания
+  }, 3500); // Измените эту паузу (в миллисекундах) в зависимости от вашего желания
 };
 
 const loginButton = document.querySelector(".login-button");
@@ -38,9 +39,9 @@ function highlightButton() {
 }
 
 // Запускаем функцию с задержкой в 3 секунды после загрузки страницы
-setTimeout(highlightButton, 3000);
+setTimeout(highlightButton, 5000);
 // Функция для автоматического перехода по ссылке через 3 секунды
 function redirectToRent() {
   window.location.href = 'Director.html';
 }
-setTimeout(redirectToRent, 4000);
+setTimeout(redirectToRent, 5500);
