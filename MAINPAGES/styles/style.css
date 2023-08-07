@@ -34,14 +34,40 @@ body {
   height: 100%;
 
 }
+.cursor {
+  width: 30px;
+  height: 30px;
+  background-image: url('../svg/hand.png');
+  background-size: cover;
+  position: absolute;
+  left: 110;
+  top: 110;
+  opacity: 1;
+
+
+}
+
 
 .logo {
   /* Укажите размеры вашего логотипа */
   width: 50px;
   height: 70px;
+  
   /* Добавляем отступы слева и сверху */
   margin-top: 40px;
   margin-left: 40px;
+}
+
+.logo-2 {
+  /* Укажите размеры вашего логотипа */
+  width: 50px;
+  height: 70px;
+  top: 40px;
+  right: 40px;
+  position:  absolute;
+  
+  /* Добавляем отступы слева и сверху */
+
 }
 .view-2 {
 display: flex;
@@ -168,13 +194,90 @@ border-radius: 10px; /* Скругление углов поля */
 
 
 }
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили панели виджетов*№№№№№№№№№№№№№№№№№№№*/
+.vidgetLine{
+  display: flex;
+  padding: 1% 0px 0px 3%;
+  gap: 20px;
+}
+
+.vidgetLine button{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 10px;
+}
+
+.vidgetContext{
+  width: 95%;
+  height: 80%;
+  margin: auto;
+  padding-top: 15px;
+  overflow: hidden;
+}
+
+.vidgetLine .activeButton{
+  background-color: #71DC7B;
+}
+
+.vidgetContext .activeBlock{
+  display: block;
+}
+
+.proizvodstvoImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.financeImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.planirovanieImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.personalImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
+
+.ezhednevnikImg{
+  scale: 1;
+  width: 143.5%;
+  height: 100%;
+  right: 5px;
+  bottom: 0px;
+  position: relative;
+}
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили пользователя*№№№№№№№№№№№№№№№№№№№*/
 .user-profile {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 10px;
-  margin-right: 30px;
+  position: absolute;
+  top: 40px;
+  right: 130px; /* Позиция слева от logo-2 */
 }
 
 .avatar {

@@ -44,4 +44,32 @@ setTimeout(highlightButton, 5000);
 function redirectToRent() {
   window.location.href = 'Director.html';
 }
-setTimeout(redirectToRent, 5500);
+// setTimeout(redirectToRent, 5500);
+
+
+
+// курсор
+
+document.addEventListener('DOMContentLoaded', function() {
+  const cursor = document.querySelector('.cursor');
+  const target = document.querySelector('.login-button');
+
+  cursor.style.display = 'block';
+
+  const targetRect = target.getBoundingClientRect();
+  const targetX = targetRect.left + targetRect.width / 2;
+  const targetY = targetRect.top + targetRect.height / 2;
+
+  const cursorAnimation = cursor.animate([
+    { transform: `translate(${targetX}px, ${targetY}px) scale(1)` },
+    { transform: 'translate(0, 0) scale(0.5)' }
+  ], {
+    duration: 8000,
+    easing: 'ease-in-out',
+    fill: 'forwards'
+  });
+
+  cursorAnimation.onfinish = function() {
+    cursor.style.display = 'none';
+  };
+});

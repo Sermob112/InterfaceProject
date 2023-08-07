@@ -1,0 +1,67 @@
+.widget {
+    position: absolute;
+    width: 300px;
+    min-height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+  
+  .widget-header {
+    background-color: #ddd;
+    padding: 8px;
+    cursor: move;
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элементов по правому краю */
+    padding: 10px;
+  }
+  
+
+  .resizable-widget {
+    flex: 1; /* Равномерное распределение пространства между виджетами */
+    position: relative;
+    min-width: 400px;
+    min-height: 600px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px; /* Добавляем немного отступа между виджетами */
+  }
+  
+  /* Дополнительный стиль для кнопок закрытия */
+  .close-button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize; /* Resize cursor */
+    background-color: #000;
+  }
+  .widget-content {
+    flex: 1;
+    overflow: auto;
+  }
+
+  .widget-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .widget-container {
+    display: flex;
+    flex-direction: row; /* Элементы будут располагаться в горизонтальном ряду */
+  }
+  
