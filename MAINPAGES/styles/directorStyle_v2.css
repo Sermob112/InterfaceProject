@@ -1,11 +1,4 @@
-.widget {
-    position: absolute;
-    width: 300px;
-    min-height: 100px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-  }
-  
+
   .widget-header {
     background-color: #ddd;
     padding: 8px;
@@ -19,12 +12,14 @@
   .resizable-widget {
     flex: 1; /* Равномерное распределение пространства между виджетами */
     position: relative;
+
     min-width: 400px;
     min-height: 600px;
     background-color: #f0f0f0;
     border: 1px solid #000;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
     margin-right: 10px; /* Добавляем немного отступа между виджетами */
   }
   
@@ -47,10 +42,7 @@
     cursor: nwse-resize; /* Resize cursor */
     background-color: #000;
   }
-  .widget-content {
-    flex: 1;
-    overflow: auto;
-  }
+
 
   .widget-panel {
     display: flex;
@@ -61,7 +53,132 @@
   }
   
   .widget-container {
+    /* display: flex;
+    flex-direction: row; Элементы будут располагаться в горизонтальном ряду */
+    position: relative;
     display: flex;
-    flex-direction: row; /* Элементы будут располагаться в горизонтальном ряду */
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .resizable-widget {
+    display: none;
   }
   
+  .active-widget {
+    display: block;
+  }
+
+  /* Стилизация таблицы */
+  .widget-table {
+    width: 100%; /* Занимает половину ширины виджета */
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px; /* Добавляем скругление краев */
+  }
+  
+  .widget-table th,
+  .widget-table td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .widget-table th {
+    background-color: #f0f0f0;
+  }
+  
+  /* Убираем границы */
+  .widget-table th,
+  .widget-table td {
+    border: none;
+  }
+  .red-row {
+    background-color: rgb(231, 130, 130);
+  }
+  
+  .green-row {
+    background-color: rgb(118, 243, 118);
+  }
+  
+  .yellow-row {
+    background-color: rgb(243, 243, 117);
+  }
+
+
+  .widget-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+
+  .widget-columns {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .widget-table-column {
+    width: 60%;
+    overflow: auto; /* Добавляем прокрутку при необходимости */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Скругление углов */
+    border: 1px solid #ccc; /* Обводка */
+    height: 80%; /* Добавляем высоту 100% */
+    
+
+  }
+  
+  .widget-text-column {
+ 
+    width: 39%;
+    padding: 10px;
+    
+    box-sizing: border-box;
+
+    border-radius: 10px; /* Скругление углов */
+    border: 1px solid #ccc; /* Обводка */
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%; /* Добавляем высоту 100% */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Изменяем направление флекс-контейнера */
+    
+  }
+  .widget-text-top {
+    padding-bottom: 10px; /* Отступ снизу */
+  }
+  
+  .widget-text-bottom {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    overflow: hidden; /* Добавляем прокрутку при необходимости */
+  }
+  .widget-text-content {
+    flex-grow: 1; /* Занимает половину высоты */
+    padding: 10px; /* Добавляем отступ внутри .widget-text-column */
+  }
+
+  .widget-images-panel {
+    width: 10%; /* Здесь ваша ширина для панели с картинками */
+    border: 1px solid #ccc;
+    background-color: #ffffff; /* Здесь ваш цвет фона */
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px; /* Добавляем отступ снизу */
+    display: flex; /* Используем flex-контейнер */
+    align-items: center; /* Выравниваем по центру вертикально */
+    justify-content: flex-start; /* Выравниваем по левому краю горизонтально */
+
+  }
+
+  .file-panel {
+    width: 100%;
+    text-align: left;
+
+  }

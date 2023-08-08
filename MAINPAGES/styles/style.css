@@ -23,7 +23,7 @@
   color: white; /* Белый цвет шрифта */
 }
 body {
-  background-image: url("../../img/backround.png"); /* Замените путь_к_вашей_картинке.jpg на путь к вашей картинке */
+  background-image: url("../../img/backround_2.png"); /* Замените путь_к_вашей_картинке.jpg на путь к вашей картинке */
   background-repeat: no-repeat; /* Отключаем повторение картинки по вертикали и горизонтали */
   background-size: cover; /* Масштабируем картинку так, чтобы она заполняла весь задний фон */
   font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
@@ -290,7 +290,8 @@ border-radius: 10px; /* Скругление углов поля */
 .user-name {
   font-family: "RobotoFlex", sans-serif;
   font-size: 16px;
-  color: #fff; /* Цвет имени пользователя */
+  color: #686868; /* Цвет имени пользователя */
+  
 }
 .chevron-icon {
   width: 20px; /* Ширина иконки */

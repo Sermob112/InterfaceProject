@@ -116,6 +116,23 @@ widgetIcons.forEach(icon => {
 });
 
 
+const widgetButtons = document.querySelectorAll('.widget-header button');
+
+widgetButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const widgetContainer = button.closest('.widget-container');
+    const widgets = widgetContainer.querySelectorAll('.resizable-widget');
+
+    widgets.forEach(widget => {
+      widget.classList.remove('active-widget');
+    });
+
+    const widget = button.closest('.resizable-widget');
+    widget.classList.add('active-widget');
+  });
+});
+
+
 const vidgetLine = document.querySelector('.vidgetLine');
 const vidgetContext = document.querySelector('.vidgetContext')
 
@@ -134,3 +151,7 @@ vidgetLine.addEventListener("click", function(event){
         document.getElementById(event.target.closest('button').getAttribute('data-target')).classList.add('activeBlock');
     }
 })
+
+
+//
+

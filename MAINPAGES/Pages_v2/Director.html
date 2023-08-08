@@ -15,6 +15,7 @@
   <div class="frame">
     <img class="logo" src="../../img/logo.png" alt="Logo" >
     <img class="logo-2" src="../../img/logo.png" alt="Logo" >
+        <!-- Аватарка и имя пользователя -->
     <div class="user-profile">
       <div class="search-container">
       <input type="text" class="search-input" placeholder="Поиск">
@@ -48,20 +49,106 @@
             </div>
  <!--Область окон-->
 
-    <!-- Аватарка и имя пользователя -->
 
 
-    <div class="widget-container">
-  <div class="resizable-widget" id="widget1">
+
+    <div class="widget-container ">
+  <div class="resizable-widget active-widget" id="widget1">
     <div class="widget-header">
       <button class="close-button">Close</button>
     </div>
-    <div class="widget-content">
-      <!-- Widget content goes here -->
-      <h3>Пример виджета 1</h3>
+
+    <div class="widget-columns">
+      <div class="widget-table-column">
+      <table class="widget-table">
+        <thead>
+          <tr>
+            <th>Кому</th>
+            <th>От кого</th>
+            <th>Статус</th>
+            <th>Дата</th>
+            <th>Тип</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="red-row" data-tooltip="Пояснение для строки 1">
+            <td>Директору</td>
+            <td>Перв. Зам</td>
+            <td>Активно</td>
+            <td>01.01.01</td>
+            <td>Служебная</td>
+          </tr>
+          <tr class="green-row">
+            <td>Перв. зам</td>
+            <td>Директор</td>
+            <td>Активно</td>
+            <td>02.01.01</td>
+            <td>Поручение</td>
+          </tr>
+          <tr class="green-row">
+            <td>Перв. зам</td>
+            <td>Директор</td>
+            <td>Активно</td>
+            <td>02.01.01</td>
+            <td>Поручение</td>
+          </tr>
+          <tr  class="yellow-row">
+            <td>Перв. зам</td>
+            <td>Директор</td>
+            <td>Активно</td>
+            <td>02.01.01</td>
+            <td>Поручение</td>
+          </tr>
+          <!-- Добавьте другие строки с данными -->
+        </tbody>
+      </table>
     </div>
-    <div class="resize-handle"></div>
+
+    <div class="widget-text-column">
+
+      <div class="widget-text-top">
+        <h4>Уважаемый ……!!!</h4>
+        <p>Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          Прошу разрешить……
+          
+        </p>
+      </div>
+      <div class="widget-text-bottom">
+        <div class="file-panel">
+          <h4>Файл</h4>
+          <img src="your-image-path.png" alt="pdf">
+        </div>
+      </div>
+    </div>
+
+
   </div>
+  <div class="widget-images-panel">
+    <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
+     <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
+  </div>
+
+    <div class="resize-handle"></div>
+
+
+  </div>
+
 
   <div class="resizable-widget" id="widget2">
     <div class="widget-header">
@@ -79,9 +166,23 @@
     </div>
     <div class="widget-content">
       <!-- Widget content goes here -->
+
       <h3>Пример виджета 3</h3>
     </div>
     <div class="resize-handle"></div>
+  </div>
+
+  <!-- Панель с плашками -->
+  <div class="widget-thumbnails">
+    <div class="widget-thumbnail" data-widget-id="widget1">
+      <!-- Плашка виджета 1 -->
+    </div>
+    <div class="widget-thumbnail" data-widget-id="widget2">
+      <!-- Плашка виджета 2 -->
+    </div>
+    <div class="widget-thumbnail" data-widget-id="widget3">
+      <!-- Плашка виджета 3 -->
+    </div>
   </div>
 </div>
 </div>
