@@ -43,7 +43,24 @@
 //     icon.style.opacity = 0;
 //   });
 // });
+//изминение размера виджета при открытии нового
+function openNewWidget() {
+  const widgetContainer = document.querySelector('.widget-container');
+  const newWidget = document.createElement('div');
+  newWidget.className = 'resizable-widget active-widget';
+  newWidget.innerHTML = '<!-- ... Внутренности нового виджета ... -->';
 
+  widgetContainer.appendChild(newWidget);
+
+  const activeWidgets = document.querySelectorAll('.active-widget');
+  const widgetWidthPercentage = 100 / (activeWidgets.length);
+
+  activeWidgets.forEach((widget, index) => {
+    widget.style.width = `${widgetWidthPercentage}%`;
+    widget.style.transform = `translateX(${index * widgetWidthPercentage}%)`;
+  });
+}
+// Размер виджета
 function setupWidget(widgetId) {
     const widget = document.getElementById(widgetId);
     const resizeHandle = widget.querySelector('.resize-handle');
@@ -153,5 +170,113 @@ vidgetLine.addEventListener("click", function(event){
 })
 
 
-//
+//чат
 
+function setupChatWidget() {
+  const chatWidgetContainer = document.querySelector('.chat-widget-container');
+  const chatWidget = chatWidgetContainer.querySelector('.chat-widget');
+  const chatWidgetToggle = chatWidgetContainer.querySelector('.chat-widget-toggle');
+  const closeButton = chatWidget.querySelector('.close-button');
+
+  chatWidgetToggle.addEventListener('click', () => {
+    chatWidget.style.display = 'block';
+    chatWidgetToggle.style.display = 'none'; // Скрываем иконку
+  });
+
+  closeButton.addEventListener('click', () => {
+    chatWidget.style.display = 'none';
+    chatWidgetToggle.style.display = 'block'; // Показываем иконку
+  });
+}
+
+setupChatWidget();
+
+
+//симуляция чата
+document.addEventListener("DOMContentLoaded", function () {
+  const chatContent = document.querySelector(".chat-content");
+  const messageInput = document.getElementById("messageInput");
+  const sendButton = document.getElementById("sendButton");
+
+  sendButton.addEventListener("click", sendMessage);
+
+  function sendMessage() {
+    const messageText = messageInput.value.trim();
+    if (messageText !== "") {
+      addMessage("user", messageText); // Отправляем сообщение пользователя
+      messageInput.value = "";
+      simulateResponse(); // Симулируем получение ответа
+    }
+  }
+
+  function addMessage(sender, message) {
+    const messagesList = chatContent.querySelector(".messages-list");
+    const messageElement = document.createElement("li");
+    messageElement.classList.add("message", sender);
+    messageElement.textContent = message;
+    messagesList.appendChild(messageElement);
+    chatContent.scrollTop = chatContent.scrollHeight; // Прокручиваем вниз для отображения последнего сообщения
+  }
+
+  function simulateResponse() {
+    setTimeout(function () {
+      addMessage("bot", "Привет! Как я могу помочь вам?"); // Симулируем ответ бота
+    }, 1000); // Задержка для эмуляции ответа
+  }
+});
+
+//боковая панель у главного виджета ежедневник
+const panelTitle = document.getElementById('panelTitle');
+const panelContent = document.getElementById('panelContent');
+const tableRows = document.querySelectorAll('.widget-table tbody tr');
+const widgetTextColumn = document.getElementById('widgetTextColumn');
+
+// Обработчики событий для каждой строки таблицы
+tableRows.forEach((row, index) => {
+  row.addEventListener('click', () => {
+    if (widgetTextColumn.style.display === 'block') {
+      // Если панель открыта и была нажата та же строка, закрываем панель
+      widgetTextColumn.style.display = 'none';
+    } else {
+      // Иначе, отображаем панель и обновляем данные
+      handleRowClick(index);
+      const rowData = getRowData(index);
+      panelTitle.textContent = rowData.title;
+      panelContent.textContent = rowData.content;
+      row.classList.add('selected-row');
+    }
+  });
+});
+
+
+function getRowData(index) {
+  // Возвращаем данные в зависимости от индекса строки
+  if (index === 0) {
+    return {
+      title: 'Заголовок для первой строки',
+      content: 'Содержимое первой строки...'
+    };
+  } else if (index === 1) {
+    return {
+      title: 'Заголовок для второй строки',
+      content: 'Содержимое второй строки...'
+    };
+  }
+  // И так далее...
+}
+
+const rowStates = {};
+
+// Функция для обработки нажатия на строку
+function handleRowClick(index) {
+  // Скрываем все открытые панели
+  for (const stateIndex in rowStates) {
+    if (rowStates[stateIndex]) {
+      rowStates[stateIndex] = false;
+    }
+  }
+  
+  // Отображаем панель и меняем состояние на true
+  widgetTextColumn.style.display = 'block';
+  rowStates[index] = true;
+}

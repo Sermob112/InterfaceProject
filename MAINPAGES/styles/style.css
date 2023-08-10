@@ -54,7 +54,7 @@ body {
   height: 70px;
   
   /* Добавляем отступы слева и сверху */
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 40px;
 }
 
@@ -62,7 +62,7 @@ body {
   /* Укажите размеры вашего логотипа */
   width: 50px;
   height: 70px;
-  top: 40px;
+  top: 20px;
   right: 40px;
   position:  absolute;
   
@@ -276,7 +276,7 @@ border-radius: 10px; /* Скругление углов поля */
   justify-content: flex-end;
   padding: 10px;
   position: absolute;
-  top: 40px;
+  top: 10px;
   right: 130px; /* Позиция слева от logo-2 */
 }
 

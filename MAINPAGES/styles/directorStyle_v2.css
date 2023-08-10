@@ -12,10 +12,9 @@
   .resizable-widget {
     flex: 1; /* Равномерное распределение пространства между виджетами */
     position: relative;
-
     min-width: 400px;
     min-height: 600px;
-    background-color: #f0f0f0;
+    background-color: #FBFBFC;
     border: 1px solid #000;
     border-radius: 10px;
     overflow: hidden;
@@ -52,14 +51,7 @@
     padding: 10px;
   }
   
-  .widget-container {
-    /* display: flex;
-    flex-direction: row; Элементы будут располагаться в горизонтальном ряду */
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    padding: 10px;
-  }
+
   .resizable-widget {
     display: none;
   }
@@ -70,6 +62,9 @@
 
   /* Стилизация таблицы */
   .widget-table {
+    font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
+    font-size: 16px; /* Размер шрифта 18px */
+    color: #242222;
     width: 100%; /* Занимает половину ширины виджета */
     border-collapse: collapse;
     margin-top: 10px;
@@ -81,22 +76,81 @@
     padding: 8px;
     text-align: center;
   }
-  
+
   .widget-table th {
-    background-color: #f0f0f0;
+    position: relative;
+ 
   }
+  .widget-table th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc; /* Цвет горизонтальной линии */
+  }
+
+  .widget-table th:nth-child(1),
+.widget-table td:nth-child(1) {
+  width: 20px; 
+}
+.widget-table th:nth-child(2),
+.widget-table td:nth-child(2) {
+  width: 120px; 
+}
+/* 
+.widget-table th:nth-child(4),
+.widget-table td:nth-child(4) {
+  width: 50px; 
+}
+.widget-table th:nth-child(5),
+.widget-table td:nth-child(5) {
+  width: 50px; 
+}
+.widget-table th:nth-child(6),
+.widget-table td:nth-child(6) {
+  width: 50px; 
+} */
   
+  .widget-table tbody tr {
+    border-bottom: 1px solid #ccc; /* Горизонтальная полоса между строками */
+  }
+  .widget-table tbody tr:last-child {
+    border-bottom: none; /* Убираем бордер для последней строки */
+  }
   /* Убираем границы */
   .widget-table th,
   .widget-table td {
+
     border: none;
   }
+ /* .highlight{
+  background-color: aqua;
+  line-height: 1;
+  margin: 0; 
+
+  border-radius: 5px;
+ } */
+
+ .highlight {
+  position: relative;
+}
+
+.highlight span {
+  display: inline-block;
+  background-color: rgb(242, 250, 136);
+  padding: 2px 6px; /* Подберите отступы по вашему усмотрению */
+  margin: 0;
+  border-radius: 5px;
+}
   .red-row {
     background-color: rgb(231, 130, 130);
   }
   
   .green-row {
     background-color: rgb(118, 243, 118);
+    border-radius: 2px;
   }
   
   .yellow-row {
@@ -119,7 +173,7 @@
   }
   
   .widget-table-column {
-    width: 60%;
+    width: 100%;
     overflow: auto; /* Добавляем прокрутку при необходимости */
     padding: 10px;
     box-sizing: border-box;
@@ -145,8 +199,10 @@
     flex-direction: column;
     height: 80%; /* Добавляем высоту 100% */
     overflow: hidden;
-    display: flex;
+    display: none;
+
     flex-direction: column; /* Изменяем направление флекс-контейнера */
+
     
   }
   .widget-text-top {
@@ -163,7 +219,7 @@
   }
 
   .widget-images-panel {
-    width: 10%; /* Здесь ваша ширина для панели с картинками */
+    width: 160px; /* Здесь ваша ширина для панели с картинками */
     border: 1px solid #ccc;
     background-color: #ffffff; /* Здесь ваш цвет фона */
     padding: 10px;
@@ -182,3 +238,206 @@
     text-align: left;
 
   }
+
+
+
+  .chat-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+  }
+  
+  .chat-widget {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    border-radius:  10px;
+  }
+  
+  .chat-header {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0Px; /* Уменьшаем вертикальный отступ */
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-content {
+    padding: 10px;
+  }
+  
+  .chat-widget-toggle {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block; /* По умолчанию иконка видна */
+  }
+
+.chat-icon{
+
+ width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+}
+/* """"""""""""Блок чата"""""""""""""""""""" */
+
+.chat-widget-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chat-widget {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-content {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.messages-list {
+  list-style: none;
+  padding: 0;
+}
+
+.message {
+  /* padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  max-width: 70%; */
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px; 
+}
+
+.user {
+  border-radius: 10px;
+  background-color: #94f7c6;
+  align-self: flex-end;
+  display: inline-block;
+}
+
+.bot {
+  border-radius: 10px;
+  background-color: #e0dde0;
+  align-self: flex-start;
+  display: inline-block;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+}
+
+#messageInput {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+#sendButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.chat-widget-toggle {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.user .avatar {
+  margin-left: 10px;
+  margin-left: auto;
+}
+
+.bot .avatar {
+  margin-right: 10px;
+
+  margin-right: auto;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 10px; /* Добавляем отступ вокруг контента сообщения */
+  border-radius: 10px;
+  background-color: #e0e0e0; /* Цвет фона контента сообщения */
+  position: relative;
+  animation: messageWidthAnimation 1s linear; 
+  display: flex; /* Добавляем flex-контейнер */
+  align-items: center; /* Выравниваем элементы вертикально */
+}
+
+@keyframes messageWidthAnimation {
+  from {
+    max-width: 100%; /* Исходная ширина сообщения */
+  }
+  to {
+    max-width: 70%; /* Суженная ширина сообщения */
+  }
+}
+
+.user .message-content {
+  margin-left: auto; /* Сдвигаем контент пользователя вправо */
+  background-color: #94f7c6;
+  flex-direction: row-reverse;
+}
+
+.bot .message-content {
+  margin-right: auto; /* Сдвигаем контент бота влево */
+  flex-direction: row; 
+}
+
