@@ -116,7 +116,7 @@ function setupWidget(widgetId) {
     setupWidget(widgetId);
   });
 // Панель виджетов
-  const widgetIcons = document.querySelectorAll('.func');
+const widgetIcons = document.querySelectorAll('.func');
 const widgets = document.querySelectorAll('.resizable-widget');
 
 widgetIcons.forEach(icon => {
@@ -124,14 +124,13 @@ widgetIcons.forEach(icon => {
   const widget = document.getElementById(widgetId);
 
   icon.addEventListener('click', () => {
-    if (widget.style.display === 'none') {
+    if (widget.style.display === 'none' || widget.style.display === "") {
       widget.style.display = 'block';
     } else {
       widget.style.display = 'none';
     }
   });
 });
-
 
 const widgetButtons = document.querySelectorAll('.widget-header button');
 
@@ -149,26 +148,17 @@ widgetButtons.forEach(button => {
   });
 });
 
+const buttons = document.querySelectorAll('.func');
 
-const vidgetLine = document.querySelector('.vidgetLine');
-const vidgetContext = document.querySelector('.vidgetContext')
-
-vidgetLine.addEventListener("click", function(event){
-    for (var i = vidgetLine.children.length - 1; i >= 0; i--) {
-        vidgetLine.children[i].classList.remove('activeButton');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('activeButton')) {
+      button.classList.remove('activeButton');
+    } else {
+      button.classList.add('activeButton');
     }
-
-    for (var i = vidgetContext.children.length - 1; i >= 0; i--) {
-        vidgetContext.children[i].classList.remove('activeBlock');
-    }
-
-    if (event.target.closest('button')){
-        event.target.closest('button').classList.add('activeButton');
-
-        document.getElementById(event.target.closest('button').getAttribute('data-target')).classList.add('activeBlock');
-    }
-})
-
+  });
+});
 
 //чат
 
@@ -193,37 +183,37 @@ setupChatWidget();
 
 
 //симуляция чата
-document.addEventListener("DOMContentLoaded", function () {
-  const chatContent = document.querySelector(".chat-content");
-  const messageInput = document.getElementById("messageInput");
-  const sendButton = document.getElementById("sendButton");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const chatContent = document.querySelector(".chat-content");
+//   const messageInput = document.getElementById("messageInput");
+//   const sendButton = document.getElementById("sendButton");
 
-  sendButton.addEventListener("click", sendMessage);
+//   sendButton.addEventListener("click", sendMessage);
 
-  function sendMessage() {
-    const messageText = messageInput.value.trim();
-    if (messageText !== "") {
-      addMessage("user", messageText); // Отправляем сообщение пользователя
-      messageInput.value = "";
-      simulateResponse(); // Симулируем получение ответа
-    }
-  }
+//   function sendMessage() {
+//     const messageText = messageInput.value.trim();
+//     if (messageText !== "") {
+//       addMessage("user", messageText); // Отправляем сообщение пользователя
+//       messageInput.value = "";
+//       simulateResponse(); // Симулируем получение ответа
+//     }
+//   }
 
-  function addMessage(sender, message) {
-    const messagesList = chatContent.querySelector(".messages-list");
-    const messageElement = document.createElement("li");
-    messageElement.classList.add("message", sender);
-    messageElement.textContent = message;
-    messagesList.appendChild(messageElement);
-    chatContent.scrollTop = chatContent.scrollHeight; // Прокручиваем вниз для отображения последнего сообщения
-  }
+//   function addMessage(sender, message) {
+//     const messagesList = chatContent.querySelector(".messages-list");
+//     const messageElement = document.createElement("li");
+//     messageElement.classList.add("message", sender);
+//     messageElement.textContent = message;
+//     messagesList.appendChild(messageElement);
+//     chatContent.scrollTop = chatContent.scrollHeight; // Прокручиваем вниз для отображения последнего сообщения
+//   }
 
-  function simulateResponse() {
-    setTimeout(function () {
-      addMessage("bot", "Привет! Как я могу помочь вам?"); // Симулируем ответ бота
-    }, 1000); // Задержка для эмуляции ответа
-  }
-});
+//   function simulateResponse() {
+//     setTimeout(function () {
+//       addMessage("bot", "Привет! Как я могу помочь вам?"); // Симулируем ответ бота
+//     }, 1000); // Задержка для эмуляции ответа
+//   }
+// });
 
 //боковая панель у главного виджета ежедневник
 const panelTitle = document.getElementById('panelTitle');
@@ -280,3 +270,171 @@ function handleRowClick(index) {
   widgetTextColumn.style.display = 'block';
   rowStates[index] = true;
 }
+
+
+
+//Сортировка 
+
+
+var sortDirection = "asc"; // По умолчанию сортировка по возрастанию
+
+
+// Ежедневник
+function sortTable(columnIndex) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[columnIndex];
+      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+
+      // Для сортировки даты рождения предварительно преобразуем строку в объект Date
+      if (columnIndex === 3) {
+        x = new Date(x.innerHTML);
+        y = new Date(y.innerHTML);
+      } else {
+        x = x.innerHTML;
+        y = y.innerHTML;
+      }
+      
+      // Сравниваем значения в зависимости от направления сортировки
+      if (sortDirection === "asc" && x > y) {
+        shouldSwitch = true;
+        break;
+      } else if (sortDirection === "desc" && x < y) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+
+  // Изменяем направление сортировки после каждого клика
+  if(sortDirection === "asc"){
+    sortDirection = "desc";
+  }
+  else{
+    sortDirection = "asc";
+  }
+}
+
+function sortTableWorker(columnIndex) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTableWorker");
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[columnIndex];
+      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+
+      // Для сортировки даты рождения предварительно преобразуем строку в объект Date
+      
+      x = x.innerHTML;
+      y = y.innerHTML;    
+      
+      // Сравниваем значения в зависимости от направления сортировки
+      if (sortDirection === "asc" && x > y) {
+        shouldSwitch = true;
+        break;
+      } else if (sortDirection === "desc" && x < y) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+
+  // Изменяем направление сортировки после каждого клика
+  if(sortDirection === "asc"){
+    sortDirection = "desc";
+  }
+  else{
+    sortDirection = "asc";
+  }
+}
+
+const ezhednevnik = document.querySelector('.firstBlock');
+var lastClickedRow = null;
+
+ezhednevnik.addEventListener("click", function(event){
+  var clickedRow = event.target.closest('tbody tr');
+
+  for (var i = document.querySelector('.secondBlock').children.length - 1; i >= 0; i--) {
+    document.querySelector('.secondBlock').children[i].classList.remove('activeDiscription');
+}
+
+  if (clickedRow) {
+    if (clickedRow === lastClickedRow) {
+      // Повторное нажатие на строку
+      document.querySelector('.firstBlock').style.width = "100%";
+      document.querySelector('.secondBlock').style.display = "none";
+      lastClickedRow = null;
+      } 
+    else {
+      // event.target.closest('button').classList.add('activeButton');
+      document.querySelector('.firstBlock').style.width = "70%";
+      document.querySelector('.secondBlock').style.display = "block";
+      document.getElementById(event.target.closest('tbody tr').getAttribute('data-target')).classList.add('activeDiscription');
+      lastClickedRow = clickedRow;
+    }
+  }
+});
+
+// План выполнения
+
+
+const projects = document.querySelectorAll('.project');
+
+projects.forEach((project) => {
+  const subProjects = project.querySelectorAll('.sub-projects');
+  subProjects.forEach((subProject)=>{
+    var sum = 0;
+    var count = 0;
+    var tbodyTest = subProject.querySelector('tbody');
+    var tbodyTr = tbodyTest.querySelectorAll('tr');
+    tbodyTr.forEach((indivTr) =>{
+      var progressBar = indivTr.querySelector("#progressBar");
+      var progressValue = indivTr.querySelector("#progressValue");
+      // Получаем заданное значение прогресса из span
+      var value = parseInt(progressValue.innerText, 10);
+      sum += value;
+      count++;
+    
+      // Устанавливаем значение атрибута value элемента progress
+      progressBar.value = value;
+
+    })
+
+    var progressWhole = project.querySelector('#progressWhole');
+
+    // Вычисляем среднее значение
+    var average = Math.round(sum / count,0);
+
+    // Устанавливаем среднее значение в атрибут value элемента progress
+    progressWhole.value = average;
+
+    project.addEventListener('click', () => {
+      subProject.classList.toggle('active');
+    });
+  })
+
+});

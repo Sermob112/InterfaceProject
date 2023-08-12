@@ -217,7 +217,7 @@ border-radius: 10px; /* Скругление углов поля */
   overflow: hidden;
 }
 
-.vidgetLine .activeButton{
+.vidgetLine button.activeButton{
   background-color: #71DC7B;
 }
 
@@ -383,12 +383,12 @@ border-radius: 10px; /* Скругление углов поля */
 }
 
 /* стили цехов */
-
+/* 
 .workshop {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #ccc; /* Цвет квадрата цеха */
+  background-color: #ccc; 
   border: 2px solid #aaa;
 
   border-radius: 5px;
@@ -398,7 +398,7 @@ border-radius: 10px; /* Скругление углов поля */
   justify-content: center;
   font-size: 14px;
   text-align: center;
-}
+} */
   /* Стили для надписи "Карта завода" */
     .map-title {
       position: absolute;
