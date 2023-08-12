@@ -20,6 +20,7 @@
     overflow: hidden;
     display: flex;
     margin-right: 10px; /* Добавляем немного отступа между виджетами */
+    
   }
   
   /* Дополнительный стиль для кнопок закрытия */
@@ -162,14 +163,15 @@
     position: relative;
     display: flex;
     align-items: flex-start;
+    padding: 10px;
   }
   
 
   .widget-columns {
     display: flex;
     padding: 10px;
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 98%;
   }
   
   .widget-table-column {
@@ -245,7 +247,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: flex;
+    display: none;
   }
   
   .chat-widget {
@@ -270,6 +272,7 @@
   
   .chat-content {
     padding: 10px;
+    
   }
   
   .chat-widget-toggle {
@@ -294,6 +297,15 @@
     justify-content: center;
     cursor: pointer;
     display: block;
+}
+
+/* Стили для скрытия чата */
+.chat-widget-container .chat-widget {
+  display: none;
+}
+
+.chat-widget-container.active .chat-widget {
+  display: block;
 }
 /* """"""""""""Блок чата"""""""""""""""""""" */
 
@@ -441,3 +453,127 @@
   flex-direction: row; 
 }
 
+/* """"""""""""Виджет цехов"""""""""""""""""""" */
+.equipmentIcon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 5px;
+  flex-shrink: 0; /* Запрет сжатия элемента */
+  margin-bottom: 20px;
+}
+.lineOfEquipment{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 55px;
+  width: 90%;
+}
+
+
+
+
+.TsekhMap{
+  width: 90%;
+  padding: 20px;
+  height: 90%;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+.backGround-color-red{
+  background-color: #FB6161;
+}
+
+.backGround-color-yellow{
+  background-color: #FEF406;
+}
+
+.backGround-color-green{
+  background-color: #71DC7B;
+}
+
+.backGround-color-grey{
+  background-color: #EBE7E7;
+}
+
+
+
+
+/* """"""""""""Виджет сотрудников"""""""""""""""""""" */
+
+.WorkersBlock {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#myTableWorker {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#myTableWorker th,
+#myTableWorker td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#myTableWorker th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#myTableWorker th:hover {
+  background-color: #d0d0d0;
+}
+
+.imgCircle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.imgCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.WorkersBlock span {
+  vertical-align: middle;
+}
+
+.WorkersBlock td {
+  border-left: none;
+  border-right: none;
+}
+
+.WorkersBlock tr:last-child td {
+  border-bottom: none;
+}
+
+.WorkersBlock td:last-child {
+  border-right: none;
+}
+
+.WorkersBlock tbody tr[data-target]:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили панели виджетов*№№№№№№№№№№№№№№№№№№№*/
+/* План выполнения заказов */
