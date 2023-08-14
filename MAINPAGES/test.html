@@ -2,20 +2,63 @@
 <html>
     <head>
         <meta charset="UTF-8">
-      
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.js"></script>
-      
-
-        </script>
-      
+  
+  <link rel="stylesheet" href="testStyle.css">
       </head>
       <body>
-        <div id="calendar"></div>
-      </body>
-
-
+        <div class="container">
+          <h2>Кликабельные строки и выпадающие таблицы</h2>
+        
+          <div class="table-container">
+            <table id="mainTable">
+              <tr class="clickable-row">
+                <td>Ячейка 1-1</td>
+                <td>Ячейка 1-2</td>
+                <td>Ячейка 1-3</td>
+              </tr>
+              <tr class="clickable-row">
+                <td>Ячейка 2-1</td>
+                <td>Ячейка 2-2</td>
+                <td>Ячейка 2-3</td>
+              </tr>
+              <tr class="clickable-row">
+                <td>Ячейка 3-1</td>
+                <td>Ячейка 3-2</td>
+                <td>Ячейка 3-3</td>
+              </tr>
+            </table>
+            
+            <div class="WorkersBlock widget-table-column hidden" id="workerTable">
+              <table id="myTableWorker">
+                <thead>
+                  <tr>
+                    <th onclick="sortTableWorker(0)" style="border-top: 0px; border-left: 0px;">Имя</th>
+                    <th onclick="sortTableWorker(1)" style="border-top: 0px;">Статус</th>
+                    <th onclick="sortTableWorker(2)" style="border-top: 0px; border-right:0px;">Должность</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="border-left: 0px;"><div class="imgCircle"><img src="../../img/avatar.png"></div><span>Иванов Иван</span></td>
+                    <td>Работает</td>
+                    <td style="border-right: 0px;">Высотник</td>
+                  </tr>
+                  <tr>
+                    <td style="border-left: 0px;"><div class="imgCircle"><img src="../../img/avatar.png"></div><span>Василий Васильевич</span></td>
+                    <td>Болеет</td>
+                    <td style="border-right: 0px;">Бригадир</td>
+                  </tr>
+                  <tr>
+                    <td style="border-left: 0px;"><div class="imgCircle"><img src="../../img/avatar.png"></div><span>Петров Петрович</span></td>
+                    <td>В отпуске</td>
+                    <td style="border-right: 0px;">Механик</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      
       <script src="testScripts.js"></script>
-
+</body>
 </html>

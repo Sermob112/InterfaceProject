@@ -140,7 +140,7 @@
   </div>
  <!--виджет Цехов -->
 
-  <div class="resizable-widget" id="widget2">
+  <div class="resizable-widget" id="widget5">
     <div class="widget-header">
       <button class="close-button">Close</button>
     </div>
@@ -155,26 +155,19 @@
           <div class="lineOfEquipment">
             <div class="equipmentIcon backGround-color-green">1</div>
             <div class="equipmentIcon backGround-color-yellow">2</div>
-            <div class="equipmentIcon backGround-color-green">3</div>
             <div class="equipmentIcon backGround-color-yellow">4</div>
             <div class="equipmentIcon backGround-color-green">5</div>
- 
           </div>
-      
-          <div class="lineOfEquipment">
-            <div class="equipmentIcon backGround-color-green">10</div>
-            <div class="equipmentIcon backGround-color-yellow">11</div>
-            <div class="equipmentIcon backGround-color-yellow">12</div>
-            <div class="equipmentIcon backGround-color-red">13</div>
-            <div class="equipmentIcon backGround-color-green">14</div>
+   
+          <div class="centerLineOfEquipment">
+            
+            <div class="equipmentIcon backGround-color-yellow">4</div>
+            <div class="equipmentIcon backGround-color-green">5</div>
           </div>
-      
           <div class="lineOfEquipment">
             <div class="equipmentIcon backGround-color-yellow">15</div>
             <div class="equipmentIcon backGround-color-gryellowey">16</div>
           </div>
-      
-          
         </div>
 
       </div>
@@ -197,40 +190,148 @@
 </div>
 <div class="resizable-widget" id="widget3">
   <div class="widget-header">
+    <span class="blockName">Список сотрудников цеха</span>
     <button class="close-button">Close</button>
   </div>
-  <div class="widget-content">
-    <div class="widget-columns">
-      <div class="WorkersBlock widget-table-column">
-        <table id="myTableWorker">
-            <thead>
-              <tr>
-                <th onclick="sortTableWorker(0)" style="border-top: 0px; border-left: 0px;">Имя</th>
-                <th onclick="sortTableWorker(1)" style="border-top: 0px;">Статус</th>
-                <th onclick="sortTableWorker(2)" style="border-top: 0px; border-right:0px;">Должность</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr data-target="msg1">
-                <td style="border-left: 0px;"><div class="imgCircle"><img src="../../img/avatar.png"></div><span>Иванов Иван</span></td>
-                <td>Работает</td>
-                <td style="border-right: 0px;">Высотник</td>
-              </tr>
-              <tr data-target="msg2">
-                <td style="border-left: 0px;"><div class="imgCircle"><img src="../../img/avatar.png"></div><span>Василий Васильевич</span></td>
-                <td>Болеет</td>
-                <td style="border-right: 0px;">Бригадир</td>
-              </tr>
-              <tr data-target="msg2">
-                <td style="border-left: 0px;"><div class="imgCircle"><img src="../../img/avatar.png"></div><span>Петров Петрович</span></td>
-                <td>В отпуске</td>
-                <td style="border-right: 0px;">Механик</td>
-              </tr>
-            </tbody>
-          </table>
+  
+    
+      <div class="container">
+
+      
+      
+        <div class="TaskWorkShop workshop-title1">
+          <div class="icon-and-text">
+            <img src="../../img/Arrowdown.png" alt="Arrowdown">
+            <p class="TaskBasicText icon-text">Цех 11</p>
+          </div>
         </div>
-      </div>
-  </div>
+                  <ul class="projects1">
+                    <li class="project1">
+                      <div class="TaskWorkShopList projects_name_list">
+                        <div class="icon-and-text">
+                          <img src="../../img/Arrowdown.png" alt="Arrowdown">
+                          <p class="TaskBasicText icon-text">Бригада 4</p>
+                      
+                        </div>
+                        <p class="TaskBasicText icon-text">Сотрудников: 3</p>
+                      </div>
+                      <ul class="sub-projects1">
+                        <li class="sub-project1">
+                          <div class="TaskWorkShopTask tasks_name_list">
+                            <img src="../../img/Arrowdown.png"" alt="Arrowdown">
+                            <p class="TaskBasicText">Имя сотрудника</p>
+                            <p class="TaskBasicText">Статус</p>
+                            <p class="TaskBasicText with-margin">Табельный номер</p>
+                          </div>
+            
+                          <ul class="sub-task-projects1">
+                            <li class="sub-task-project1">
+                              <div class="TaskWorkShopTask info_name_list RedTask">
+                                <div class="user-avatar">
+                                  <img src="../../img/avatar.png" alt="Аватар пользователя">
+                                </div>
+                                <div class="user-info">
+                                  <p class="user-name">Имя пользователя</p>
+                                  <p class="user-status">Работает</p>
+                                  <p class="user-id">Табельный номер</p>
+                                </div>
+                              </div>
+                              <li class="sub-task-project1">
+                                <div class="TaskWorkShopTask info_name_list GreenTask ">
+                                  <div class="user-avatar">
+                                    <img src="../../img/avatar.png" alt="Аватар пользователя">
+                                  </div>
+                                  <div class="user-info">
+                                    <p class="user-name">Имя пользователя</p>
+                                    <p class="user-status">Работает</p>
+                                    <p class="user-id">Табельный номер</p>
+                                  </div>
+                                </div>
+                                <li class="sub-task-project1">
+                                  <div class="TaskWorkShopTask info_name_list YellowTask">
+                                    <div class="user-avatar">
+                                      <img src="../../img/avatar.png" alt="Аватар пользователя">
+                                    </div>
+                                    <div class="user-info">
+                                      <p class="user-name">Имя пользователя</p>
+                                      <p class="user-status">Работает</p>
+                                      <p class="user-id">Табельный номер</p>
+                                    </div>
+                                  </div>
+                          
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="projects1">
+                    <li class="project1">
+                      <div class="TaskWorkShopList projects_name_list">
+                        <div class="icon-and-text">
+                          <img src="../../img/Arrowdown.png" alt="Arrowdown">
+                          <p class="TaskBasicText icon-text">Бригада 4</p>
+                      
+                        </div>
+                        <p class="TaskBasicText icon-text">Сотрудников: 3</p>
+                      </div>
+                      <ul class="sub-projects1">
+                        <li class="sub-project1">
+                          <div class="TaskWorkShopTask tasks_name_list">
+                            <img src="../../img/Arrowdown.png"" alt="Arrowdown">
+                            <p class="TaskBasicText">Имя сотрудника</p>
+                            <p class="TaskBasicText">Статус</p>
+                            <p class="TaskBasicText with-margin">Табильный номер</p>
+                          </div>
+            
+                          <ul class="sub-task-projects1">
+                            <li class="sub-task-project1">
+                              <div class="TaskWorkShopTask info_name_list RedTask">
+                                <div class="user-avatar">
+                                  <img src="../../img/avatar.png" alt="Аватар пользователя">
+                                </div>
+                                <div class="user-info">
+                                  <p class="user-name">Имя пользователя</p>
+                                  <p class="user-status">Работает</p>
+                                  <p class="user-id">Табельный номер</p>
+                                </div>
+                              </div>
+                              <li class="sub-task-project1">
+                                <div class="TaskWorkShopTask info_name_list GreenTask ">
+                                  <div class="user-avatar">
+                                    <img src="../../img/avatar.png" alt="Аватар пользователя">
+                                  </div>
+                                  <div class="user-info">
+                                    <p class="user-name">Имя пользователя</p>
+                                    <p class="user-status">Работает</p>
+                                    <p class="user-id">Табельный номер</p>
+                                  </div>
+                                </div>
+                                <li class="sub-task-project1">
+                                  <div class="TaskWorkShopTask info_name_list YellowTask">
+                                    <div class="user-avatar">
+                                      <img src="../../img/avatar.png" alt="Аватар пользователя">
+                                    </div>
+                                    <div class="user-info">
+                                      <p class="user-name">Имя пользователя</p>
+                                      <p class="user-status">Работает</p>
+                                      <p class="user-id">Табельный номер</p>
+                                    </div>
+                                  </div>
+                          
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+               
+          
+            </div>
+         
+   
+
+ 
    <!--нижняя панель управления виджетом-->
    <!--нижняя панель управления виджетом-->
  <div class="widget-images-panel">
@@ -356,12 +457,47 @@
 
      <!--Виджет чего -то-->
 
-     <div class="resizable-widget" id="widget5">
+     <div class="resizable-widget" id="widget2">
       <div class="widget-header">
+        <span class="blockName">Схема цехов</span>
         <button class="close-button">Close</button>
       </div>
+
       <div class="widget-content">
-        <div id="calendar"></div>
+         <!--СХЕМА ЦЕХОВ-->
+
+         <div class="factory-map">
+          <div class="workshop backGround-color-yellow" style="top: 10Px; left: 10px;">
+            <div class="workshop-name">Цех 1</div>
+            <div class="workshop-info">Выполнено: 75%</div>
+          </div>
+          <div class="workshop backGround-color-red" style="top: 10Px; left: 130px;">
+            <div class="workshop-name">Цех 2</div>
+            <div class="workshop-info">Выполнено: 50%</div>
+          </div>
+          <div class="workshop backGround-color-green" style="top: 130px; left: 130px;">
+            <div class="workshop-name">Цех 3</div>
+            <div class="workshop-info">Выполнено: 90%</div>
+          </div>
+          <div class="workshop backGround-color-red"" style="top:130px; left: 260px;">
+            <div class="workshop-name">Цех 4</div>
+            <div class="workshop-info">Выполнено: 25%</div>
+          </div>
+
+          <div class="workshop backGround-color-red"" style="top:310px; left: 400px;">
+            <div class="workshop-name">Цех 5</div>
+            <div class="workshop-info">Выполнено: 25%</div>
+          </div>
+
+          <div class="workshop backGround-color-green" style="top:130px; left: 530px;">
+            <div class="workshop-name">Цех 6</div>
+            <div class="workshop-info">Выполнено: 85%</div>
+          </div>
+
+          <div class="workshop backGround-color-green" style="top:310px; left: 10px;">
+            <div class="workshop-name">Цех 7</div>
+            <div class="workshop-info">Выполнено: 85%</div>
+          </div>
       </div>
       <!--нижняя панель управления виджетом-->
  <div class="widget-images-panel">
@@ -414,8 +550,9 @@
 <!--Конец чата-->
 
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../scripts/directorScript_v2.js" ></script>
+
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>

@@ -270,9 +270,47 @@ function handleRowClick(index) {
   widgetTextColumn.style.display = 'block';
   rowStates[index] = true;
 }
+$(document).ready(function() {
+  $('.clickable-cell').click(function() {
+    // Очистка содержимого выпадающей таблицы
+    $('#dropdownTable').empty();
+
+    // Получение содержимого ячеек строки
+    var cells = $(this).parent().children();
+    var rowContent = '';
+    cells.each(function() {
+      rowContent += '<td>' + $(this).text() + '</td>';
+    });
+
+    // Добавление строки в выпадающую таблицу
+    $('#dropdownTable').append('<tr>' + rowContent + '</tr>');
+
+    // Позиционирование и отображение выпадающей таблицы
+    var dropdownContainer = $('#dropdownTableContainer');
+    dropdownContainer.css('display', 'block');
+    dropdownContainer.offset({ top: $(this).offset().top + $(this).outerHeight(), left: $(this).offset().left });
+  });
+});
 
 
+$(document).ready(function() {
+  $('.workshop-title1').click(function() {
+    $(this).toggleClass('active');
+    $(this).next('.projects1').slideToggle();
+  });
 
+  $('.projects_name_list').click(function() {
+    $(this).toggleClass('active');
+    $(this).next('.sub-projects1').slideToggle();
+  });
+
+  $('.TaskWorkShopTask.tasks_name_list').click(function() {
+    $(this).toggleClass('active');
+    $(this).next('.sub-task-projects1').slideToggle();
+  });
+
+  // И так далее...
+});
 //Сортировка 
 
 
@@ -438,3 +476,4 @@ projects.forEach((project) => {
   })
 
 });
+

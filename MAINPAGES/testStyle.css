@@ -1,17 +1,47 @@
-.workshop {
-    margin-bottom: 20px;
-  }
-  
-  .workshop-title, .project {
-    cursor: pointer;
-  }
-  
-  .projects, .sub-projects {
-    display: none;
-    list-style: none;
-    padding-left: 20px;
-  }
-  
-  .projects.active, .sub-projects.active {
-    display: block;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.table-container {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: none;
+}
+
+.sub-table {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+}
+
+.hidden {
+  display: none;
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clickable-row:hover {
+  background-color: #f9f9f9;
+}

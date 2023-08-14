@@ -1,20 +1,11 @@
-const projects = document.querySelectorAll('.project');
+const rows = document.querySelectorAll('.clickable-row');
 
-projects.forEach((project) => {
-  const subProjects = project.querySelector('.sub-projects');
+rows.forEach(row => {
+  const workerTable = row.nextElementSibling.querySelector('.WorkersBlock');
 
-  project.addEventListener('click', () => {
-    subProjects.classList.toggle('active');
-  });
-});
-
-const workshops = document.querySelectorAll('.workshop');
-
-workshops.forEach((workshop) => {
-  const title = workshop.querySelector('.workshop-title');
-  const projects = workshop.querySelector('.projects');
-
-  title.addEventListener('click', () => {
-    projects.classList.toggle('active');
+  row.addEventListener('click', () => {
+    if (workerTable) {
+      workerTable.classList.toggle('hidden');
+    }
   });
 });

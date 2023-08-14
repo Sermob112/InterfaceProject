@@ -460,21 +460,41 @@
   border: 2px solid black;
   font-size: 20px;
   border-radius: 5px;
-  flex-shrink: 0; /* Запрет сжатия элемента */
+  flex-shrink: 0;
   margin-bottom: 20px;
 }
-.lineOfEquipment{
+
+.lineOfEquipment {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   padding: 10px;
   gap: 55px;
   width: 90%;
+  justify-content: flex-start;
 }
 
+.rightLineOfEquipment {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 55px;
+  width: 90%;
+  justify-content: flex-end;
+}
 
+.centerLineOfEquipment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  gap: 55px;
+  width: 90%;
+  justify-content: center;
+}
 
-
-.TsekhMap{
+.TsekhMap {
   width: 90%;
   padding: 20px;
   height: 90%;
@@ -483,9 +503,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
-
-
 
 .backGround-color-red{
   background-color: #FB6161;
@@ -502,8 +521,52 @@
 .backGround-color-grey{
   background-color: #EBE7E7;
 }
-
-
+.blockName {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-right: auto;
+  color: #444343;
+}
+.factory-map {
+  width: 97%;
+  height: 50vh;
+  padding: 10px;
+  border: 1px solid #e0dde0;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.workshop {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #222222; /* Добавляем обводку */
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #222222;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+}
+.workshop:hover {
+  background-color: #bebebe;
+}
+.workshop-name {
+  align-self: flex-start;
+  margin-bottom: 5px;
+}
+.workshop-info {
+  font-size: 12px;
+  align-self: center;
+}
+.widget-content{
+  padding: 10px;
+}
 
 
 /* """"""""""""Виджет сотрудников"""""""""""""""""""" */
@@ -577,3 +640,138 @@
 
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили панели виджетов*№№№№№№№№№№№№№№№№№№№*/
 /* План выполнения заказов */
+
+.container {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+/* Стиль для заголовков с тенью */
+.workshop-title1, .projects_name_list, .TaskWorkShopTask.tasks_name_list {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
+}
+.workshop-title1 {
+  /* ... остальные стили ... */
+  margin-bottom: 0; /* Убираем нижний отступ */
+}
+
+.projects1 {
+  /* ... остальные стили ... */
+  margin-top: 0; /* Убираем верхний отступ */
+}
+.active {
+  background-color: #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при активации */
+}
+
+/* Стили для списков и подсписков */
+.projects1, .sub-projects1, .sub-task-projects1 {
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+
+/* Стиль для элементов задач */
+.TaskWorkShopTask {
+  padding: 10px;
+  border: 1px solid #ccc;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.GreenTask {
+  background-color: #d0f3d0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.BlueInfo {
+  background-color: #cce0ff;
+}
+
+.YellowTask {
+  background-color: #f8e5ac;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.RedTask {
+  background-color: #fdd4d4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для описания задач и даты выполнения */
+.tasks-info, .task-info {
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+  margin-top: 5px;
+}
+
+.GrayInfo {
+  background-color: #f2f2f2;
+}
+
+.user-row {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar img {
+  width: 40px; /* Размер аватарки */
+  height: 40px;
+  border-radius: 50%; /* Для создания круглой аватарки */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; /* Отступ между аватаркой и деталями пользователя */
+}
+
+.user-name{
+  margin: 0;
+  color: #000000; /* Изменяем цвет имени пользователя */
+}
+
+.user-status {
+  color: #2c2c2c; /* Цвет для статуса */
+}
+.user-text-color {
+  color: #050505; /* Замените на желаемый цвет */
+}
+.user-id {
+  margin: 0;
+  font-size: 14px;
+  color: #000000; /* Серый цвет для табельного номера */
+}
+.with-margin {
+  margin-right: 10px; /* Добавляем отступ справа 10 пикселей */
+}
+.icon-and-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon-and-text img {
+  margin-right: 10px; /* Отступ между иконкой и надписью */
+}
+
+.icon-text {
+  margin: 0; /* Убираем отступы по умолчанию у параграфа */
+}
