@@ -1,38 +1,76 @@
 
-  .widget-header {
-    background-color: #ddd;
-    padding: 8px;
-    cursor: move;
-    display: flex;
-    justify-content: flex-end; /* Выравнивание элементов по правому краю */
-    padding: 10px;
-  }
-  
+.resizable-widget {
+  flex: 0.99;
+  position: relative;
+  min-width: 300px;
+  min-height: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin-right: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .resizable-widget {
-    flex: 1; /* Равномерное распределение пространства между виджетами */
-    position: relative;
-    min-width: 400px;
-    min-height: 600px;
-    background-color: #FBFBFC;
-    border: 1px solid #000;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    margin-right: 10px; /* Добавляем немного отступа между виджетами */
-    
-  }
-  
-  /* Дополнительный стиль для кнопок закрытия */
-  .close-button {
-    background-color: #ccc;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: #fff;
-    cursor: pointer;
-  }
+.resizable-widget:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
 
+/* Стиль для заголовка виджета */
+.widget-header {
+  background-color: #b9d5f1;
+  padding: 8px;
+  cursor: move;
+  display: flex;
+  justify-content: flex-end; /* Изменяем выравнивание на правое */
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+}
+
+/* Обновленные стили для кнопки закрытия */
+.close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px; /* Изменяем отступ с левой стороны */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button img {
+  width: 44px;
+  height: 24px;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+}
+
+/* Стили для нижней панели управления виджетом */
+.widget-images-panel {
+  background-color: #010508;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.widget-images-panel img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.widget-images-panel img:hover {
+  transform: scale(1.2);
+}
   .resize-handle {
     position: absolute;
     bottom: 0;
@@ -62,89 +100,95 @@
   }
 
   /* Стилизация таблицы */
-.widget-table {
-  font-family: "RobotoFlex", sans-serif;
-  font-size: 16px;
-  color: #242222;
-  width: 100%;
-  border-collapse: separate; /* Используем отдельные границы для ячеек */
-  border-spacing: 0;
-  margin-top: 10px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Тень */
-  overflow: hidden;
-}
+  .widget-columns {
+    display: flex;
+    padding: 10px;
+    width: 98%;
+    height: 98%;
+  }
+  
+  .widget-table-column {
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    height: 80%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .widget-table {
+    font-family: "RobotoFlex", sans-serif;
+    font-size: 16px;
+    color: #242222;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .widget-table th,
+  .widget-table td {
+    padding: 12px 16px;
+    text-align: center;
+  }
+  
+  .widget-table th {
+    position: relative;
+  }
+  
+  .widget-table th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+  }
+  
+  .widget-table th:nth-child(1),
+  .widget-table td:nth-child(1) {
+    width: 20px;
+  }
+  
+  .widget-table th:nth-child(2),
+  .widget-table td:nth-child(2) {
+    width: 120px;
+  }
+  
+  .widget-table tbody tr {
+    border-bottom: 1px solid #d1d1d1;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .widget-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .widget-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .widget-table th,
+  .widget-table td {
+    border: none;
+  }
+  
+  .widget-table td.green-row {
+    background-color: #e6f3ec;
+  }
+  
+  .widget-table td.highlight {
+    position: relative;
+  }
+  
 
-.widget-table th,
-.widget-table td {
-  padding: 12px 16px;
-  text-align: center;
-}
-
-.widget-table th {
-  position: relative;
-}
-
-.widget-table th::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ccc;
-}
-
-.widget-table th:nth-child(1),
-.widget-table td:nth-child(1) {
-  width: 20px;
-}
-
-.widget-table th:nth-child(2),
-.widget-table td:nth-child(2) {
-  width: 120px;
-}
-
-.widget-table tbody tr {
-  border-bottom: 1px solid #ccc;
-  transition: background-color 0.2s ease-in-out; /* Анимация при наведении */
-}
-
-.widget-table tbody tr:hover {
-  background-color: #f2f2f2; /* Изменение цвета при наведении */
-}
-
-.widget-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.widget-table th,
-.widget-table td {
-  border: none;
-}
-
-/* Стили для разных статусов */
-.widget-table td.green-row {
-  background-color: #e1f3df;
-}
-
-.widget-table td.highlight {
-  position: relative;
-}
-
-.widget-table td.highlight span {
-  background-color: #fffacd;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.widget-table tr.red-row {
-  background-color: #f8e5e5;
-}
+  .widget-table tr.red-row {
+    background-color: #fca3a3;
+  }
  /* .highlight{
   background-color: aqua;
   line-height: 1;
@@ -153,28 +197,40 @@
   border-radius: 5px;
  } */
 
- .highlight {
-  position: relative;
-}
 
-.highlight span {
+
+.highlight-yellow span {
   display: inline-block;
   background-color: rgb(242, 250, 136);
   padding: 2px 6px; /* Подберите отступы по вашему усмотрению */
   margin: 0;
   border-radius: 5px;
 }
+.highlight-green span {
+  display: inline-block;
+  background-color: rgb(57, 247, 130);
+  padding: 2px 6px; /* Подберите отступы по вашему усмотрению */
+  margin: 0;
+  border-radius: 5px;
+}
+.highlight-red span {
+  display: inline-block;
+  background-color: rgb(247, 127, 127);
+  padding: 2px 6px; /* Подберите отступы по вашему усмотрению */
+  margin: 0;
+  border-radius: 5px;
+}
   .red-row {
-    background-color: rgb(231, 130, 130);
+    background-color: rgb(238, 13, 13);
   }
   
   .green-row {
-    background-color: rgb(118, 243, 118);
+    background-color: rgb(161, 245, 161);
     border-radius: 2px;
   }
   
   .yellow-row {
-    background-color: rgb(243, 243, 117);
+    background-color: rgb(252, 252, 168);
   }
 
 
@@ -210,38 +266,73 @@
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #d1d1d1;
     display: flex;
     flex-direction: column;
     height: 80%;
     overflow: hidden;
-
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Анимации */
-    transform: translateY(0); /* Начальное состояние */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
   }
-  
+
+  /* //Выпадающая панель """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+   */
   .widget-text-column:hover {
-    transform: translateY(-5px); /* Изменение положения при наведении */
+    transform: translateY(-5px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   }
   
   .widget-text-top {
-    padding-bottom: 10px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .widget-text-bottom {
-    flex-grow: 1;
-    overflow: hidden;
+  .widget-text-top h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
   }
   
   .widget-text-content {
     flex-grow: 1;
     padding: 10px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.4;
+  }
+  
+  .widget-text-bottom {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .file-panel {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #d1d1d1;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .file-panel h4 {
+    font-size: 16px;
+  }
+  
+  .file-panel img {
+    width: 20px;
+    height: 20px;
   }
   
   .widget-images-panel {
-    width: 160px;
+    width: flex;
     border: 1px solid #ccc;
     background-color: #ffffff;
     padding: 10px;
@@ -301,11 +392,8 @@
   }
   
   .chat-widget-toggle {
-    width: 50px;
-    height: 50px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 50%;
+
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,8 +403,8 @@
 
 .chat-icon{
 
- width: 50px;
-    height: 50px;
+ width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
