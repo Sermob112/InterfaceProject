@@ -200,48 +200,34 @@ border-radius: 10px; /* Скругление углов поля */
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили панели виджетов*№№№№№№№№№№№№№№№№№№№*/
 .vidgetLine {
   display: flex;
-  align-items: center;
+  margin-top: 10px;
+  padding-left: 40px;
   gap: 10px;
-  margin-left: 20px;
+  align-items: center; /* Выравнивание элементов по вертикали */
+
 }
 
 .vidgetLine button {
-  background-color: transparent;
-  border: none;
-  padding: 8px 16px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Добавляем анимацию для opacity */
-  color: #5c5b5b;
-  font-weight: bold;
-  font-size: 14px;
-  position: relative; /* Добавляем относительное позиционирование */
-}
-
-.vidgetLine button:before {
-  content: "";
-  position: absolute;
-  bottom: -5px; /* Расположение полоски под кнопкой */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #2456fc; /* Цвет полоски */
-  opacity: 0; /* Изначально полоска невидима */
-  transition: opacity 0.3s ease; /* Добавляем анимацию для opacity */
+  transition: background-color 0.3s ease; /* Добавляем анимацию перехода цвета фона */
 }
 
 .vidgetLine button:hover {
-  color: #555;
-  transform: scale(1.1);
+  background-color: #f5f5f5; /* Изменяем цвет фона при наведении */
 }
 
 .vidgetLine button.activeButton {
-  color: #5162fc; /* Изменяем цвет текста для активной кнопки */
+  background-color: #719fdc;
 }
 
-.vidgetLine button.activeButton:before {
-  opacity: 1; /* Показываем полоску при активации кнопки */
-}
-/* 
 .proizvodstvoImg,
 .financeImg,
 .planirovanieImg,
@@ -250,7 +236,7 @@ border-radius: 10px; /* Скругление углов поля */
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease; /* Добавляем анимацию масштабирования */
 }
 
 .vidgetLine button:hover .proizvodstvoImg,
@@ -258,8 +244,8 @@ border-radius: 10px; /* Скругление углов поля */
 .vidgetLine button:hover .planirovanieImg,
 .vidgetLine button:hover .personalImg,
 .vidgetLine button:hover .ezhednevnikImg {
-  transform: scale(1.1); 
-} */
+  transform: scale(1.1); /* Увеличиваем масштаб при наведении */
+}
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили пользователя*№№№№№№№№№№№№№№№№№№№*/
 .user-profile {
   display: flex;
