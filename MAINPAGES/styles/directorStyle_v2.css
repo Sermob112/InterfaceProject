@@ -62,70 +62,89 @@
   }
 
   /* Стилизация таблицы */
-  .widget-table {
-    font-family: "RobotoFlex", sans-serif; /* Шрифт RobotoFlex */
-    font-size: 16px; /* Размер шрифта 18px */
-    color: #242222;
-    width: 100%; /* Занимает половину ширины виджета */
-    border-collapse: collapse;
-    margin-top: 10px;
-    border-radius: 10px; /* Добавляем скругление краев */
-  }
-  
-  .widget-table th,
-  .widget-table td {
-    padding: 8px;
-    text-align: center;
-  }
-
-  .widget-table th {
-    position: relative;
- 
-  }
-  .widget-table th::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ccc; /* Цвет горизонтальной линии */
-  }
-
-  .widget-table th:nth-child(1),
-.widget-table td:nth-child(1) {
-  width: 20px; 
+.widget-table {
+  font-family: "RobotoFlex", sans-serif;
+  font-size: 16px;
+  color: #242222;
+  width: 100%;
+  border-collapse: separate; /* Используем отдельные границы для ячеек */
+  border-spacing: 0;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Тень */
+  overflow: hidden;
 }
+
+.widget-table th,
+.widget-table td {
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.widget-table th {
+  position: relative;
+}
+
+.widget-table th::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.widget-table th:nth-child(1),
+.widget-table td:nth-child(1) {
+  width: 20px;
+}
+
 .widget-table th:nth-child(2),
 .widget-table td:nth-child(2) {
-  width: 120px; 
+  width: 120px;
 }
-/* 
-.widget-table th:nth-child(4),
-.widget-table td:nth-child(4) {
-  width: 50px; 
-}
-.widget-table th:nth-child(5),
-.widget-table td:nth-child(5) {
-  width: 50px; 
-}
-.widget-table th:nth-child(6),
-.widget-table td:nth-child(6) {
-  width: 50px; 
-} */
-  
-  .widget-table tbody tr {
-    border-bottom: 1px solid #ccc; /* Горизонтальная полоса между строками */
-  }
-  .widget-table tbody tr:last-child {
-    border-bottom: none; /* Убираем бордер для последней строки */
-  }
-  /* Убираем границы */
-  .widget-table th,
-  .widget-table td {
 
-    border: none;
-  }
+.widget-table tbody tr {
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.2s ease-in-out; /* Анимация при наведении */
+}
+
+.widget-table tbody tr:hover {
+  background-color: #f2f2f2; /* Изменение цвета при наведении */
+}
+
+.widget-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.widget-table th,
+.widget-table td {
+  border: none;
+}
+
+/* Стили для разных статусов */
+.widget-table td.green-row {
+  background-color: #e1f3df;
+}
+
+.widget-table td.highlight {
+  position: relative;
+}
+
+.widget-table td.highlight span {
+  background-color: #fffacd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.widget-table tr.red-row {
+  background-color: #f8e5e5;
+}
  /* .highlight{
   background-color: aqua;
   line-height: 1;
@@ -187,60 +206,66 @@
   }
   
   .widget-text-column {
- 
     width: 39%;
     padding: 10px;
-    
     box-sizing: border-box;
-
-    border-radius: 10px; /* Скругление углов */
-    border: 1px solid #ccc; /* Обводка */
+    border-radius: 10px;
+    border: 1px solid #ccc;
     display: flex;
-    align-items: left;
-    justify-content: center;
     flex-direction: column;
-    height: 80%; /* Добавляем высоту 100% */
+    height: 80%;
     overflow: hidden;
-    display: none;
 
-    flex-direction: column; /* Изменяем направление флекс-контейнера */
-
-    
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Анимации */
+    transform: translateY(0); /* Начальное состояние */
   }
+  
+  .widget-text-column:hover {
+    transform: translateY(-5px); /* Изменение положения при наведении */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
   .widget-text-top {
-    padding-bottom: 10px; /* Отступ снизу */
+    padding-bottom: 10px;
   }
   
   .widget-text-bottom {
-    flex-grow: 1; /* Занимает оставшееся пространство */
-    overflow: hidden; /* Добавляем прокрутку при необходимости */
+    flex-grow: 1;
+    overflow: hidden;
   }
+  
   .widget-text-content {
-    flex-grow: 1; /* Занимает половину высоты */
-    padding: 10px; /* Добавляем отступ внутри .widget-text-column */
+    flex-grow: 1;
+    padding: 10px;
   }
-
+  
   .widget-images-panel {
-    width: 160px; /* Здесь ваша ширина для панели с картинками */
+    width: 160px;
     border: 1px solid #ccc;
-    background-color: #ffffff; /* Здесь ваш цвет фона */
+    background-color: #ffffff;
     padding: 10px;
     margin-left: 10px;
     border-radius: 10px;
     position: absolute;
-    bottom: 20px; /* Добавляем отступ снизу */
-    display: flex; /* Используем flex-контейнер */
-    align-items: center; /* Выравниваем по центру вертикально */
-    justify-content: flex-start; /* Выравниваем по левому краю горизонтально */
-
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Анимации */
+    transform: translateY(0); /* Начальное состояние */
   }
-
+  
+  .widget-images-panel:hover {
+    transform: translateY(-3px); /* Изменение положения при наведении */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
   .file-panel {
     width: 100%;
     text-align: left;
-
   }
-
 
 
   .chat-widget-container {
@@ -652,15 +677,17 @@
   background-color: #f2f2f2;
   padding: 10px;
   border: 1px solid #ccc;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
   transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
 }
 .workshop-title1 {
-  /* ... остальные стили ... */
+  height: 10px; /* Устанавливаем высоту 40px */
+  font-size: 14px;
+
   margin-bottom: 0; /* Убираем нижний отступ */
 }
 
@@ -684,7 +711,6 @@
 .TaskWorkShopTask {
   padding: 10px;
   border: 1px solid #ccc;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -727,9 +753,11 @@
 }
 
 .user-avatar img {
+  padding-top: 5px;
   width: 40px; /* Размер аватарки */
   height: 40px;
   border-radius: 50%; /* Для создания круглой аватарки */
+  justify-content: center;
 }
 
 .user-info {
@@ -766,12 +794,35 @@
 .icon-and-text {
   display: flex;
   align-items: center;
+  height: 10px; /* Устанавливаем высоту 20px */
 }
 
 .icon-and-text img {
   margin-right: 10px; /* Отступ между иконкой и надписью */
 }
 
-.icon-text {
+.TaskBasicText.icon-text {
+  font-size: 16px;
   margin: 0; /* Убираем отступы по умолчанию у параграфа */
+}
+
+.arrow-picture {
+  width: 20px; /* Устанавливаем ширину 20px */
+  height: 10px; /* Устанавливаем высоту 10px */
+} /* Устанавливаем высоту 20px */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 520px; /* Добавьте нужный вам отступ слева */
+}
+
+.frame {
+  background-color: #ffffff; /* Изменяем цвет фона */
+  height: 60px;
+
+
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
 }

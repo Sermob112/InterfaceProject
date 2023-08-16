@@ -46,24 +46,27 @@ body {
 
 
 }
-
+.logo-vidget-container {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   /* Укажите размеры вашего логотипа */
-  width: 50px;
-  height: 70px;
+  width: 20px;
+  height: 40px;
   
   /* Добавляем отступы слева и сверху */
-  margin-top: 20px;
-  margin-left: 40px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .logo-2 {
   /* Укажите размеры вашего логотипа */
-  width: 50px;
-  height: 70px;
-  top: 20px;
-  right: 40px;
+  width: 20px;
+  height: 40px;
+  top: 10px;
+  right: 20px;
   position:  absolute;
   
   /* Добавляем отступы слева и сверху */
@@ -195,80 +198,68 @@ border-radius: 10px; /* Скругление углов поля */
 
 }
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили панели виджетов*№№№№№№№№№№№№№№№№№№№*/
-.vidgetLine{
+.vidgetLine {
   display: flex;
-  padding: 1% 0px 0px 3%;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
 }
 
-.vidgetLine button{
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  border: 2.5px solid black;
-  border-radius: 10px;
+.vidgetLine button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Добавляем анимацию для opacity */
+  color: #5c5b5b;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative; /* Добавляем относительное позиционирование */
 }
 
-.vidgetContext{
-  width: 95%;
-  height: 80%;
-  margin: auto;
-  padding-top: 15px;
-  overflow: hidden;
+.vidgetLine button:before {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Расположение полоски под кнопкой */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2456fc; /* Цвет полоски */
+  opacity: 0; /* Изначально полоска невидима */
+  transition: opacity 0.3s ease; /* Добавляем анимацию для opacity */
 }
 
-.vidgetLine button.activeButton{
-  background-color: #71DC7B;
+.vidgetLine button:hover {
+  color: #555;
+  transform: scale(1.1);
 }
 
-.vidgetContext .activeBlock{
-  display: block;
+.vidgetLine button.activeButton {
+  color: #5162fc; /* Изменяем цвет текста для активной кнопки */
 }
 
-.proizvodstvoImg{
-  scale: 1;
-  width: 143.5%;
+.vidgetLine button.activeButton:before {
+  opacity: 1; /* Показываем полоску при активации кнопки */
+}
+/* 
+.proizvodstvoImg,
+.financeImg,
+.planirovanieImg,
+.personalImg,
+.ezhednevnikImg {
+  width: 100%;
   height: 100%;
-  right: 5px;
-  bottom: 0px;
-  position: relative;
+  object-fit: contain;
+  transition: transform 0.3s ease; 
 }
 
-.financeImg{
-  scale: 1;
-  width: 143.5%;
-  height: 100%;
-  right: 5px;
-  bottom: 0px;
-  position: relative;
-}
-
-.planirovanieImg{
-  scale: 1;
-  width: 143.5%;
-  height: 100%;
-  right: 5px;
-  bottom: 0px;
-  position: relative;
-}
-
-.personalImg{
-  scale: 1;
-  width: 143.5%;
-  height: 100%;
-  right: 5px;
-  bottom: 0px;
-  position: relative;
-}
-
-.ezhednevnikImg{
-  scale: 1;
-  width: 143.5%;
-  height: 100%;
-  right: 5px;
-  bottom: 0px;
-  position: relative;
-}
+.vidgetLine button:hover .proizvodstvoImg,
+.vidgetLine button:hover .financeImg,
+.vidgetLine button:hover .planirovanieImg,
+.vidgetLine button:hover .personalImg,
+.vidgetLine button:hover .ezhednevnikImg {
+  transform: scale(1.1); 
+} */
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили пользователя*№№№№№№№№№№№№№№№№№№№*/
 .user-profile {
   display: flex;
@@ -276,7 +267,7 @@ border-radius: 10px; /* Скругление углов поля */
   justify-content: flex-end;
   padding: 10px;
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 130px; /* Позиция слева от logo-2 */
 }
 
@@ -290,13 +281,14 @@ border-radius: 10px; /* Скругление углов поля */
 .user-name {
   font-family: "RobotoFlex", sans-serif;
   font-size: 16px;
-  color: #686868; /* Цвет имени пользователя */
-  
+  color: #1f1e1e; /* Цвет имени пользователя */
+  white-space: nowrap;
+  padding-left:10px;
 }
 .chevron-icon {
   width: 20px; /* Ширина иконки */
-  height: 20px; /* Высота иконки */
-  margin-left: 5px; /* Отступ слева от имени пользователя */
+  height: 10px; /* Высота иконки */
+  margin-left: 10px; /* Отступ слева от имени пользователя */
 }
 .settings-icon {
   width: 20px; /* Ширина левого изображения */
@@ -440,15 +432,15 @@ border-radius: 10px; /* Скругление углов поля */
   text-stroke: 1px white; /* Внешняя обводка */
 }
 .workshop-green {
-  background-color: green; /* Зеленый цех */
+  background-color: rgb(162, 245, 162); /* Зеленый цех */
 }
 
 .workshop-red {
-  background-color: red; /* Красный цех */
+  background-color: rgb(243, 141, 141); /* Красный цех */
 }
 
 .workshop-yellow {
-  background-color: yellow; /* Желтый цех */
+  background-color: rgb(248, 248, 140); /* Желтый цех */
 }
 
 .topBar{
@@ -571,7 +563,7 @@ border-radius: 10px; /* Скругление углов поля */
   margin-bottom: 0.15rem;
   position: relative;
   cursor: pointer;
-  height: 2rem;
+  height: 20px;
 }
 
 .dropdown1 {
@@ -590,7 +582,7 @@ border-radius: 10px; /* Скругление углов поля */
   border: none;
   cursor: pointer;
   width: 20rem;
-  height: 3rem;
+  height: 20px;
 }
 
 .dropdown-content1 {
@@ -648,7 +640,9 @@ border-radius: 10px; /* Скругление углов поля */
   font-size: large;
 }
 .TaskBasicText{
-  font-size: large;
+  font-size: 16px;
+  white-space: nowrap;
+  padding-left: 10px;
 }
 .WhiteTask{
   background-color: white;
