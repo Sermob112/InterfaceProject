@@ -56,6 +56,7 @@
   display: flex;
   justify-content: center;
   padding: 8px;
+  margin-top: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -239,6 +240,7 @@
     display: flex;
     align-items: flex-start;
     padding: 10px;
+
   }
   
 
@@ -577,11 +579,16 @@
   margin-bottom: 20px;
 }
 
+
+
+/* Медиа-запрос для адаптивной ширины equipmentIcon */
+
 .lineOfEquipment {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 10px;
+  overflow: scroll;
   gap: 55px;
   width: 90%;
   justify-content: flex-start;
@@ -610,11 +617,9 @@
 .TsekhMap {
   width: 90%;
   padding: 20px;
-  height: 90%;
-  padding: 10px;
-  margin: auto;
+  max-height: 400px; /* Максимальная высота контейнера */
+  overflow-y: auto; /* Вертикальная прокрутка при необходимости */
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -642,6 +647,8 @@
   margin-right: auto;
   color: #444343;
 }
+
+/* Мтили карты цехов */
 .factory-map {
   width: 97%;
   height: 50vh;
@@ -650,25 +657,33 @@
   border-radius: 10px;
   position: relative;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Создает автоматическую сетку с минимальной шириной элемента 200px */
+  gap: 20px; /* Расстояние между элементами */
+  justify-content: space-between;
+  overflow: scroll;
 }
 .workshop {
   width: 80px;
   height: 80px;
   border: 2px solid #222222; /* Добавляем обводку */
   border-radius: 10px;
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  color: #222222;
+
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .workshop:hover {
   background-color: #bebebe;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
+
 .workshop-name {
   align-self: flex-start;
   margin-bottom: 5px;
@@ -757,6 +772,9 @@
 .container {
   font-family: Arial, sans-serif;
   padding: 10px;
+  margin-bottom: 60px;
+  overflow: hidden;
+
 }
 
 /* Стиль для заголовков с тенью */
@@ -772,6 +790,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
   transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
 }
+
 .workshop-title1 {
   height: 10px; /* Устанавливаем высоту 40px */
   font-size: 14px;
@@ -782,6 +801,7 @@
 .projects1 {
   /* ... остальные стили ... */
   margin-top: 0; /* Убираем верхний отступ */
+  overflow: scroll;
 }
 .active {
   background-color: #ddd;
@@ -814,7 +834,7 @@
 }
 
 .YellowTask {
-  background-color: #f8e5ac;
+  border: 1px solid #ccc;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -852,6 +872,7 @@
   display: flex;
   align-items: center;
   color: #000000;
+
 }
 
 .user-details {
@@ -863,6 +884,7 @@
 .user-name{
   margin: 0;
   color: #000000; /* Изменяем цвет имени пользователя */
+
 }
 
 .user-status {
@@ -892,6 +914,7 @@
 .TaskBasicText.icon-text {
   font-size: 16px;
   margin: 0; /* Убираем отступы по умолчанию у параграфа */
+
 }
 
 .arrow-picture {
@@ -913,4 +936,109 @@
 
   align-items: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+
+/* """""""""""""""""""""""""""""Стили планов""""""""""""""""""""""""""""""""""""""""" */
+.plans {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  height: 99%;
+  margin-bottom: 60px;
+  
+}
+
+.plan-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 120px;
+  margin-bottom: 20px;
+}
+
+.plan-title {
+  margin: 0;
+  font-size: 24px;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.plan-title:hover {
+  color: #768efa; /* Измените цвет по вашему желанию */
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.progress-bar, .sub-progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+}
+
+.sub-progress-bar {
+  background-color: #71DC7B;
+}
+
+.progress-value, .sub-progress-value {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.sub-projects {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333333;
+  display: none;
+  border-collapse: collapse;
+}
+
+.sub-projects th, .sub-projects td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sub-projects th {
+  font-weight: bold;
+}
+
+.sub-projects td:last-child {
+  text-align: center;
+}
+
+.visible {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.plan {
+  margin-bottom: 20px; /* Добавляем нижний отступ для отступа от панели */
+}
+
+#draggableHeader {
+  cursor: grab;
 }

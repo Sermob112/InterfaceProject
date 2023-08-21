@@ -6,7 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../styles/directorStyle_v2.css">
-  <link rel="stylesheet" href="../styles/GlavaTsecha.css">
+
   <link rel="stylesheet" href="../styles/style.css">
 
 </head>
@@ -18,10 +18,10 @@
      <!--Полоска виджетов-->
      <div class="vidgetLine">
       <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> Ежедневник </button>
-      <button type="button" data-widget="widget2" class="func" data-target="wnd2"> Финансы </button>
-      <button type="button" data-widget="widget3" class="func" data-target="wnd3"> Планирование </button>
-      <button type="button" data-widget="widget4" class="func" data-target="wnd4"> Персонал </button>
-      <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button>
+      <button type="button" data-widget="widget2" class="func" data-target="wnd2"> Схема цехов </button>
+      <button type="button" data-widget="widget3" class="func" data-target="wnd3"> Список сотрудников </button>
+      <button type="button" data-widget="widget4" class="func" data-target="wnd4"> Планирование </button>
+      <!-- <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button> -->
     </div>
 
     <!-- <div class="vidgetLine">
@@ -154,16 +154,16 @@
   </div>
  <!--виджет Цехов -->
 
-  <div class="resizable-widget" id="widget5">
+  <!-- <div class="resizable-widget" id="widget5">
     <div class="widget-header">
-      <button class="close-button">Close</button>
+      <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
     </div>
-    <div class="widget-content">
+    <div class="container">
       <!-- Widget content goes here -->
       <!-- Схема цеха -->
-      <div class="widget-columns">
-      <div class="widget-table-column">
-        <span class="blockName">Схема цехов</span>
+
+
+        <!-- <span class="blockName">Схема цехов</span>
         <hr style="padding: 1px; width:99%;"/>
         <div class="TsekhMap">
           <div class="lineOfEquipment">
@@ -183,11 +183,9 @@
             <div class="equipmentIcon backGround-color-gryellowey">16</div>
           </div>
         </div>
-
       </div>
-    </div>
  <!--нижняя панель управления виджетом-->
- <div class="widget-images-panel">
+ <!-- <div class="widget-images-panel">
   <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
@@ -196,16 +194,16 @@
 </div>
 
     <div class="resize-handle"></div>
-  </div>
+  </div> --> 
 
   
  <!--виджет управления персоналом-->
 
-</div>
+
 <div class="resizable-widget" id="widget3">
   <div class="widget-header">
     <span class="blockName">Список сотрудников цеха</span>
-    <button class="close-button">Close</button>
+    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
   </div>
   
     
@@ -230,44 +228,44 @@
                         <li class="sub-project1">
                           <div class="TaskWorkShopTask tasks_name_list">
                             <img  class = "arrow-picture" src="../../img/Arrowdown.png"" alt="Arrowdown">
-                            <p class="TaskBasicText">Имя сотрудника</p>
-                            <p class="TaskBasicText">Статус</p>
+                            <p class="TaskBasicText ">Имя сотрудника</p>
+                            <p class="TaskBasicText" class="highlight-yellow" >Статус</p>
                             <p class="TaskBasicText with-margin">Табельный номер</p>
                           </div>
             
                           <ul class="sub-task-projects1">
                             <li class="sub-task-project1">
-                              <div class="TaskWorkShopTask info_name_list RedTask">
+                              <div class="TaskWorkShopTask info_name_list YellowTask">
                                 <div class="user-avatar">
                                   <img src="../../img/avatar.png" alt="Аватар пользователя">
                                 </div>
-                                <div class="user-info">
+                            
                                   <p class="user-name">Имя пользователя</p>
-                                  <p class="user-status">Работает</p>
+                                  <p class="highlight-yellow"><span>Работает</span></p>
                                   <p class="user-id">Табельный номер</p>
-                                </div>
+                               
                               </div>
                               <li class="sub-task-project1">
-                                <div class="TaskWorkShopTask info_name_list GreenTask ">
+                                <div class="TaskWorkShopTask info_name_list YellowTask">
                                   <div class="user-avatar">
                                     <img src="../../img/avatar.png" alt="Аватар пользователя">
                                   </div>
-                                  <div class="user-info">
+                                 
                                     <p class="user-name">Имя пользователя</p>
-                                    <p class="user-status">Работает</p>
+                                    <p class="highlight-yellow"><span>Работает</span></p>
                                     <p class="user-id">Табельный номер</p>
-                                  </div>
+                                 
                                 </div>
                                 <li class="sub-task-project1">
                                   <div class="TaskWorkShopTask info_name_list YellowTask">
                                     <div class="user-avatar">
                                       <img src="../../img/avatar.png" alt="Аватар пользователя">
                                     </div>
-                                    <div class="user-info">
+                                  
                                       <p class="user-name">Имя пользователя</p>
-                                      <p class="user-status">Работает</p>
+                                      <p class="highlight-yellow"><span>Работает</span></p>
                                       <p class="user-id">Табельный номер</p>
-                                    </div>
+                                 
                                   </div>
                             </li>
                           </ul>
@@ -299,33 +297,33 @@
                                 <div class="user-avatar">
                                   <img src="../../img/avatar.png" alt="Аватар пользователя">
                                 </div>
-                                <div class="user-info">
+                      
                                   <p class="user-name">Имя пользователя</p>
                                   <p class="user-status">Работает</p>
                                   <p class="user-id">Табельный номер</p>
-                                </div>
+                            
                               </div>
                               <li class="sub-task-project1">
                                 <div class="TaskWorkShopTask info_name_list GreenTask ">
                                   <div class="user-avatar">
                                     <img src="../../img/avatar.png" alt="Аватар пользователя">
                                   </div>
-                                  <div class="user-info">
+                               
                                     <p class="user-name">Имя пользователя</p>
                                     <p class="user-status">Работает</p>
                                     <p class="user-id">Табельный номер</p>
-                                  </div>
+                            
                                 </div>
                                 <li class="sub-task-project1">
                                   <div class="TaskWorkShopTask info_name_list YellowTask">
                                     <div class="user-avatar">
                                       <img src="../../img/avatar.png" alt="Аватар пользователя">
                                     </div>
-                                    <div class="user-info">
+                             
                                       <p class="user-name">Имя пользователя</p>
                                       <p class="user-status">Работает</p>
                                       <p class="user-id">Табельный номер</p>
-                                    </div>
+                                    
                                   </div>
                           
                             </li>
@@ -370,33 +368,33 @@
                                           <div class="user-avatar">
                                             <img src="../../img/avatar.png" alt="Аватар пользователя">
                                           </div>
-                                          <div class="user-info">
+                                      
                                             <p class="user-name">Имя пользователя</p>
                                             <p class="user-status">Работает</p>
                                             <p class="user-id">Табельный номер</p>
-                                          </div>
+                                      
                                         </div>
                                         <li class="sub-task-project1">
                                           <div class="TaskWorkShopTask info_name_list GreenTask ">
                                             <div class="user-avatar">
                                               <img src="../../img/avatar.png" alt="Аватар пользователя">
                                             </div>
-                                            <div class="user-info">
+                                          
                                               <p class="user-name">Имя пользователя</p>
                                               <p class="user-status">Работает</p>
                                               <p class="user-id">Табельный номер</p>
-                                            </div>
+                                          
                                           </div>
                                           <li class="sub-task-project1">
                                             <div class="TaskWorkShopTask info_name_list YellowTask">
                                               <div class="user-avatar">
                                                 <img src="../../img/avatar.png" alt="Аватар пользователя">
                                               </div>
-                                              <div class="user-info">
+                                   
                                                 <p class="user-name">Имя пользователя</p>
                                                 <p class="user-status">Работает</p>
                                                 <p class="user-id">Табельный номер</p>
-                                              </div>
+                                      
                                             </div>
                                     
                                       </li>
@@ -405,17 +403,6 @@
                                 </ul>
                               </li>
                             </ul>
-          
-               
-          
-                
-
-
-
-
-
-
-
             </div>
         
          
@@ -441,17 +428,17 @@
 
 <div class="resizable-widget" id="widget4">
   <div class="widget-header">
-    <button class="close-button">Close</button>
+    <span class="blockName">Планирование</span>
+    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
   </div>
   <div class="widget-content">
     <!-- Widget content goes here -->
     <!-- Планы заказов -->
-    <div class="workshops">
-      <div class="widget-table-column">
-      <div class="workshop">
-        <ul class="projects">
-          <li class="project">
-            План №3 <progress id="progressWhole" value="0" max="100"></progress>
+    <div class="plans">
+        <ul class="plan-contents">
+          <li class="plan">
+            <h4 class="plan-title">План №1</h4>
+            <progress id="progressWhole" value="81" max="100"></progress>
             <!-- Выполнение заказаов -->
             <table class="sub-projects">
               <thead>
@@ -464,7 +451,7 @@
                 <tr>
                   <td>#637283e2</td>
                   <td>Заказ по кораблям модели 34r2</td>
-                  <td><progress id="progressBar" value="0" max="100"></progress>
+                  <td><progress id="progressBar" value="60" max="100"></progress>
                     <span id="progressValue">60</span>%</td>
                   <td>Заморожен</td>
                 </tr>
@@ -472,15 +459,16 @@
                 <tr>
                   <td>#637283e2</td>
                   <td>Заказ по кораблям модели 34r2</td>
-                  <td><progress id="progressBar" value="0" max="100"></progress>
+                  <td><progress id="progressBar" value="20" max="100"></progress>
                     <span id="progressValue">20</span>%</td>
                   <td>Заморожен</td>
                 </tr>
               </tbody>
             </table>
           </li>
-          <li class="project">
-            План №4 <progress id="progressWhole" value="0" max="100"></progress>
+          <li class="plan">
+            <h3 class="plan-title" id="plan3">План №2</h3>
+            <progress id="progressWhole" value="70" max="100"></progress>
             <!-- Выполнение заказаов -->
             <table class="sub-projects">
               <thead>
@@ -493,15 +481,24 @@
                 <tr>
                   <td>#637283e2</td>
                   <td>Заказ по кораблям модели 34r2</td>
-                  <td><progress id="progressBar" value="0" max="100"></progress>
-                    <span id="progressValue">80</span>%</td>
+                  <td><progress id="progressBar" value="60" max="100"></progress>
+                    <span id="progressValue">70</span>%</td>
+                  <td>Заморожен</td>
+                </tr>
+
+                <tr>
+                  <td>#637283e2</td>
+                  <td>Заказ по кораблям модели 34r2</td>
+                  <td><progress id="progressBar" value="20" max="100"></progress>
+                    <span id="progressValue">20</span>%</td>
                   <td>Заморожен</td>
                 </tr>
               </tbody>
             </table>
           </li>
-          <li class="project">
-            План №5 <progress id="progressWhole" value="0" max="100"></progress>
+          <li class="plan">
+            <h3 class="plan-title" >План №3</h3>
+            <progress id="progressWhole" value="20" max="100"></progress>
             <!-- Выполнение заказаов -->
             <table class="sub-projects">
               <thead>
@@ -514,18 +511,23 @@
                 <tr>
                   <td>#637283e2</td>
                   <td>Заказ по кораблям модели 34r2</td>
-                  <td><progress id="progressBar" value="0" max="100"></progress>
-                    <span id="progressValue">80</span>%</td>
+                  <td><progress id="progressBar" value="70" max="100"></progress>
+                    <span id="progressValue">70</span>%</td>
+                  <td>Заморожен</td>
+                </tr>
+
+                <tr>
+                  <td>#637283e2</td>
+                  <td>Заказ по кораблям модели 34r2</td>
+                  <td><progress id="progressBar" value="20" max="100"></progress>
+                    <span id="progressValue">20</span>%</td>
                   <td>Заморожен</td>
                 </tr>
               </tbody>
             </table>
-
           </li>
         </ul>
       </div>
-    </div>
-  </div>
 
   </div>
   <!--нижняя панель управления виджетом-->
@@ -550,45 +552,40 @@
      <div class="resizable-widget" id="widget2">
       <div class="widget-header">
         <span class="blockName">Схема цехов</span>
-        <button class="close-button">Close</button>
+        <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
       </div>
 
-      <div class="widget-content">
-         <!--СХЕМА ЦЕХОВ-->
-
-         <div class="factory-map">
-          <div class="workshop backGround-color-yellow" style="top: 10Px; left: 10px;">
-            <div class="workshop-name">Цех 1</div>
-            <div class="workshop-info">Выполнено: 75%</div>
-          </div>
-          <div class="workshop backGround-color-red" style="top: 10Px; left: 130px;">
-            <div class="workshop-name">Цех 2</div>
-            <div class="workshop-info">Выполнено: 50%</div>
-          </div>
-          <div class="workshop backGround-color-green" style="top: 130px; left: 130px;">
-            <div class="workshop-name">Цех 3</div>
-            <div class="workshop-info">Выполнено: 90%</div>
-          </div>
-          <div class="workshop backGround-color-red"" style="top:130px; left: 260px;">
-            <div class="workshop-name">Цех 4</div>
-            <div class="workshop-info">Выполнено: 25%</div>
-          </div>
-
-          <div class="workshop backGround-color-red"" style="top:310px; left: 400px;">
-            <div class="workshop-name">Цех 5</div>
-            <div class="workshop-info">Выполнено: 25%</div>
-          </div>
-
-          <div class="workshop backGround-color-green" style="top:130px; left: 530px;">
-            <div class="workshop-name">Цех 6</div>
-            <div class="workshop-info">Выполнено: 85%</div>
-          </div>
-
-          <div class="workshop backGround-color-green" style="top:310px; left: 10px;">
-            <div class="workshop-name">Цех 7</div>
-            <div class="workshop-info">Выполнено: 85%</div>
-          </div>
+      <div class="factory-map">
+        <div class="workshop backGround-color-yellow">
+          <div class="workshop-name">Цех 1</div>
+          <div class="workshop-info">Выполнено: 75%</div>
+        </div>
+        <div class="workshop backGround-color-red">
+          <div class="workshop-name">Цех 2</div>
+          <div class="workshop-info">Выполнено: 50%</div>
+        </div>
+        <div class="workshop backGround-color-green">
+          <div class="workshop-name">Цех 3</div>
+          <div class="workshop-info">Выполнено: 90%</div>
+        </div>
+        <div class="workshop backGround-color-red">
+          <div class="workshop-name">Цех 4</div>
+          <div class="workshop-info">Выполнено: 25%</div>
+        </div>
+        <div class="workshop backGround-color-red">
+          <div class="workshop-name">Цех 5</div>
+          <div class="workshop-info">Выполнено: 25%</div>
+        </div>
+        <div class="workshop backGround-color-green">
+          <div class="workshop-name">Цех 6</div>
+          <div class="workshop-info">Выполнено: 85%</div>
+        </div>
+        <div class="workshop backGround-color-green">
+          <div class="workshop-name">Цех 7</div>
+          <div class="workshop-info">Выполнено: 85%</div>
+        </div>
       </div>
+      
       <!--нижняя панель управления виджетом-->
  <div class="widget-images-panel">
   <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
@@ -600,16 +597,17 @@
       <div class="resize-handle"></div>
     </div>
 </div>
-
+</div>
 
 
 <!--Конец контейнера виджетов -->
   <!-- чат -->
-  <div class="chat-widget-container">
-    <div class="chat-widget">
-      <div class="chat-header">
-        <h3>Чат</h3>
-        <button class="close-button">Закрыть</button>
+  
+  <div class="chat-widget-container"   id="widgetChat" >
+    <div class="chat-widget"  >
+      <div class="widget-header">
+        <span class="blockName">чат</span>
+        <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
       </div>
       <div class="chat-content">
         <ul class="messages-list">
@@ -631,10 +629,12 @@
         <input type="text" id="messageInput" placeholder="Введите сообщение">
         <button id="sendButton">Отправить</button>
       </div>
+      <div class="resize-handle"></div>
     </div>
     <div class="chat-widget-toggle">
       <img src="../../img/chat.png" alt="Chat Icon" class="chat-icon">
     </div>
+
   </div>
   
 <!--Конец чата-->

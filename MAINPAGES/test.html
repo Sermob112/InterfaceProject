@@ -6,15 +6,38 @@
   <link rel="stylesheet" href="testStyle.css">
       </head>
       <body>
-        <div class="container">
-         
-        <div class="TaskWorkShop workshop-title1">
-          <div class="icon-and-text">
-            <img class = "arrow-picture" src="../../img/Arrowdown.png">
-            <p class="TaskBasicText icon-text">Цех 11</p>
-          </div>
-        </div>
-        </div>
+      <!-- чат -->
+  <div class="chat-widget-container"  id="draggableHeader" >
+    <div class="chat-widget"  >
+      <div class="chat-header"   >
+        <h3>Чат</h3>
+        <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+      </div>
+      <div class="chat-content">
+        <ul class="messages-list">
+          <li class="message user">
+            <div class="message-content">
+              <p>Привет! Как дела?</p>
+            </div>
+            <img src="../../img/avatar.png" alt="User Avatar" class="avatar">
+          </li>
+          <li class="message bot">
+            <img src="../../img/avatar.png" alt="Bot Avatar" class="avatar">
+            <div class="message-content">
+              <p>Привет! Чем могу помочь?</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Введите сообщение">
+        <button id="sendButton">Отправить</button>
+      </div>
+    </div>
+    <div class="chat-widget-toggle">
+      <img src="../../img/chat.png" alt="Chat Icon" class="chat-icon">
+    </div>
+  </div>
       
       <script src="testScripts.js"></script>
 </body>

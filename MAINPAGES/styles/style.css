@@ -489,29 +489,7 @@ border-radius: 10px; /* Скругление углов поля */
   width: 100%;
 }
 
-.ProjectMap .lineOfProject:nth-child(2){
 
-  .equipmentIcon:nth-child(2){
-      margin-left: 54vh;
-  }
-
-}
-
-.ProjectMap .lineOfProject:nth-child(3){
-
-  .equipmentIcon:nth-child(2){
-      margin-left: 27vh;
-  }
-
-}
-
-.ProjectMap .lineOfProject:nth-child(4){
-
-  .equipmentIcon:nth-child(1){
-      margin-left: 27vh;
-  }
-
-}
 
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили  Задачи*№№№№№№№№№№№№№№№№№№№№№№№№№№/ */
 
@@ -652,10 +630,7 @@ border-radius: 10px; /* Скругление углов поля */
   background-color: #71DC7B;
   border-color: #71DC7B;
 }
-.YellowTask{
-  background-color: #FEF406;
-  border-color: #FEF406;
-}
+
 .RedTask{
   background-color: #FB6161;
   border-color: #FB6161;

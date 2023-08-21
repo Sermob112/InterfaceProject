@@ -110,7 +110,7 @@ function setupWidget(widgetId) {
     });
   }
   
-  const widgetIds = ['widget1', 'widget2', 'widget3'];
+  const widgetIds = ['widget1', 'widget2', 'widget3','widget4','widgetChat']
   
   widgetIds.forEach(widgetId => {
     setupWidget(widgetId);
@@ -178,8 +178,42 @@ function setupChatWidget() {
     chatWidgetToggle.style.display = 'block'; // Показываем иконку
   });
 }
-
 setupChatWidget();
+// function setupChatMover(chatWidgetId) {
+//   const chatWidget = document.getElementById(chatWidgetId);
+//   const chatHeader = chatWidget.querySelector('.chat-header');
+  
+//   let isDragging = false;
+//   let initialX, initialY;
+//   let initialLeft, initialTop;
+
+//   chatHeader.addEventListener('mousedown', (e) => {
+//     isDragging = true;
+//     initialX = e.clientX;
+//     initialY = e.clientY;
+//     initialLeft = parseFloat(getComputedStyle(chatWidget).left);
+//     initialTop = parseFloat(getComputedStyle(chatWidget).top);
+//     e.preventDefault();
+//   });
+  
+//   document.addEventListener('mousemove', (e) => {
+//     if (isDragging) {
+//       const deltaX = e.clientX - initialX;
+//       const deltaY = e.clientY - initialY;
+//       chatWidget.style.left = `${initialLeft + deltaX}px`;
+//       chatWidget.style.top = `${initialTop + deltaY}px`;
+//     }
+//   });
+  
+//   document.addEventListener('mouseup', () => {
+//     isDragging = false;
+//   });
+// }
+// const chatWidgetId = 'draggableHeader'; // Замените на ID вашего чат-виджета
+// setupChatMover(chatWidgetId);
+// Вызов функции для настройки перемещения чата
+
+
 
 
 //симуляция чата
@@ -313,129 +347,7 @@ $(document).ready(function() {
 });
 //Сортировка 
 
-
-var sortDirection = "asc"; // По умолчанию сортировка по возрастанию
-
-
 // Ежедневник
-function sortTable(columnIndex) {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("myTable");
-  switching = true;
-
-  while (switching) {
-    switching = false;
-    rows = table.rows;
-    
-    for (i = 1; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("td")[columnIndex];
-      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
-
-      // Для сортировки даты рождения предварительно преобразуем строку в объект Date
-      if (columnIndex === 3) {
-        x = new Date(x.innerHTML);
-        y = new Date(y.innerHTML);
-      } else {
-        x = x.innerHTML;
-        y = y.innerHTML;
-      }
-      
-      // Сравниваем значения в зависимости от направления сортировки
-      if (sortDirection === "asc" && x > y) {
-        shouldSwitch = true;
-        break;
-      } else if (sortDirection === "desc" && x < y) {
-        shouldSwitch = true;
-        break;
-      }
-    }
-    
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-    }
-  }
-
-  // Изменяем направление сортировки после каждого клика
-  if(sortDirection === "asc"){
-    sortDirection = "desc";
-  }
-  else{
-    sortDirection = "asc";
-  }
-}
-
-function sortTableWorker(columnIndex) {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("myTableWorker");
-  switching = true;
-
-  while (switching) {
-    switching = false;
-    rows = table.rows;
-    
-    for (i = 1; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("td")[columnIndex];
-      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
-
-      // Для сортировки даты рождения предварительно преобразуем строку в объект Date
-      
-      x = x.innerHTML;
-      y = y.innerHTML;    
-      
-      // Сравниваем значения в зависимости от направления сортировки
-      if (sortDirection === "asc" && x > y) {
-        shouldSwitch = true;
-        break;
-      } else if (sortDirection === "desc" && x < y) {
-        shouldSwitch = true;
-        break;
-      }
-    }
-    
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-    }
-  }
-
-  // Изменяем направление сортировки после каждого клика
-  if(sortDirection === "asc"){
-    sortDirection = "desc";
-  }
-  else{
-    sortDirection = "asc";
-  }
-}
-
-const ezhednevnik = document.querySelector('.firstBlock');
-var lastClickedRow = null;
-
-ezhednevnik.addEventListener("click", function(event){
-  var clickedRow = event.target.closest('tbody tr');
-
-  for (var i = document.querySelector('.secondBlock').children.length - 1; i >= 0; i--) {
-    document.querySelector('.secondBlock').children[i].classList.remove('activeDiscription');
-}
-
-  if (clickedRow) {
-    if (clickedRow === lastClickedRow) {
-      // Повторное нажатие на строку
-      document.querySelector('.firstBlock').style.width = "100%";
-      document.querySelector('.secondBlock').style.display = "none";
-      lastClickedRow = null;
-      } 
-    else {
-      // event.target.closest('button').classList.add('activeButton');
-      document.querySelector('.firstBlock').style.width = "70%";
-      document.querySelector('.secondBlock').style.display = "block";
-      document.getElementById(event.target.closest('tbody tr').getAttribute('data-target')).classList.add('activeDiscription');
-      lastClickedRow = clickedRow;
-    }
-  }
-});
 
 // План выполнения
 
