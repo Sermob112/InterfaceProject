@@ -44,77 +44,84 @@
 //   });
 // });
 //изминение размера виджета при открытии нового
-function openNewWidget() {
-  const widgetContainer = document.querySelector('.widget-container');
-  const newWidget = document.createElement('div');
-  newWidget.className = 'resizable-widget active-widget';
-  newWidget.innerHTML = '<!-- ... Внутренности нового виджета ... -->';
 
-  widgetContainer.appendChild(newWidget);
+// function openNewWidget() {
+//   const widgetContainer = document.querySelector('.widget-container');
+//   const newWidget = document.createElement('div');
+//   newWidget.className = 'resizable-widget active-widget';
+//   newWidget.innerHTML = '<!-- ... Внутренности нового виджета ... -->';
 
-  const activeWidgets = document.querySelectorAll('.active-widget');
-  const widgetWidthPercentage = 100 / (activeWidgets.length);
+//   widgetContainer.appendChild(newWidget);
 
-  activeWidgets.forEach((widget, index) => {
-    widget.style.width = `${widgetWidthPercentage}%`;
-    widget.style.transform = `translateX(${index * widgetWidthPercentage}%)`;
-  });
-}
+//   const activeWidgets = document.querySelectorAll('.active-widget');
+//   const widgetWidthPercentage = 100 / (activeWidgets.length);
+
+//   activeWidgets.forEach((widget, index) => {
+//     widget.style.width = `${widgetWidthPercentage}%`;
+//     widget.style.transform = `translateX(${index * widgetWidthPercentage}%)`;
+//   });
+// }
+
 // Размер виджета
 function setupWidget(widgetId) {
-    const widget = document.getElementById(widgetId);
-    const resizeHandle = widget.querySelector('.resize-handle');
-    const widgetHeader = widget.querySelector('.widget-header');
-    const closeButton = widget.querySelector('.close-button');
+  const widget = document.getElementById(widgetId);
+  const resizeHandle = widget.querySelector('.resize-handle');
   
-    let isResizing = false;
-    let originalWidth, originalHeight;
-    let isDragging = false;
-    let initialX, initialY; // Added variables for initial cursor position
-  
-    resizeHandle.addEventListener('mousedown', (e) => {
-      isResizing = true;
-      originalWidth = widget.offsetWidth;
-      originalHeight = widget.offsetHeight;
-      e.preventDefault(); // Prevent text selection during resize
-    });
-  
-    widgetHeader.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      initialX = e.clientX - parseFloat(getComputedStyle(widget).left); // Store initial cursor position
-      initialY = e.clientY - parseFloat(getComputedStyle(widget).top); // Store initial cursor position
-      e.preventDefault(); // Prevent text selection during dragging
-    });
-  
-    document.addEventListener('mousemove', (e) => {
-      if (isResizing) {
-        const newWidth = originalWidth + (e.clientX - resizeHandle.getBoundingClientRect().left);
-        const newHeight = originalHeight + (e.clientY - resizeHandle.getBoundingClientRect().top);
-        widget.style.width = `${newWidth}px`;
-        widget.style.height = `${newHeight}px`;
-      } else if (isDragging) {
-        const newX = e.clientX - initialX;
-        const newY = e.clientY - initialY;
-        widget.style.left = `${newX}px`;
-        widget.style.top = `${newY}px`;
-      }
-    });
-  
-    document.addEventListener('mouseup', () => {
-      isResizing = false;
-      isDragging = false;
-    });
-  
-    closeButton.addEventListener('click', () => {
-      widget.style.display = 'none';
-    });
-  }
-  
-  const widgetIds = ['widget1', 'widget2', 'widget3','widget4','widgetChat']
-  
-  widgetIds.forEach(widgetId => {
-    setupWidget(widgetId);
+  const widgetHeader = widget.querySelector('.widget-header');
+  const closeButton = widget.querySelector('.close-button');
+
+  let isResizing = false;
+  let originalWidth, originalHeight;
+  let isDragging = false;
+  let initialX, initialY; // Initial cursor position for dragging
+  let initialResizeX, initialResizeY; // Initial cursor position for resizing
+
+  resizeHandle.addEventListener('mousedown', (e) => {
+    isResizing = true;
+    originalWidth = widget.offsetWidth;
+    originalHeight = widget.offsetHeight;
+    initialResizeX = e.clientX;
+    initialResizeY = e.clientY;
+    e.preventDefault();
   });
+
+  widgetHeader.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    initialX = e.clientX - parseFloat(getComputedStyle(widget).left); // Store initial cursor position for dragging
+    initialY = e.clientY - parseFloat(getComputedStyle(widget).top); // Store initial cursor position for dragging
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isResizing) {
+      const newWidth = originalWidth + (e.clientX - initialResizeX);
+      const newHeight = originalHeight + (e.clientY - initialResizeY);
+      widget.style.width = `${newWidth}px`;
+      widget.style.height = `${newHeight}px`;
+    } else if (isDragging) {
+      const newX = e.clientX - initialX;
+      const newY = e.clientY - initialY;
+      widget.style.left = `${newX}px`;
+      widget.style.top = `${newY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isResizing = false;
+    isDragging = false;
+  });
+
+  closeButton.addEventListener('click', () => {
+    widget.style.display = 'none';
+  });
+}
+
+const widgetIds = ['widget1', 'widget2', 'widget3', 'widget4', 'widgetChat'];
+
+widgetIds.forEach(widgetId => {
+  setupWidget(widgetId);
+});
+
 // Панель виджетов
 const widgetIcons = document.querySelectorAll('.func');
 const widgets = document.querySelectorAll('.resizable-widget');
@@ -166,7 +173,7 @@ function setupChatWidget() {
   const chatWidgetContainer = document.querySelector('.chat-widget-container');
   const chatWidget = chatWidgetContainer.querySelector('.chat-widget');
   const chatWidgetToggle = chatWidgetContainer.querySelector('.chat-widget-toggle');
-  const closeButton = chatWidget.querySelector('.close-button');
+  const closeButton = chatWidget.querySelector('.close-button-chat');
 
   chatWidgetToggle.addEventListener('click', () => {
     chatWidget.style.display = 'block';
