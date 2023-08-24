@@ -180,10 +180,10 @@ function setupChatWidget() {
     chatWidgetToggle.style.display = 'none'; // Скрываем иконку
   });
 
-  closeButton.addEventListener('click', () => {
-    chatWidget.style.display = 'none';
-    chatWidgetToggle.style.display = 'block'; // Показываем иконку
-  });
+  // closeButton.addEventListener('click', () => {
+  //   chatWidget.style.display = 'none';
+  //   chatWidgetToggle.style.display = 'block'; // Показываем иконку
+  // });
 }
 setupChatWidget();
 // function setupChatMover(chatWidgetId) {
