@@ -180,6 +180,22 @@ function setupChatWidget() {
     chatWidgetToggle.style.display = 'none'; // Скрываем иконку
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const closeButton = document.querySelector(".close-button");
+    const chatWidget = document.querySelector(".chat-widget");
+    const chatIconContainer = document.querySelector("#chatIconContainer");
+
+    closeButton.addEventListener("click", function () {
+      chatWidget.style.display = "none";
+      chatIconContainer.style.display = "block";
+    });
+
+    chatIconContainer.addEventListener("click", function () {
+      chatWidget.style.display = "block";
+      chatIconContainer.style.display = "none";
+    });
+  });
+
   // closeButton.addEventListener('click', () => {
   //   chatWidget.style.display = 'none';
   //   chatWidgetToggle.style.display = 'block'; // Показываем иконку
@@ -352,14 +368,12 @@ $(document).ready(function() {
 
   // И так далее...
 });
-//Сортировка 
 
-// Ежедневник
 
 // План выполнения
 
 
-const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.plan');
 
 projects.forEach((project) => {
   const subProjects = project.querySelectorAll('.sub-projects');
@@ -390,7 +404,7 @@ projects.forEach((project) => {
     progressWhole.value = average;
 
     project.addEventListener('click', () => {
-      subProject.classList.toggle('active');
+      subProject.classList.toggle('visible');
     });
   })
 

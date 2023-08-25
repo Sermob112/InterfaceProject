@@ -1023,7 +1023,10 @@
 .sub-projects td:last-child {
   text-align: center;
 }
-
+.sub-projects .active{
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
 .visible {
   display: block;
   animation: fadeIn 0.5s ease-in-out;
