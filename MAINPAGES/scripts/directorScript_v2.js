@@ -121,6 +121,26 @@ const widgetIds = ['widget1', 'widget2', 'widget3', 'widget4', 'widgetChat'];
 widgetIds.forEach(widgetId => {
   setupWidget(widgetId);
 });
+//чат
+
+function setupChatWidget() {
+  const chatWidgetContainer = document.querySelector('.chat-widget-container');
+  const chatWidget = chatWidgetContainer.querySelector('.chat-widget');
+  const chatWidgetToggle = chatWidgetContainer.querySelector('.chat-widget-toggle');
+  const closeButton = chatWidget.querySelector('.close-button');
+
+  chatWidgetToggle.addEventListener('click', () => {
+    chatWidget.style.display = 'block';
+    chatWidgetToggle.style.display = 'none'; // Скрываем иконку
+  });
+
+  closeButton.addEventListener('click', () => {
+    chatWidget.style.display = 'none';
+    chatWidgetToggle.style.display = 'block'; // Показываем иконку
+  });
+}
+setupChatWidget();
+
 
 // Панель виджетов
 const widgetIcons = document.querySelectorAll('.func');
@@ -138,19 +158,18 @@ widgetIcons.forEach(icon => {
     }
   });
 });
-
 const widgetButtons = document.querySelectorAll('.widget-header button');
 
 widgetButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const widgetContainer = button.closest('.widget-container');
-    const widgets = widgetContainer.querySelectorAll('.resizable-widget');
+    const widgetContainer = button.closest('.chat-widget-container'); // Изменили на '.chat-widget-container'
+    const widgets = widgetContainer.querySelectorAll('.chat-widget'); // Изменили на '.chat-widget'
 
     widgets.forEach(widget => {
       widget.classList.remove('active-widget');
     });
 
-    const widget = button.closest('.resizable-widget');
+    const widget = button.closest('.chat-widget'); // Изменили на '.chat-widget'
     widget.classList.add('active-widget');
   });
 });
@@ -167,41 +186,7 @@ buttons.forEach(button => {
   });
 });
 
-//чат
 
-function setupChatWidget() {
-  const chatWidgetContainer = document.querySelector('.chat-widget-container');
-  const chatWidget = chatWidgetContainer.querySelector('.chat-widget');
-  const chatWidgetToggle = chatWidgetContainer.querySelector('.chat-widget-toggle');
-  const closeButton = chatWidget.querySelector('.close-button-chat');
-
-  chatWidgetToggle.addEventListener('click', () => {
-    chatWidget.style.display = 'block';
-    chatWidgetToggle.style.display = 'none'; // Скрываем иконку
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const closeButton = document.querySelector(".close-button");
-    const chatWidget = document.querySelector(".chat-widget");
-    const chatIconContainer = document.querySelector("#chatIconContainer");
-
-    closeButton.addEventListener("click", function () {
-      chatWidget.style.display = "none";
-      chatIconContainer.style.display = "block";
-    });
-
-    chatIconContainer.addEventListener("click", function () {
-      chatWidget.style.display = "block";
-      chatIconContainer.style.display = "none";
-    });
-  });
-
-  // closeButton.addEventListener('click', () => {
-  //   chatWidget.style.display = 'none';
-  //   chatWidgetToggle.style.display = 'block'; // Показываем иконку
-  // });
-}
-setupChatWidget();
 // function setupChatMover(chatWidgetId) {
 //   const chatWidget = document.getElementById(chatWidgetId);
 //   const chatHeader = chatWidget.querySelector('.chat-header');
