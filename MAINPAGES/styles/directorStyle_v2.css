@@ -935,12 +935,38 @@
 }
 
 .frame {
-  background-color: #ffffff; /* Изменяем цвет фона */
+  background-color: #ffffff;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
 
 
+.logo-vidget-container {
+  display: flex; /* Включаем flex контейнер для логотипов */
+  align-items: center; /* Выравниваем их по вертикали */
+}
+
+.user-profile {
+  display: flex; /* Включаем flex контейнер для .user-profile */
   align-items: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+  padding-right: 80px;
+   /* Выравниваем по вертикали по центру */
+}
+
+.director-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  color: #505050; /* Цвет текста */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Тень текста */
+
 }
 
 /* """""""""""""""""""""""""""""Стили планов""""""""""""""""""""""""""""""""""""""""" */
@@ -1049,4 +1075,74 @@
 
 #draggableHeader {
   cursor: grab;
+}
+.director-title {
+  text-align: center; /* Выравнивание текста по центру */
+  font-size: 24px; /* Размер шрифта, который вы можете настроить */
+  font-weight: bold; /* Жирный шрифт, если нужно */
+  margin-top: 20px; /* Расстояние от верхней границы */
+}
+.footer {
+  background-color: #b9d5f1;
+  color: #555; /* Темно-серый текст */
+  padding: 40px 0;
+  border-top-left-radius: 5px; /* Скругление верхних углов */
+  border-top-right-radius: 5px;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2); /* Тень внизу */
+  transition: background-color 0.3s ease-in-out; /* Анимация смены цвета фона */
+}
+
+.footer:hover {
+  background-color: #8ac3fc; /* Новый цвет фона при наведении */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px; /* Скругление углов логотипа */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out; /* Анимация смены цвета текста ссылок */
+}
+
+.footer-links a:hover {
+  color: #f1f1f1; /* Новый цвет текста ссылок при наведении */
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out; /* Анимация при наведении на иконки соц. сетей */
+}
+
+.footer-social .social-icon:hover {
+  transform: scale(1.1); /* Увеличение иконки при наведении */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
 }

@@ -69,9 +69,16 @@ body {
   /* Укажите размеры вашего логотипа */
   width: 20px;
   height: 40px;
-  top: 10px;
-  right: 20px;
-  position:  absolute;
+
+  /* Установите позицию на абсолютную */
+  position: absolute;
+
+  /* Выравнивание по правому краю */
+  right: 0;
+
+  /* Добавьте отступ сверху и справа, если необходимо */
+  margin-top: 10px;
+  margin-right: 20px;
   
   /* Добавляем отступы слева и сверху */
 
@@ -270,15 +277,7 @@ body {
   transform: scale(1.1); 
 } */
 /*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили пользователя*№№№№№№№№№№№№№№№№№№№*/
-.user-profile {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px;
-  position: absolute;
-  top: 0px;
-  right: 130px; /* Позиция слева от logo-2 */
-}
+
 
 .avatar {
   width: 40px;

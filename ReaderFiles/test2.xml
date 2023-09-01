@@ -1,0 +1,54 @@
+  <root>
+    <workshop>Цех 12</workshop>
+    <brigade>Бригада 52</brigade>
+    <users>
+        <user>
+            <name>Имя сотрудника 521</name>
+            <status>Статус 5211</status>
+            <id>Табельный номер 5211</id>
+        </user>
+        <user>
+            <name>Имя сотрудника 5212</name>
+            <status>Статус 5212</status>
+            <id>Табельный номер 5122</id>
+        </user>
+         <user>
+            <name>Имя сотрудника 5212</name>
+            <status>Статус 5212</status>
+            <id>Табельный номер 5122</id>
+        </user>
+     
+        <!-- Добавьте других сотрудников здесь, если необходимо -->
+    </users>
+     <workshop>Цех 24</workshop>
+    <brigade>Бригада 122</brigade>
+    <users>
+        <user>
+            <name>Имя сотрудника 521</name>
+            <status>Статус 5211</status>
+            <id>Табельный номер 5211</id>
+        </user>
+        <user>
+            <name>Имя сотрудника 5212</name>
+            <status>Статус 5212</status>
+            <id>Табельный номер 5122</id>
+        </user>
+         <user>
+            <name>Имя сотрудника 5212</name>
+            <status>Статус 5212</status>
+            <id>Табельный номер 5122</id>
+        </user>
+          <user>
+            <name>Имя сотрудника 5212</name>
+            <status>Статус 5212</status>
+            <id>Табельный номер 5122</id>
+        </user>
+          <user>
+            <name>Имя сотрудника 5212</name>
+            <status>Статус 5212</status>
+            <id>Табельный номер 5122</id>
+        </user>
+     
+        <!-- Добавьте других сотрудников здесь, если необходимо -->
+    </users>
+</root>

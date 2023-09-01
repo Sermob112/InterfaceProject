@@ -1,0 +1,126 @@
+<data>
+  <item>
+    <to>Директору</to>
+    <from>Перв. Зам</from>
+    <status>Активно</status>
+    <date>01.01.01</date>
+    <type>Служебная</type>
+  </item>
+  <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+    <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+    <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+    <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+    <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+    <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+    <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+    <item>
+    <to>Перв. зам</to>
+    <from>Директор 4</from>
+    <status>Не активно 4</status>
+    <date>02.01.01</date>
+    <type>Поручение4 </type>
+  </item>
+<plan>
+    <title>План №76</title>
+    <progressWhole>81</progressWhole>
+    <subProjects>
+        <subProject>
+            <specCode>#42</specCode>
+            <orderName>Заказ по кораблям модели ек2321</orderName>
+            <progressValue>30</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+        <subProject>
+            <specCode>#521</specCode>
+            <orderName>Заказ по кораблям модели 34r2</orderName>
+            <progressValue>50</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+         <subProject>
+            <specCode>#521</specCode>
+            <orderName>Заказ по кораблям модели 34r2</orderName>
+            <progressValue>50</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+         <subProject>
+            <specCode>#521</specCode>
+            <orderName>Заказ по кораблям модели 34r2</orderName>
+            <progressValue>50</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+    </subProjects>
+</plan>
+<plan>
+    <title>План №22</title>
+    <progressWhole>81</progressWhole>
+    <subProjects>
+        <subProject>
+            <specCode>#422</specCode>
+            <orderName>Заказ по кораблям модели ек2321</orderName>
+            <progressValue>30</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+        <subProject>
+            <specCode>#5521</specCode>
+            <orderName>Заказ по кораблям модели 34r2</orderName>
+            <progressValue>50</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+         <subProject>
+            <specCode>#5221</specCode>
+            <orderName>Заказ по кораблям модели 34r2</orderName>
+            <progressValue>50</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+         <subProject>
+            <specCode>#5521</specCode>
+            <orderName>Заказ по кораблям модели 34r2</orderName>
+            <progressValue>50</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+    </subProjects>
+</plan>
+
+</data>

@@ -102,6 +102,7 @@ move_and_click(670, 130, 30)
 move_and_click(670, 130, 0)
 move_and_click(447, 130, 10)
 move_and_click(320, 130, 10)
+#Виджет Ежедневник
 move_and_click(500, 320,10)
 move_and_click(500, 370, 10)
 move_and_click(500, 370, 0)

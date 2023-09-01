@@ -12,17 +12,20 @@
 </head>
 <body>
 <!-- логотипы -->
+
   <div class="frame">
+    <div class="director-title">Директор</div>
     <div class="logo-vidget-container">
     <img class="logo" src="../../img/logo.png" alt="Logo" >
+    <img class="logo-2" src="../../img/logo.png" alt="Logo" >
      <!--Полоска виджетов-->
-     <div class="vidgetLine">
+     <!-- <div class="vidgetLine">
       <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> Ежедневник </button>
       <button type="button" data-widget="widget2" class="func" data-target="wnd2"> Схема цехов </button>
       <button type="button" data-widget="widget3" class="func" data-target="wnd3"> Список сотрудников </button>
       <button type="button" data-widget="widget4" class="func" data-target="wnd4"> Планирование </button>
-      <!-- <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button> -->
-    </div>
+      <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button> -->
+    </div> 
 
     <!-- <div class="vidgetLine">
       <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> <img src="../..//img/proizvodstvo.png" class="proizvodstvoImg"> </button>
@@ -31,26 +34,27 @@
       <button type="button" data-widget="widget4" class="func" data-target="wnd4"> <img src="../..//img/personal.avif" class="personalImg"> </button>
       <button type="button" data-widget="widget5" class="func" data-target="wnd5"> <img src="../..//img/Ezhednevnik.png" class="ezhednevnikImg"> </button>
   </div> -->
+
+  <!-- Аватарка и имя пользователя -->
+  
+<div class="user-profile">
+
+<!-- <div class="search-container">
+<input type="text" class="search-input" placeholder="Поиск">
+  <img src="../../img/search.png" alt="Картинка" class="search-icon"> 
+</div> -->
+
+<img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+<img src="../../img/avatar.png" alt="Аватар пользователя" class ="avatar">
+<span class="user-name">Имя пользователя</span>
+<img src="../../img/Arrowdown.png" alt="Иконка шеврон" class="chevron-icon">
+
 </div>
-    <img class="logo-2" src="../../img/logo.png" alt="Logo" >
-        <!-- Аватарка и имя пользователя -->
-        
-    <div class="user-profile">
-    
-      <div class="search-container">
-      <input type="text" class="search-input" placeholder="Поиск">
-        <img src="../../img/search.png" alt="Картинка" class="search-icon"> <!-- Картинка -->
-     </div>
-     <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
-     <img src="../../img/avatar.png" alt="Аватар пользователя" class ="avatar">
-     <span class="user-name">Имя пользователя</span>
-     <img src="../../img/Arrowdown.png" alt="Иконка шеврон" class="chevron-icon">
-    
-    </div>
-    <!--Полоска виджетов-->
-    
 </div>
-   </div>
+
+    
+
+
 
   <!--Область окон-->
             <div class="vidgetContext">
@@ -63,8 +67,6 @@
  <!--Сами виджеты-->
 
     <div class="widget-container ">
-
-
   <div class="resizable-widget active-widget" id="widget1">
     <div class="widget-header">
       <span class="blockName">Ежедневник</span>
@@ -219,7 +221,7 @@
                       <div class="TaskWorkShopList projects_name_list">
                         <div class="icon-and-text">
                           <img class = "arrow-picture" src="../../img/Arrowdown.png" alt="Arrowdown">
-                          <p class="TaskBasicText icon-text">Бригада 4</p>
+                          <p class="TaskBasicText Brigade-text">Бригада 4</p>
                       
                         </div>
                         <p class="TaskBasicText icon-text">Сотрудников: 3</p>
@@ -229,7 +231,7 @@
                           <div class="TaskWorkShopTask tasks_name_list">
                             <img  class = "arrow-picture" src="../../img/Arrowdown.png"" alt="Arrowdown">
                             <p class="TaskBasicText ">Имя сотрудника</p>
-                            <p class="TaskBasicText" class="highlight-yellow" >Статус</p>
+                            <p class="TaskBasicText" >Статус</p>
                             <p class="TaskBasicText with-margin">Табельный номер</p>
                           </div>
             
@@ -277,7 +279,7 @@
                       <div class="TaskWorkShopList projects_name_list">
                         <div class="icon-and-text">
                           <img class = "arrow-picture" src="../../img/Arrowdown.png" alt="Arrowdown">
-                          <p class="TaskBasicText icon-text">Бригада 5</p>
+                          <p class="TaskBasicText Brigade-text">Бригада 5</p>
                       
                         </div>
                         <p class="TaskBasicText icon-text">Сотрудников: 3</p>
@@ -299,7 +301,7 @@
                                 </div>
                       
                                   <p class="user-name">Имя пользователя</p>
-                                  <p class="user-status">Работает</p>
+                                  <p class="user-status">Ч</p>
                                   <p class="user-id">Табельный номер</p>
                             
                               </div>
@@ -323,9 +325,7 @@
                                       <p class="user-name">Имя пользователя</p>
                                       <p class="user-status">Работает</p>
                                       <p class="user-id">Табельный номер</p>
-                                    
                                   </div>
-                          
                             </li>
                           </ul>
                         </li>
@@ -602,7 +602,7 @@
 
 <!--Конец контейнера виджетов -->
   <!-- чат -->
-  
+<!--   
   <div class="chat-widget-container"  >
     
     <div class="chat-widget "  id="widgetChat"   >
@@ -638,9 +638,33 @@
     </div>
    
   </div>
-  
+   -->
 <!--Конец чата-->
-
+<!--Футор-->
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="../../img/logo.png" alt="Логотип">
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <!-- <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a> -->
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023. Все права защищены.</p>
+  </div>
+</div>
+<!--Футор-->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../scripts/directorScript_v2.js" ></script>
