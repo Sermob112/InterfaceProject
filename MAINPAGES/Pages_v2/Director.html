@@ -19,12 +19,12 @@
     <img class="logo" src="../../img/logo.png" alt="Logo" >
     <img class="logo-2" src="../../img/logo.png" alt="Logo" >
      <!--Полоска виджетов-->
-     <!-- <div class="vidgetLine">
+     <div class="vidgetLine">
       <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> Ежедневник </button>
       <button type="button" data-widget="widget2" class="func" data-target="wnd2"> Схема цехов </button>
       <button type="button" data-widget="widget3" class="func" data-target="wnd3"> Список сотрудников </button>
       <button type="button" data-widget="widget4" class="func" data-target="wnd4"> Планирование </button>
-      <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button> -->
+      <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button>
     </div> 
 
     <!-- <div class="vidgetLine">
@@ -36,13 +36,8 @@
   </div> -->
 
   <!-- Аватарка и имя пользователя -->
-  
+</div>
 <div class="user-profile">
-
-<!-- <div class="search-container">
-<input type="text" class="search-input" placeholder="Поиск">
-  <img src="../../img/search.png" alt="Картинка" class="search-icon"> 
-</div> -->
 
 <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
 <img src="../../img/avatar.png" alt="Аватар пользователя" class ="avatar">
@@ -51,6 +46,7 @@
 
 </div>
 </div>
+
 
     
 
@@ -213,196 +209,48 @@
         <div class="TaskWorkShop workshop-title1">
           <div class="icon-and-text">
             <img class = "arrow-picture" src="../../img/Arrowdown.png">
-            <p class="TaskBasicText icon-text">Цех 11</p>
+            <p class="TaskBasicText icon-text"></p>
           </div>
         </div>
                   <ul class="projects1">
+        
                     <li class="project1">
                       <div class="TaskWorkShopList projects_name_list">
                         <div class="icon-and-text">
                           <img class = "arrow-picture" src="../../img/Arrowdown.png" alt="Arrowdown">
-                          <p class="TaskBasicText Brigade-text">Бригада 4</p>
+                          <p class="TaskBasicText Brigade-text"></p>
                       
                         </div>
-                        <p class="TaskBasicText icon-text">Сотрудников: 3</p>
+                        <p class="TaskBasicText Brigade-Count"></p>
                       </div>
                       <ul class="sub-projects1">
-                        <li class="sub-project1">
-                          <div class="TaskWorkShopTask tasks_name_list">
-                            <img  class = "arrow-picture" src="../../img/Arrowdown.png"" alt="Arrowdown">
-                            <p class="TaskBasicText ">Имя сотрудника</p>
-                            <p class="TaskBasicText" >Статус</p>
-                            <p class="TaskBasicText with-margin">Табельный номер</p>
-                          </div>
-            
-                          <ul class="sub-task-projects1">
-                            <li class="sub-task-project1">
-                              <div class="TaskWorkShopTask info_name_list YellowTask">
-                                <div class="user-avatar">
-                                  <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                </div>
-                            
-                                  <p class="user-name">Имя пользователя</p>
-                                  <p class="highlight-yellow"><span>Работает</span></p>
-                                  <p class="user-id">Табельный номер</p>
-                               
-                              </div>
-                              <li class="sub-task-project1">
-                                <div class="TaskWorkShopTask info_name_list YellowTask">
-                                  <div class="user-avatar">
-                                    <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                  </div>
-                                 
-                                    <p class="user-name">Имя пользователя</p>
-                                    <p class="highlight-yellow"><span>Работает</span></p>
-                                    <p class="user-id">Табельный номер</p>
-                                 
-                                </div>
-                                <li class="sub-task-project1">
-                                  <div class="TaskWorkShopTask info_name_list YellowTask">
-                                    <div class="user-avatar">
-                                      <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                    </div>
-                                  
-                                      <p class="user-name">Имя пользователя</p>
-                                      <p class="highlight-yellow"><span>Работает</span></p>
-                                      <p class="user-id">Табельный номер</p>
-                                 
-                                  </div>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
+                        <table class="employee-table">
+                          <thead>
+                            <tr>
+                              <th>Имя сотрудника</th>
+                              <th>Статус</th>
+                              <th>Табельный номер</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Имя пользователя</td>
+                              <td><span class="highlight-yellow">Работает</span></td>
+                              <td>Табельный номер</td>
                 
-                    <li class="project1">
-                      <div class="TaskWorkShopList projects_name_list">
-                        <div class="icon-and-text">
-                          <img class = "arrow-picture" src="../../img/Arrowdown.png" alt="Arrowdown">
-                          <p class="TaskBasicText Brigade-text">Бригада 5</p>
-                      
-                        </div>
-                        <p class="TaskBasicText icon-text">Сотрудников: 3</p>
-                      </div>
-                      <ul class="sub-projects1">
-                        <li class="sub-project1">
-                          <div class="TaskWorkShopTask tasks_name_list">
-                            <img  class = "arrow-picture" src="../../img/Arrowdown.png"" alt="Arrowdown">
-                            <p class="TaskBasicText">Имя сотрудника</p>
-                            <p class="TaskBasicText">Статус</p>
-                            <p class="TaskBasicText with-margin">Табельный номер</p>
-                          </div>
-            
-                          <ul class="sub-task-projects1">
-                            <li class="sub-task-project1">
-                              <div class="TaskWorkShopTask info_name_list RedTask">
-                                <div class="user-avatar">
-                                  <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                </div>
-                      
-                                  <p class="user-name">Имя пользователя</p>
-                                  <p class="user-status">Ч</p>
-                                  <p class="user-id">Табельный номер</p>
-                            
-                              </div>
-                              <li class="sub-task-project1">
-                                <div class="TaskWorkShopTask info_name_list GreenTask ">
-                                  <div class="user-avatar">
-                                    <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                  </div>
-                               
-                                    <p class="user-name">Имя пользователя</p>
-                                    <p class="user-status">Работает</p>
-                                    <p class="user-id">Табельный номер</p>
-                            
-                                </div>
-                                <li class="sub-task-project1">
-                                  <div class="TaskWorkShopTask info_name_list YellowTask">
-                                    <div class="user-avatar">
-                                      <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                    </div>
-                             
-                                      <p class="user-name">Имя пользователя</p>
-                                      <p class="user-status">Работает</p>
-                                      <p class="user-id">Табельный номер</p>
-                                  </div>
-                            </li>
-                          </ul>
-                        </li>
+                            </tr>
+                            <tr>
+                              <td>Имя пользователя</td>
+                              <td><span class="highlight-yellow">Работает</span></td>
+                              <td>Табельный номер</td>
+                
+                            </tr>
+                            <!-- Вставьте остальные сотрудники здесь как новые строки таблицы -->
+                          </tbody>
+                        </table>
                       </ul>
                     </li>
                   </ul>
-
-
-                  
-
-                  
-                  <div class="TaskWorkShop workshop-title1">
-                    <div class="icon-and-text">
-                      <img class = "arrow-picture" src="../../img/Arrowdown.png">
-                      <p class="TaskBasicText icon-text">Цех 12</p>
-                    </div>
-                  </div>
-                            <ul class="projects1">
-                              <li class="project1">
-                                <div class="TaskWorkShopList projects_name_list">
-                                  <div class="icon-and-text">
-                                    <img class = "arrow-picture" src="../../img/Arrowdown.png" alt="Arrowdown">
-                                    <p class="TaskBasicText icon-text">Бригада 11</p>
-                                
-                                  </div>
-                                  <p class="TaskBasicText icon-text">Сотрудников: 13</p>
-                                </div>
-                                <ul class="sub-projects1">
-                                  <li class="sub-project1">
-                                    <div class="TaskWorkShopTask tasks_name_list">
-                                      <img  class = "arrow-picture" src="../../img/Arrowdown.png"" alt="Arrowdown">
-                                      <p class="TaskBasicText">Имя сотрудника</p>
-                                      <p class="TaskBasicText">Статус</p>
-                                      <p class="TaskBasicText with-margin">Табельный номер</p>
-                                    </div>
-                      
-                                    <ul class="sub-task-projects1">
-                                      <li class="sub-task-project1">
-                                        <div class="TaskWorkShopTask info_name_list RedTask">
-                                          <div class="user-avatar">
-                                            <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                          </div>
-                                      
-                                            <p class="user-name">Имя пользователя</p>
-                                            <p class="user-status">Работает</p>
-                                            <p class="user-id">Табельный номер</p>
-                                      
-                                        </div>
-                                        <li class="sub-task-project1">
-                                          <div class="TaskWorkShopTask info_name_list GreenTask ">
-                                            <div class="user-avatar">
-                                              <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                            </div>
-                                          
-                                              <p class="user-name">Имя пользователя</p>
-                                              <p class="user-status">Работает</p>
-                                              <p class="user-id">Табельный номер</p>
-                                          
-                                          </div>
-                                          <li class="sub-task-project1">
-                                            <div class="TaskWorkShopTask info_name_list YellowTask">
-                                              <div class="user-avatar">
-                                                <img src="../../img/avatar.png" alt="Аватар пользователя">
-                                              </div>
-                                   
-                                                <p class="user-name">Имя пользователя</p>
-                                                <p class="user-status">Работает</p>
-                                                <p class="user-id">Табельный номер</p>
-                                      
-                                            </div>
-                                    
-                                      </li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
             </div>
         
          

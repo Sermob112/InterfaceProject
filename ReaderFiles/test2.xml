@@ -1,54 +1,29 @@
-  <root>
-    <workshop>Цех 12</workshop>
-    <brigade>Бригада 52</brigade>
-    <users>
-        <user>
-            <name>Имя сотрудника 521</name>
-            <status>Статус 5211</status>
-            <id>Табельный номер 5211</id>
-        </user>
-        <user>
-            <name>Имя сотрудника 5212</name>
-            <status>Статус 5212</status>
-            <id>Табельный номер 5122</id>
-        </user>
-         <user>
-            <name>Имя сотрудника 5212</name>
-            <status>Статус 5212</status>
-            <id>Табельный номер 5122</id>
-        </user>
-     
-        <!-- Добавьте других сотрудников здесь, если необходимо -->
-    </users>
-     <workshop>Цех 24</workshop>
-    <brigade>Бригада 122</brigade>
-    <users>
-        <user>
-            <name>Имя сотрудника 521</name>
-            <status>Статус 5211</status>
-            <id>Табельный номер 5211</id>
-        </user>
-        <user>
-            <name>Имя сотрудника 5212</name>
-            <status>Статус 5212</status>
-            <id>Табельный номер 5122</id>
-        </user>
-         <user>
-            <name>Имя сотрудника 5212</name>
-            <status>Статус 5212</status>
-            <id>Табельный номер 5122</id>
-        </user>
-          <user>
-            <name>Имя сотрудника 5212</name>
-            <status>Статус 5212</status>
-            <id>Табельный номер 5122</id>
-        </user>
-          <user>
-            <name>Имя сотрудника 5212</name>
-            <status>Статус 5212</status>
-            <id>Табельный номер 5122</id>
-        </user>
-     
-        <!-- Добавьте других сотрудников здесь, если необходимо -->
-    </users>
-</root>
+<data>
+    <ceh>
+        <id>ceh1</id>
+        <name>Цех 521</name>
+        <brigade>
+            <id>brigade1</id>
+            <name>Бригада 1521</name>
+            <employee>Сотрудник 1.1231</employee>
+            <employee>Сотрудник 5121.2</employee>
+        </brigade>
+        <brigade>
+            <id>brigade2</id>
+            <name>Бригада 2</name>
+            <employee>Сотрудник 2.5211</employee>
+            <employee>Сотрудник 2.5212</employee>
+        </brigade>
+    </ceh>
+    <ceh>
+        <id>ceh2</id>
+        <name>Цех 521</name>
+        <brigade>
+            <id>brigade3</id>
+            <name>Бригада 52</name>
+            <employee>Сотрудник 323.1</employee>
+            <employee>Сотрудник 3.4212</employee>
+        </brigade>
+    </ceh>
+    <!-- Добавьте другие цехи, бригады и сотрудников по аналогии -->
+</data>

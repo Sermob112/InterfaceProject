@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы цехов, бригад и сотрудников</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+        }
+        .brigade-table, .employee-table {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <table id="cehTable">
+        <tr>
+            <th>Цех</th>
+        </tr>
+        <tr>
+            <td onclick="toggleBrigades('ceh1')">Цех 1</td>
+        </tr>
+        <tr>
+            <td onclick="toggleBrigades('ceh2')">Цех 2</td>
+        </tr>
+        <tr>
+            <td onclick="toggleBrigades('ceh3')">Цех 3</td>
+        </tr>
+    </table>
+
+    <script>
+        function toggleBrigades(cehId, brigadesData) {
+            var cehTable = document.getElementById("cehTable");
+            var brigadesTable = document.getElementById(cehId + "-brigades");
+    
+            if (!brigadesTable) {
+                brigadesTable = document.createElement("table");
+                brigadesTable.id = cehId + "-brigades";
+                brigadesTable.innerHTML = '<tr><th>Бригада</th></tr>';
+                for (var i = 0; i < brigadesData.length; i++) {
+                    brigadesTable.innerHTML += '<tr><td onclick="toggleEmployees(\'' + brigadesData[i].id + '\')">' + brigadesData[i].name + '</td></tr>';
+                }
+                var currentRow = event.target.parentElement; // Получаем родительский <tr> для элемента, на котором был клик
+                var newRow = cehTable.insertRow(currentRow.rowIndex + 1);
+                var cell = newRow.insertCell(0);
+                cell.colSpan = "1";
+                cell.appendChild(brigadesTable);
+            } else {
+                brigadesTable.style.display = (brigadesTable.style.display === "none" || brigadesTable.style.display === "") ? "block" : "none";
+            }
+        }
+    
+        function toggleEmployees(brigadeId, employeesData) {
+            var brigadesTable = document.getElementById(brigadeId + "-employees");
+    
+            if (!brigadesTable) {
+                brigadesTable = document.createElement("table");
+                brigadesTable.id = brigadeId + "-employees";
+                brigadesTable.innerHTML = '<tr><th>Сотрудник</th></tr>';
+                for (var i = 0; i < employeesData.length; i++) {
+                    brigadesTable.innerHTML += '<tr><td>' + employeesData[i].name + '</td></tr>';
+                }
+                var currentRow = event.target.parentElement; // Получаем родительский <td> для элемента, на котором был клик
+                var newRow = currentRow.parentElement.insertRow(currentRow.rowIndex + 1);
+                var cell = newRow.insertCell(0);
+                cell.colSpan = "1";
+                cell.appendChild(brigadesTable);
+            } else {
+                brigadesTable.style.display = (brigadesTable.style.display === "none" || brigadesTable.style.display === "") ? "block" : "none";
+            }
+        }
+    </script>
+</body>
+</html>

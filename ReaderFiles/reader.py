@@ -7,6 +7,7 @@ tree = ET.parse('./ReaderFiles/test.xml')
 root = tree.getroot()
 tree2 = ET.parse('./ReaderFiles/test2.xml')
 root2 = tree2.getroot()
+
 #Роль Директор
 with open('./Mainpages/Pages_v2/director.html', 'r', encoding='utf-8') as html_file:
     soup = BeautifulSoup(html_file, 'html.parser')
@@ -30,6 +31,8 @@ with open('./Mainpages/Pages_v2/director.html', 'r', encoding='utf-8') as html_f
     #             tr.append(td)
 
     #         tbody.append(tr)
+
+
     #Найти таблицу в HTML Сотрудники и очистить ее содержимое
 
     # workshop_elements = soup.find_all('p', class_='TaskBasicText icon-text')
@@ -53,6 +56,11 @@ with open('./Mainpages/Pages_v2/director.html', 'r', encoding='utf-8') as html_f
     #     span_element = highlight_yellow_elements[i].find('span')
     #     span_element.string = root.find('.//status').text
 
+
+
+#План
+
+
 plan_contents_ul = soup.find('ul', class_='plan-contents')
 
 # Находим все элементы <li class="plan"> в файле Director.html
@@ -68,6 +76,7 @@ for plan_xml, plan_element in zip(root.findall('.//plan'), plan_elements):
     new_h4 = soup.new_tag('h4', **{'class': 'plan-title'})
     new_h4.string = title_element.text
     plan_element.append(new_h4)
+    
 
     # Создаем элемент <progress id="progressWhole"> с данными из XML
     progress_whole_element = plan_xml.find('.//progressWhole')
@@ -78,8 +87,25 @@ for plan_xml, plan_element in zip(root.findall('.//plan'), plan_elements):
 
     # Создаем таблицу <table class="sub-projects"> и ее содержимое с данными из XML
     sub_projects_table = soup.new_tag('table', **{'class': 'sub-projects'})
-    sub_projects_tbody = soup.new_tag('tbody')
 
+    # Создаем элемент <thead> и его содержимое с данными
+    sub_projects_thead = soup.new_tag('thead')
+    tr_header = soup.new_tag('tr')
+    th_spec_code = soup.new_tag('th')
+    th_spec_code.string = 'Спец код'
+    th_order_name = soup.new_tag('th')
+    th_order_name.string = 'Название заказа'
+    th_progress_value = soup.new_tag('th')
+    th_progress_value.string = 'Процент выполнения'
+    th_status = soup.new_tag('th')
+    th_status.string = 'Статус'
+    tr_header.extend([th_spec_code, th_order_name, th_progress_value, th_status])
+    sub_projects_thead.append(tr_header)
+
+    # Добавляем <thead> в таблицу
+    sub_projects_table.append(sub_projects_thead)
+
+    sub_projects_tbody = soup.new_tag('tbody')
     for sub_project_element in plan_xml.findall('.//subProject'):
         tr = soup.new_tag('tr')
         spec_code = sub_project_element.find('.//specCode').text
@@ -115,7 +141,62 @@ for plan_xml, plan_element in zip(root.findall('.//plan'), plan_elements):
     plan_element.append(sub_projects_table)
 
 
+#Сотрудники
+# Найдите соответствующий элемент <name> в XML
+# p_element = soup.find('p', class_='TaskBasicText icon-text')
+
+# # Найдите соответствующий элемент <name> в XML
+# workshop_name = root2.find('.//workshop/name').text
+
+# # Установите текст элемента <p> равным тексту из XML
+# p_element.string = workshop_name
+
+# projects_ul = soup.find('ul', class_='projects1')
+
+# brigade_text_p = soup.find('p', class_='TaskBasicText Brigade-text')
+# brigade_name = root2.find('.//projects/project/brigade').text
+
+# # Установите текст элемента <p> равным тексту из XML
+# brigade_text_p.string = brigade_name
+
+# icon_text_p = soup.find('p', class_='Brigade-Count')
+
+# # Найдите соответствующий элемент <employee_count> в XML
+# employee_count = root2.find('.//projects/project/employee_count').text
+
+# # Установите текст элемента <p> равным тексту из XML
+# icon_text_p.string = f'Количество сотрудников: {employee_count}'
+
+
+# employee_table = soup.find('table', class_='employee-table')
+
+# # Найдите все элементы <employee> в XML
+# for employee in root2.findall('.//employee'):
+#     # Создайте элементы HTML для сотрудника
+#     tr = soup.new_tag('tr')
+#     td1 = soup.new_tag('td')
+#     td2 = soup.new_tag('td')
+#     td3 = soup.new_tag('td')
     
+#     # Загрузите данные из XML
+#     employee_name = employee.find('name').text
+#     employee_status = employee.find('status').text
+#     employee_id = employee.find('employee_id').text
+    
+#     # Установите текст ячеек <td> равным данным из XML
+#     td1.string = employee_name
+#     td2.string = employee_status
+#     td3.string = employee_id
+    
+#     # Добавьте ячейки в строку <tr>
+#     tr.extend([td1, td2, td3])
+    
+#     # Добавьте строку в таблицу <table>
+#     employee_table.find('tbody').append(tr)
+
+
+
+
 
 # Сохранение измененного HTML обратно в файл
 with open('./Mainpages/Pages_v2/director_new.html', 'w', encoding='utf-8') as html_file:

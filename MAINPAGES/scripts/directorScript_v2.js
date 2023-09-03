@@ -1,66 +1,3 @@
-// const widget = document.getElementById('draggable-widget');
-// const header = widget.querySelector('.widget-header');
-// const closeButton = widget.querySelector('.close-button');
-
-// let isDragging = false;
-// let offsetX, offsetY;
-
-// header.addEventListener('mousedown', (e) => {
-//   isDragging = true;
-//   offsetX = e.clientX - widget.getBoundingClientRect().left;
-//   offsetY = e.clientY - widget.getBoundingClientRect().top;
-// });
-
-// document.addEventListener('mousemove', (e) => {
-//   if (!isDragging) return;
-
-//   const newX = e.clientX - offsetX;
-//   const newY = e.clientY - offsetY;
-
-//   widget.style.left = `${newX}px`;
-//   widget.style.top = `${newY}px`;
-// });
-
-// document.addEventListener('mouseup', () => {
-//   isDragging = false;
-// });
-
-// closeButton.addEventListener('click', () => {
-//   widget.style.display = 'none';
-// });
-
-// const resizer = document.getElementById('resizable-widget');
-// const resizeIcons = resizer.querySelectorAll('.resize-icon');
-
-// resizer.addEventListener('mouseenter', () => {
-//   resizeIcons.forEach(icon => {
-//     icon.style.opacity = 1;
-//   });
-// });
-
-// resizer.addEventListener('mouseleave', () => {
-//   resizeIcons.forEach(icon => {
-//     icon.style.opacity = 0;
-//   });
-// });
-//изминение размера виджета при открытии нового
-
-// function openNewWidget() {
-//   const widgetContainer = document.querySelector('.widget-container');
-//   const newWidget = document.createElement('div');
-//   newWidget.className = 'resizable-widget active-widget';
-//   newWidget.innerHTML = '<!-- ... Внутренности нового виджета ... -->';
-
-//   widgetContainer.appendChild(newWidget);
-
-//   const activeWidgets = document.querySelectorAll('.active-widget');
-//   const widgetWidthPercentage = 100 / (activeWidgets.length);
-
-//   activeWidgets.forEach((widget, index) => {
-//     widget.style.width = `${widgetWidthPercentage}%`;
-//     widget.style.transform = `translateX(${index * widgetWidthPercentage}%)`;
-//   });
-// }
 
 // Размер виджета
 function setupWidget(widgetId) {
@@ -116,31 +53,11 @@ function setupWidget(widgetId) {
   });
 }
 
-const widgetIds = ['widget1', 'widget2', 'widget3', 'widget4', 'widgetChat'];
+const widgetIds = ['widget1', 'widget2', 'widget3', 'widget4'];
 
 widgetIds.forEach(widgetId => {
   setupWidget(widgetId);
 });
-//чат
-
-function setupChatWidget() {
-  const chatWidgetContainer = document.querySelector('.chat-widget-container');
-  const chatWidget = chatWidgetContainer.querySelector('.chat-widget');
-  const chatWidgetToggle = chatWidgetContainer.querySelector('.chat-widget-toggle');
-  const closeButton = chatWidget.querySelector('.close-button');
-
-  chatWidgetToggle.addEventListener('click', () => {
-    chatWidget.style.display = 'block';
-    chatWidgetToggle.style.display = 'none'; // Скрываем иконку
-  });
-
-  closeButton.addEventListener('click', () => {
-    chatWidget.style.display = 'none';
-    chatWidgetToggle.style.display = 'block'; // Показываем иконку
-  });
-}
-setupChatWidget();
-
 
 // Панель виджетов
 const widgetIcons = document.querySelectorAll('.func');
@@ -162,8 +79,7 @@ const widgetButtons = document.querySelectorAll('.widget-header button');
 
 widgetButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const widgetContainer = button.closest('.chat-widget-container'); // Изменили на '.chat-widget-container'
-    const widgets = widgetContainer.querySelectorAll('.chat-widget'); // Изменили на '.chat-widget'
+
 
     widgets.forEach(widget => {
       widget.classList.remove('active-widget');
@@ -187,75 +103,7 @@ buttons.forEach(button => {
 });
 
 
-// function setupChatMover(chatWidgetId) {
-//   const chatWidget = document.getElementById(chatWidgetId);
-//   const chatHeader = chatWidget.querySelector('.chat-header');
-  
-//   let isDragging = false;
-//   let initialX, initialY;
-//   let initialLeft, initialTop;
 
-//   chatHeader.addEventListener('mousedown', (e) => {
-//     isDragging = true;
-//     initialX = e.clientX;
-//     initialY = e.clientY;
-//     initialLeft = parseFloat(getComputedStyle(chatWidget).left);
-//     initialTop = parseFloat(getComputedStyle(chatWidget).top);
-//     e.preventDefault();
-//   });
-  
-//   document.addEventListener('mousemove', (e) => {
-//     if (isDragging) {
-//       const deltaX = e.clientX - initialX;
-//       const deltaY = e.clientY - initialY;
-//       chatWidget.style.left = `${initialLeft + deltaX}px`;
-//       chatWidget.style.top = `${initialTop + deltaY}px`;
-//     }
-//   });
-  
-//   document.addEventListener('mouseup', () => {
-//     isDragging = false;
-//   });
-// }
-// const chatWidgetId = 'draggableHeader'; // Замените на ID вашего чат-виджета
-// setupChatMover(chatWidgetId);
-// Вызов функции для настройки перемещения чата
-
-
-
-
-//симуляция чата
-// document.addEventListener("DOMContentLoaded", function () {
-//   const chatContent = document.querySelector(".chat-content");
-//   const messageInput = document.getElementById("messageInput");
-//   const sendButton = document.getElementById("sendButton");
-
-//   sendButton.addEventListener("click", sendMessage);
-
-//   function sendMessage() {
-//     const messageText = messageInput.value.trim();
-//     if (messageText !== "") {
-//       addMessage("user", messageText); // Отправляем сообщение пользователя
-//       messageInput.value = "";
-//       simulateResponse(); // Симулируем получение ответа
-//     }
-//   }
-
-//   function addMessage(sender, message) {
-//     const messagesList = chatContent.querySelector(".messages-list");
-//     const messageElement = document.createElement("li");
-//     messageElement.classList.add("message", sender);
-//     messageElement.textContent = message;
-//     messagesList.appendChild(messageElement);
-//     chatContent.scrollTop = chatContent.scrollHeight; // Прокручиваем вниз для отображения последнего сообщения
-//   }
-
-//   function simulateResponse() {
-//     setTimeout(function () {
-//       addMessage("bot", "Привет! Как я могу помочь вам?"); // Симулируем ответ бота
-//     }, 1000); // Задержка для эмуляции ответа
-//   }
-// });
 
 //боковая панель у главного виджета ежедневник
 const panelTitle = document.getElementById('panelTitle');
@@ -294,8 +142,10 @@ function getRowData(index) {
       content: 'Содержимое второй строки...'
     };
   }
-  // И так далее...
+
 }
+
+//Выпадающий список работников
 
 const rowStates = {};
 

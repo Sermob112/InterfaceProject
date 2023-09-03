@@ -122,5 +122,24 @@
         </subProject>
     </subProjects>
 </plan>
-
+<plan>
+    <title>План №252</title>
+    <progressWhole>81</progressWhole>
+    <subProjects>
+        <subProject>
+            <specCode>#422</specCode>
+            <orderName>Заказ по кораблям модели ек2321</orderName>
+            <progressValue>30</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+        <subProject>
+            <specCode>#5521</specCode>
+            <orderName>Заказ по кораблям модели 34r2</orderName>
+            <progressValue>50</progressValue>
+            <status>Заморожен</status>
+        </subProject>
+        
+    </subProjects>
+</plan>
+ 
 </data>

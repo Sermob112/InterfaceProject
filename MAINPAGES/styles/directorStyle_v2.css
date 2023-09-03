@@ -783,18 +783,7 @@
 }
 
 /* Стиль для заголовков с тенью */
-.workshop-title1, .projects_name_list, .TaskWorkShopTask.tasks_name_list {
-  cursor: pointer;
-  background-color: #f2f2f2;
-  padding: 10px;
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
-}
+
 
 .workshop-title1 {
   height: 10px; /* Устанавливаем высоту 40px */
@@ -883,20 +872,7 @@
 .user-details {
   display: flex;
   flex-direction: column;
-  margin-right: 10px; /* Отступ между аватаркой и деталями пользователя */
-}
-
-.user-name{
-  margin: 0;
-  color: #000000; /* Изменяем цвет имени пользователя */
-
-}
-
-.user-status {
-  color: #2c2c2c; /* Цвет для статуса */
-}
-.user-text-color {
-  color: #050505; /* Замените на желаемый цвет */
+  margin-right: 10px; 
 }
 .user-id {
   margin: 0;
@@ -1146,3 +1122,44 @@
   margin-top: 20px;
   font-size: 14px;
 }
+
+
+
+.workshop-title1,
+.projects_name_list,
+.TaskWorkShopTask.tasks_name_list {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
+  border-radius: 5px; /* Добавляем скругление углов */
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: separate; /* Убираем сетку */
+  border-spacing: 0; /* Убираем промежутки между ячейками */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  border-radius: 5px; /* Добавляем скругление углов */
+}
+
+.employee-table th,
+.employee-table td {
+  border-bottom: 1px solid #ccc; 
+  padding: 8px;
+  text-align: center;
+}
+
+.employee-table th {
+  background-color: #f2f2f2;
+}
+
+
+
+
