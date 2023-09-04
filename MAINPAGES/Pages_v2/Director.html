@@ -74,86 +74,71 @@
     </div>
 
     <div class="widget-columns"> 
-      <div class="widget-table-column">
-      <table class="widget-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Кому</th>
-            <th>От кого</th>
-            <th>Статус</th>
-            <th>Дата</th>
-            <th>Тип</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr >
-            <td><input type="checkbox"></td> 
-            <td>Директору</td>
-            <td>Перв. Зам</td>
-            <td class="highlight-green"><span>Активно</span></td>
-            <td>01.01.01</td>
-            <td>Служебная</td>
-          </tr>
-          <!-- <tr  class="green-row"> -->
-            <tr  >
-            <td><input type="checkbox"></td> 
-            <td>Перв. зам</td>
-            <td>Директор</td>
-            <td class="highlight-yellow"><span>Не активно</span></td>
-            <td>02.01.01</td>
-            <td>Поручение</td>
-          </tr>
-          <tr  >
-            <td><input type="checkbox"></td> 
-            <td>Перв. зам</td>
-            <td>Директор</td>
-            <td class="highlight-green"><span>Aктивно</span></td>
-            <td>02.01.01</td>
-            <td>Поручение</td>
-          </tr>
-          <tr  >
-            <td><input type="checkbox"></td> 
-            <td>Перв. зам</td>
-            <td>Директор</td>
-            <td class="highlight-red"><span>Не активно</span></td>
-            <td>02.01.01</td>
-            <td>Поручение</td>
-          </tr>
-          <!-- Добавьте другие строки с данными -->
-        </tbody>
-      </table>
-    </div>
-
-    <div class="widget-text-column" id="widgetTextColumn">
-
-      <div class="widget-text-top">
-        <h4 id="panelTitle">Заголовок</h4>
-        <p id="panelContent">Содержимое...</p>
-      </div>
-      <div class="widget-text-bottom">
-        <div class="file-panel">
-          <h4>Файл</h4>
-          <img src="your-image-path.png" alt="pdf">
+      <div class="person-selector">
+        <div class="persons">
+          <button class="button person-selector-button active-person" id="john-selector">
+            <img src="../../img/avatar.png" alt="Аватар Виталия">
+            <span>Виталий Алексеевич</span>
+            <div class="unread-badge">3</div> <!-- Это серый овал с цифрой -->
+          </button>
+          <button class="button person-selector-button" id="jane-selector">
+            <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+            <span>Дмитрий Викторович</span>
+            <div class="unread-badge">53</div> 
+          </button>
+          <button class="button person-selector-button active-person" id="john-selector">
+            <img src="../../img/avatar.png" alt="Аватар Виталия">
+            <span>Иван Иванов</span>
+            <div class="unread-badge">34</div> <!-- Это серый овал с цифрой -->
+          </button>
+          <button class="button person-selector-button" id="jane-selector">
+            <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+            <span>Иван Иванов</span>
+  
+          </button>
+          <button class="button person-selector-button active-person" id="john-selector">
+            <img src="../../img/avatar.png" alt="Аватар Виталия">
+            <span>Иван Иванов</span>
+            
+          </button>
+          <button class="button person-selector-button" id="jane-selector">
+            <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+            <span>Иван Иванов</span>
+            <div class="unread-badge">4</div> 
+          </button>
+          <button class="button person-selector-button active-person" id="john-selector">
+            <img src="../../img/avatar.png" alt="Аватар Виталия">
+            <span>Иван Иванов</span>
+            <div class="unread-badge">11</div> <!-- Это серый овал с цифрой -->
+          </button>
+          <button class="button person-selector-button" id="jane-selector">
+            <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+            <span>Иван Иванов</span>
+         
+          </button>
         </div>
-      </div>
+
+        <div class="chat-container">
+
+            <div class="chat-messages">
+              
+            </div>
+    
+            <form class="chat-input-form">
+                <input type="text" class="chat-input" required placeholder="Введите сообщение">
+                <button type="submit" class="button send-button">Отправить</button>
+            </form>
+            <button class="button clear-chat-button">Очистить сообщения</button>
+        </div>
     </div>
 
 
   </div>
-   <!--нижняя панель управления виджетом-->
-  <div class="widget-images-panel">
-    <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
-    <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
-    <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
-    <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
-     <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
-  </div>
-
     <div class="resize-handle"></div>
 
 
   </div>
+</div>
  <!--виджет Цехов -->
 
   <!-- <div class="resizable-widget" id="widget5">
@@ -668,6 +653,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../scripts/directorScript_v2.js" ></script>
+<script src="../scripts/chatScript.js"></script>
 
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
