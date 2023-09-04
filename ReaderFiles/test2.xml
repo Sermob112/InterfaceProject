@@ -1,29 +1,18 @@
 <data>
-    <ceh>
-        <id>ceh1</id>
-        <name>Цех 521</name>
-        <brigade>
-            <id>brigade1</id>
-            <name>Бригада 1521</name>
-            <employee>Сотрудник 1.1231</employee>
-            <employee>Сотрудник 5121.2</employee>
-        </brigade>
-        <brigade>
-            <id>brigade2</id>
-            <name>Бригада 2</name>
-            <employee>Сотрудник 2.5211</employee>
-            <employee>Сотрудник 2.5212</employee>
-        </brigade>
-    </ceh>
-    <ceh>
-        <id>ceh2</id>
-        <name>Цех 521</name>
-        <brigade>
-            <id>brigade3</id>
-            <name>Бригада 52</name>
-            <employee>Сотрудник 323.1</employee>
-            <employee>Сотрудник 3.4212</employee>
-        </brigade>
-    </ceh>
-    <!-- Добавьте другие цехи, бригады и сотрудников по аналогии -->
+    <brigadeText>Название бригады</brigadeText>
+    <brigadeCount>Количество сотрудников в бригаде</brigadeCount>
+    <workshopName>Название цеха</workshopName> <!-- Добавьте эту строку -->
+    <employees>
+        <employee>
+            <name>Имя сотрудника 1</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+        <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+        <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
+    </employees>
 </data>
