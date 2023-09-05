@@ -141,5 +141,70 @@
         
     </subProjects>
 </plan>
- 
+<employeeList>
+    <brigadeText>Бригада 4</brigadeText>
+    <brigadeCount>Количество сотрудников в бригаде: 8</brigadeCount>
+    <workshopName>Цех 3</workshopName> <!-- Добавьте эту строку -->
+    <employees>
+        <employee>
+            <name>Имя сотрудника 1</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+        <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+         <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+         <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+         <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+        <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
+    </employees>
+ </employeeList>
+ <employeeList>
+    <brigadeText>Бригада 4</brigadeText>
+    <brigadeCount>Количество сотрудников в бригаде: 8</brigadeCount>
+    <workshopName>Цех 3</workshopName> <!-- Добавьте эту строку -->
+    <employees>
+        <employee>
+            <name>Имя сотрудника 1</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+        <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+         <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+         <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+         <employee>
+            <name>Имя сотрудника 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+        <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
+    </employees>
+ </employeeList>
 </data>
