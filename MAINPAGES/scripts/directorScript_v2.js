@@ -53,7 +53,7 @@ function setupWidget(widgetId) {
   });
 }
 
-const widgetIds = ['widget1', 'widget2', 'widget3', 'widget4'];
+const widgetIds = ['widget1', 'widget2', 'widget3', 'widget4','widgetChat'];
 
 widgetIds.forEach(widgetId => {
   setupWidget(widgetId);
