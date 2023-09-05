@@ -14,12 +14,7 @@
   margin-right: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#widgetChat.resizable-widget {
-  /* Ваши стили для виджета с id "widgetChat" */
-  width: 90%; /* Например, уменьшим ширину до половины */
-  min-width: 680px;
-  /* Другие стили по вашему выбору */
-}
+
 .resizable-widget:hover {
   transform: scale(1.01);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
@@ -1416,3 +1411,9 @@ body {
   color: blue; /* Цвет текста отправителя */
 }
 
+#widgetChat.resizable-widget {
+  /* Ваши стили для виджета с id "widgetChat" */
+  width: 90%; /* Например, уменьшим ширину до половины */
+  min-width: 680px;
+  /* Другие стили по вашему выбору */
+}
