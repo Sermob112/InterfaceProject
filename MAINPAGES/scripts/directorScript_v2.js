@@ -1,5 +1,4 @@
 
-// Размер виджета
 function setupWidget(widgetId) {
   const widget = document.getElementById(widgetId);
   const resizeHandle = widget.querySelector('.resize-handle');
@@ -57,49 +56,6 @@ const widgetIds = ['widget1', 'widget2', 'widget3', 'widget4','widgetChat'];
 
 widgetIds.forEach(widgetId => {
   setupWidget(widgetId);
-});
-
-// Панель виджетов
-const widgetIcons = document.querySelectorAll('.func');
-const widgets = document.querySelectorAll('.resizable-widget');
-
-widgetIcons.forEach(icon => {
-  const widgetId = icon.getAttribute('data-widget');
-  const widget = document.getElementById(widgetId);
-
-  icon.addEventListener('click', () => {
-    if (widget.style.display === 'none' || widget.style.display === "") {
-      widget.style.display = 'block';
-    } else {
-      widget.style.display = 'none';
-    }
-  });
-});
-const widgetButtons = document.querySelectorAll('.widget-header button');
-
-widgetButtons.forEach(button => {
-  button.addEventListener('click', () => {
-
-
-    widgets.forEach(widget => {
-      widget.classList.remove('active-widget');
-    });
-
-    const widget = button.closest('.chat-widget'); // Изменили на '.chat-widget'
-    widget.classList.add('active-widget');
-  });
-});
-
-const buttons = document.querySelectorAll('.func');
-
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    if (button.classList.contains('activeButton')) {
-      button.classList.remove('activeButton');
-    } else {
-      button.classList.add('activeButton');
-    }
-  });
 });
 
 
@@ -244,4 +200,77 @@ projects.forEach((project) => {
   })
 
 });
+// скрипт выбора элементов в выпадающем меню
+// Находим выпадающий список
+const widgetSelect = document.getElementById('widget-select');
+
+// Добавляем обработчик события при изменении значения выпадающего списка
+widgetSelect.addEventListener('change', function () {
+  const selectedWidget = widgetSelect.value;
+
+  // Находим выбранное окно
+  const selectedWidgetElement = document.getElementById(selectedWidget);
+
+  // Проверяем, если окно уже отображается, то скрываем его, иначе отображаем
+
+  if (selectedWidgetElement.style.display === 'none' || selectedWidgetElement.style.display === '') {
+    selectedWidgetElement.style.display = 'block';
+  }
+});
+
+
+
+
+// Функция для разворачивания виджета на весь экран
+function expandWidget(widgetId) {
+  const widget = document.getElementById(widgetId);
+
+  // Добавляем класс для развернутого состояния
+  widget.classList.add('expanded');
+}
+
+// Функция для сворачивания виджета обратно в исходное состояние
+function collapseWidget(widgetId) {
+  const widget = document.getElementById(widgetId);
+
+  // Удаляем класс для развернутого состояния
+  widget.classList.remove('expanded');
+}
+
+// Функция для переключения состояния виджета при клике на кнопку
+function toggleFullscreen(widgetId) {
+  const widget = document.getElementById(widgetId);
+
+  if (widget.classList.contains('expanded')) {
+    collapseWidget(widgetId);
+  } else {
+    expandWidget(widgetId);
+  }
+}
+
+// Назначаем обработчик клика на кнопку разворачивания/сворачивания
+const uncollapseButtons = document.querySelectorAll('.uncollapse-button');
+
+uncollapseButtons.forEach(button => {
+  const widgetId = button.closest('.resizable-widget').id;
+  button.addEventListener('click', () => {
+    toggleFullscreen(widgetId);
+  });
+});
+
+
+//Изменение z-index при клике по виджету
+const widgets = document.querySelectorAll('.resizable-widget');
+widgets.forEach(widget => {
+  widget.addEventListener('click', () => {
+    // Уберем активное состояние у всех виджетов
+    widgets.forEach(w => {
+      w.style.zIndex = '1'; // Возвращаем z-index в исходное состояние
+    });
+
+    // Устанавливаем активное состояние и повышаем z-index для текущего виджета
+    widget.style.zIndex = '2'; // Изменяем z-index для активного виджета
+  });
+});
+
 

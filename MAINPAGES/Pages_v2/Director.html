@@ -19,13 +19,30 @@
     <img class="logo" src="../../img/logo.png" alt="Logo" >
     <img class="logo-2" src="../../img/logo.png" alt="Logo" >
      <!--Полоска виджетов-->
-     <div class="vidgetLine">
+
+      <!--Полоска виджетов-->
+      <div class="vidgetLine">
+
+        <!-- Горизонтальное выпадающее меню с виджетами -->
+       <div class="widget-dropdown">
+         <select id="widget-select" class="horizontal">
+           <option value="widget1" >Ежедневник</option>
+           <option value="widget2">Схема цехов</option>
+           <option value="widget3">Список сотрудников цеха</option>
+           <option value="widget4">Планирование</option>
+           <option value="widgetChat">Чат</option>
+           <!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
+         </select>
+       </div>
+
+   </div>
+     <!-- <div class="vidgetLine">
       <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> Ежедневник </button>
       <button type="button" data-widget="widget2" class="func" data-target="wnd2"> Схема цехов </button>
       <button type="button" data-widget="widget3" class="func" data-target="wnd3"> Список сотрудников </button>
       <button type="button" data-widget="widget4" class="func" data-target="wnd4"> Планирование </button>
       <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button>
-    </div> 
+    </div>  -->
 
     <!-- <div class="vidgetLine">
       <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> <img src="../..//img/proizvodstvo.png" class="proizvodstvoImg"> </button>
@@ -48,25 +65,17 @@
 </div>
 
 
-    
 
 
-
-  <!--Область окон-->
-            <div class="vidgetContext">
-                <div class="funcDiscription1" id="wnd1"></div>
-                <div class="funcDiscription2" id="wnd2"></div>
-                <div class="funcDiscription3" id="wnd3"></div>
-                <div class="funcDiscription4" id="wnd4"></div>
-                <div class="funcDiscription5 activeBlock" id="wnd5"></div>
-            </div>
  <!--Сами виджеты-->
 
     <div class="widget-container ">
   <div class="resizable-widget active-widget" id="widget1">
     <div class="widget-header">
       <span class="blockName">Ежедневник</span>
-      <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+      <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+      <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+  <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
     </div>
 
     <div class="widget-columns"> 
@@ -138,13 +147,13 @@
 
   </div>
    <!--нижняя панель управления виджетом-->
-  <div class="widget-images-panel">
+  <!-- <div class="widget-images-panel">
     <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
     <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
     <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
     <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
      <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
-  </div>
+  </div> -->
 
     <div class="resize-handle"></div>
 
@@ -201,7 +210,9 @@
 <div class="resizable-widget" id="widget3">
   <div class="widget-header">
     <span class="blockName">Список сотрудников цеха</span>
-    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+    <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+    <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+<button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
   </div>
   
     
@@ -259,13 +270,13 @@
  
    <!--нижняя панель управления виджетом-->
    <!--нижняя панель управления виджетом-->
- <div class="widget-images-panel">
+ <!-- <div class="widget-images-panel">
   <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
    <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
-</div>
+</div> -->
 
   <div class="resize-handle"></div>
 </div>
@@ -277,7 +288,9 @@
 <div class="resizable-widget" id="widget4">
   <div class="widget-header">
     <span class="blockName">Планирование</span>
-    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+    <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+    <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+<button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
   </div>
   <div class="widget-content">
     <!-- Widget content goes here -->
@@ -379,13 +392,13 @@
 
   </div>
   <!--нижняя панель управления виджетом-->
- <div class="widget-images-panel">
+ <!-- <div class="widget-images-panel">
   <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
   <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
    <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
-</div>
+</div> -->
   <div class="resize-handle"></div>
 </div>
 
@@ -400,7 +413,9 @@
      <div class="resizable-widget" id="widget2">
       <div class="widget-header">
         <span class="blockName">Схема цехов</span>
-        <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+        <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+        <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
       </div>
 
       <div class="factory-map">
@@ -451,11 +466,13 @@
 
 <!--Конец контейнера виджетов -->
   <!-- чат -->
-  <div class="widget-container ">
-    <div class="resizable-widget active-widget" id="widgetChat">
+
+    <div class="resizable-widget" id="widgetChat">
       <div class="widget-header">
         <span class="blockName">Чат</span>
-        <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+        <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+        <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
       </div>
   
    
@@ -529,6 +546,7 @@
       <div class="resize-handle"></div>
     </div>
   </div>
+ 
 <!--Конец чата-->
 <!--Футор-->
 <div class="footer">
@@ -559,6 +577,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../scripts/directorScript_v2.js" ></script>
 <script src="../scripts/chatScript.js"></script>
+<script src="../scripts/directorScript_v2.js" ></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>

@@ -1,11 +1,11 @@
 
-.resizable-widget {
+/* .resizable-widget {
   position: relative;
 
   width: 99%;
   height: 100%;
   min-width: 300px;
-  min-height: 600px;
+  min-height: 300px;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -13,7 +13,34 @@
   display: flex;
   margin-right: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.resizable-widget {
+  position: relative;
+
+  /*position: absolute;*/
+  margin-right: 10px;
+  min-height: 300px;
+  min-width: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  z-index: 1;
 }
+
+
+.widget-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+
+}
+
 
 .resizable-widget:hover {
   transform: scale(1.01);
@@ -51,6 +78,42 @@
 .close-button:hover {
   transform: scale(1.2);
 }
+.collapse-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px; /* Изменяем отступ с левой стороны */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.collapse-button img {
+  width: 30px;
+  height: 24px;
+}
+
+.collapse-button:hover {
+  transform: scale(1.2);
+}
+
+.uncollapse-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px; /* Изменяем отступ с левой стороны */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.uncollapse-button img {
+  width: 30px;
+  height: 24px;
+}
+
+.uncollapse-button:hover {
+  transform: scale(1.2);
+}
+
 
 /* Стили для нижней панели управления виджетом */
 .widget-images-panel {
@@ -236,14 +299,6 @@
     background-color: rgb(252, 252, 168);
   }
 
-
-  .widget-container {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    padding: 10px;
-
-  }
   
 
   .widget-columns {
@@ -1181,8 +1236,11 @@ body {
 
 /* Оставляем flex-контейнеру футера свободное пространство внизу и уменьшаем высоту футера */
 .footer {
+  bottom: 0;
+  position: flex;
   margin-top: auto;
-  height: 200px; /* Установите желаемую высоту футера здесь */
+  height: 200px;
+  width: 100%;
 }
 
 /*Chat */
@@ -1191,7 +1249,7 @@ body {
   display: block;
   max-width: 100%; /* Максимальная ширина для .persons */
   width: 100%; /* Заполняем всю доступную ширину родительского элемента */
-  min-width: 0; /* Убираем минимальную ширину */
+  min-width: 0; 
   background-color: #f0f0f0;
   border-radius: 5px;
   overflow-y: scroll;
@@ -1367,9 +1425,6 @@ body {
   border-radius: 50%;
 }
 
-
-
-/* Стили для сообщений партнера (Виталия и Дмитрия) */
 .message-partner {
   background-color: #f0f0f0; /* Цвет фона для сообщений партнера */
   color: #333; /* Цвет текста для сообщений партнера */
@@ -1413,7 +1468,26 @@ body {
 
 #widgetChat.resizable-widget {
   /* Ваши стили для виджета с id "widgetChat" */
-  width: 90%; /* Например, уменьшим ширину до половины */
+  width: 60%; /* Например, уменьшим ширину до половины */
   min-width: 680px;
+  height: 60%;
+  min-height: 680px;
   /* Другие стили по вашему выбору */
+}
+
+/* Раскрытие скрытие виджетов*/
+.resizable-widget.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height:  100%;
+  z-index: 99; /* Устанавливаем виджет поверх остальных элементов */
+  margin-top: 70px;
+  max-height: calc(100% - 360px);
+  margin-left: 10px;
+  max-width: calc(100% - 10px);
+  transform: none; /* Убираем трансформацию */
 }
