@@ -43,7 +43,7 @@
 
 
 .resizable-widget:hover {
-  transform: scale(1.01);
+  /* transform: scale(1.01); */
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -1474,6 +1474,22 @@ body {
   min-height: 680px;
   /* Другие стили по вашему выбору */
 }
+/* #widget1.resizable-widget {
+
+  width: 100%; 
+  min-width: 680px;
+  height: 100%;
+  min-height: 680px;
+
+}
+#widget2.resizable-widget {
+
+  width: 50%; 
+  min-width: 680px;
+
+  min-height: 480px;
+
+} */
 
 /* Раскрытие скрытие виджетов*/
 .resizable-widget.expanded {
