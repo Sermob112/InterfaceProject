@@ -207,4 +207,19 @@
         <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
     </employees>
  </employeeList>
+<workshops>
+  <workshop class="backGround-color-yellow">
+    <workshopName>Цех 1</workshopName>
+    <workshopInfo>Выполнено: 75%</workshopInfo>
+  </workshop>
+  <workshop class="backGround-color-red">
+    <workshopName>Цех 2</workshopName>
+    <workshopInfo>Выполнено: 50%</workshopInfo>
+  </workshop>
+  <workshop class="backGround-color-green">
+    <workshopName>Цех 3</workshopName>
+    <workshopInfo>Выполнено: 90%</workshopInfo>
+  </workshop>
+  <!-- Добавьте остальные цеха здесь как новые элементы workshop с соответствующими классами -->
+</workshops>
 </data>

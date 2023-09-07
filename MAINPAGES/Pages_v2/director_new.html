@@ -16,13 +16,38 @@
 <img alt="Logo" class="logo" src="../../img/logo.png"/>
 <img alt="Logo" class="logo-2" src="../../img/logo.png"/>
 <!--Полоска виджетов-->
+<!--Полоска виджетов-->
 <div class="vidgetLine">
-<button class="func activeButton" data-target="wnd1" data-widget="widget1" type="button"> Ежедневник </button>
-<button class="func" data-target="wnd2" data-widget="widget2" type="button"> Схема цехов </button>
-<button class="func" data-target="wnd3" data-widget="widget3" type="button"> Список сотрудников </button>
-<button class="func" data-target="wnd4" data-widget="widget4" type="button"> Планирование </button>
-<button class="func" data-target="wnd5" data-widget="widget5" type="button"> Производство </button>
+<!-- Горизонтальное выпадающее меню с виджетами -->
+<div class="widget-dropdown">
+<select class="horizontal" id="widget-select">
+<option value="widget1">Ежедневник</option>
+<option value="widget2">Схема цехов</option>
+<option value="widget3">Список сотрудников цеха</option>
+<option value="widget4">Планирование</option>
+<option value="widgetChat">Чат</option>
+<!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
+</select>
 </div>
+<!-- Горизонтальное выпадающее меню с виджетами -->
+<div class="widget-dropdown">
+<select class="horizontal" id="widget-select">
+<option value="widget1">Ежедневник</option>
+<option value="widget2">Схема цехов</option>
+<option value="widget3">Список сотрудников цеха</option>
+<option value="widget4">Планирование</option>
+<option value="widgetChat">Чат</option>
+<!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
+</select>
+</div>
+</div>
+<!-- <div class="vidgetLine">
+      <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> Ежедневник </button>
+      <button type="button" data-widget="widget2" class="func" data-target="wnd2"> Схема цехов </button>
+      <button type="button" data-widget="widget3" class="func" data-target="wnd3"> Список сотрудников </button>
+      <button type="button" data-widget="widget4" class="func" data-target="wnd4"> Планирование </button>
+      <button type="button" data-widget="widget5" class="func" data-target="wnd5"> Производство </button>
+    </div>  -->
 <!-- <div class="vidgetLine">
       <button type="button" data-widget="widget1" class="func activeButton" data-target="wnd1"> <img src="../..//img/proizvodstvo.png" class="proizvodstvoImg"> </button>
       <button type="button" data-widget="widget2" class="func " data-target="wnd2"> <img src="../..//img/finance.png" class="financeImg"> </button>
@@ -39,19 +64,13 @@
 <img alt="Иконка шеврон" class="chevron-icon" src="../../img/Arrowdown.png"/>
 </div>
 </div>
-<!--Область окон-->
-<div class="vidgetContext">
-<div class="funcDiscription1" id="wnd1"></div>
-<div class="funcDiscription2" id="wnd2"></div>
-<div class="funcDiscription3" id="wnd3"></div>
-<div class="funcDiscription4" id="wnd4"></div>
-<div class="funcDiscription5 activeBlock" id="wnd5"></div>
-</div>
 <!--Сами виджеты-->
 <div class="widget-container">
 <div class="resizable-widget active-widget" id="widget1">
 <div class="widget-header">
 <span class="blockName">Ежедневник</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
 <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
 </div>
 <div class="widget-columns">
@@ -67,7 +86,42 @@
 <th>Тип</th>
 </tr>
 </thead>
-<tbody><tr><td><input type="checkbox"/></td><td>Директору</td><td>Перв. Зам</td><td>Активно</td><td>01.01.01</td><td>Служебная</td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr><tr><td><input type="checkbox"/></td><td>Перв. зам</td><td>Директор 4</td><td>Не активно 4</td><td>02.01.01</td><td>Поручение4 </td></tr></tbody>
+<tbody>
+<tr>
+<td><input type="checkbox"/></td>
+<td>Директору</td>
+<td>Перв. Зам</td>
+<td class="highlight-green"><span>Активно</span></td>
+<td>01.01.01</td>
+<td>Служебная</td>
+</tr>
+<!-- <tr  class="green-row"> -->
+<tr>
+<td><input type="checkbox"/></td>
+<td>Перв. зам</td>
+<td>Директор</td>
+<td class="highlight-yellow"><span>Не активно</span></td>
+<td>02.01.01</td>
+<td>Поручение</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>Перв. зам</td>
+<td>Директор</td>
+<td class="highlight-green"><span>Aктивно</span></td>
+<td>02.01.01</td>
+<td>Поручение</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>Перв. зам</td>
+<td>Директор</td>
+<td class="highlight-red"><span>Не активно</span></td>
+<td>02.01.01</td>
+<td>Поручение</td>
+</tr>
+<!-- Добавьте другие строки с данными -->
+</tbody>
 </table>
 </div>
 <div class="widget-text-column" id="widgetTextColumn">
@@ -84,13 +138,13 @@
 </div>
 </div>
 <!--нижняя панель управления виджетом-->
-<div class="widget-images-panel">
-<img alt="Иконка настроек" class="settings-icon" src="../../img/settings_2.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/planirovanie.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/proizvodstvo.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/phone.svg"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/search.png"/>
-</div>
+<!-- <div class="widget-images-panel">
+    <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
+    <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
+     <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
+  </div> -->
 <div class="resize-handle"></div>
 </div>
 <!--виджет Цехов -->
@@ -134,9 +188,11 @@
     <div class="resize-handle"></div>
   </div> -->
 <!--виджет управления персоналом-->
-<div class="resizable-widget" id="widget3">
+<div class="resizable-widget active-widget" id="widget3">
 <div class="widget-header">
 <span class="blockName">Список сотрудников цеха</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
 <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
 </div>
 <div class="container">
@@ -181,16 +237,16 @@
 </ul>
 </li>
 </ul>
-<div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Цех 3</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Бригада 4</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в бригаде: 8</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Имя сотрудника</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr><td>Имя сотрудника 1</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 1</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Цех 3</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Бригада 4</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в бригаде: 8</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Имя сотрудника</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr><td>Имя сотрудника 1</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 1</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr><tr><td>Имя сотрудника 2</td><td><span class="highlight-yellow">Работает</span></td><td>Табельный номер 2</td></tr></tbody></table></ul></li></ul></div>
-<!--нижняя панель управления виджетом-->
-<!--нижняя панель управления виджетом-->
-<div class="widget-images-panel">
-<img alt="Иконка настроек" class="settings-icon" src="../../img/settings_2.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/planirovanie.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/proizvodstvo.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/phone.svg"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/search.png"/>
 </div>
+<!--нижняя панель управления виджетом-->
+<!--нижняя панель управления виджетом-->
+<!-- <div class="widget-images-panel">
+  <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
+   <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
+</div> -->
 <div class="resize-handle"></div>
 </div>
 <!--виджет управления персоналом-->
@@ -198,6 +254,8 @@
 <div class="resizable-widget" id="widget4">
 <div class="widget-header">
 <span class="blockName">Планирование</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
 <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
 </div>
 <div class="widget-content">
@@ -205,109 +263,199 @@
 <!-- Планы заказов -->
 <div class="plans">
 <ul class="plan-contents">
-<li class="plan"><h4 class="plan-title">План №76</h4><progress id="progressWhole" max="100" value="81"></progress><table class="sub-projects"><thead><tr><th>Спец код</th><th>Название заказа</th><th>Процент выполнения</th><th>Статус</th></tr></thead><tbody><tr><td>#42</td><td>Заказ по кораблям модели ек2321</td><td><progress id="progressBar" max="100" value="30"></progress><span id="progressValue">30%</span></td><td>Заморожен</td></tr><tr><td>#521</td><td>Заказ по кораблям модели 34r2</td><td><progress id="progressBar" max="100" value="50"></progress><span id="progressValue">50%</span></td><td>Заморожен</td></tr><tr><td>#521</td><td>Заказ по кораблям модели 34r2</td><td><progress id="progressBar" max="100" value="50"></progress><span id="progressValue">50%</span></td><td>Заморожен</td></tr><tr><td>#521</td><td>Заказ по кораблям модели 34r2</td><td><progress id="progressBar" max="100" value="50"></progress><span id="progressValue">50%</span></td><td>Заморожен</td></tr></tbody></table></li>
-<li class="plan"><h4 class="plan-title">План №22</h4><progress id="progressWhole" max="100" value="81"></progress><table class="sub-projects"><thead><tr><th>Спец код</th><th>Название заказа</th><th>Процент выполнения</th><th>Статус</th></tr></thead><tbody><tr><td>#422</td><td>Заказ по кораблям модели ек2321</td><td><progress id="progressBar" max="100" value="30"></progress><span id="progressValue">30%</span></td><td>Заморожен</td></tr><tr><td>#5521</td><td>Заказ по кораблям модели 34r2</td><td><progress id="progressBar" max="100" value="50"></progress><span id="progressValue">50%</span></td><td>Заморожен</td></tr><tr><td>#5221</td><td>Заказ по кораблям модели 34r2</td><td><progress id="progressBar" max="100" value="50"></progress><span id="progressValue">50%</span></td><td>Заморожен</td></tr><tr><td>#5521</td><td>Заказ по кораблям модели 34r2</td><td><progress id="progressBar" max="100" value="50"></progress><span id="progressValue">50%</span></td><td>Заморожен</td></tr></tbody></table></li>
-<li class="plan"><h4 class="plan-title">План №252</h4><progress id="progressWhole" max="100" value="81"></progress><table class="sub-projects"><thead><tr><th>Спец код</th><th>Название заказа</th><th>Процент выполнения</th><th>Статус</th></tr></thead><tbody><tr><td>#422</td><td>Заказ по кораблям модели ек2321</td><td><progress id="progressBar" max="100" value="30"></progress><span id="progressValue">30%</span></td><td>Заморожен</td></tr><tr><td>#5521</td><td>Заказ по кораблям модели 34r2</td><td><progress id="progressBar" max="100" value="50"></progress><span id="progressValue">50%</span></td><td>Заморожен</td></tr></tbody></table></li>
+<li class="plan">
+<h4 class="plan-title">План №1</h4>
+<progress id="progressWhole" max="100" value="81"></progress>
+<!-- Выполнение заказаов -->
+<table class="sub-projects">
+<thead>
+<th>Спец код</th>
+<th>Название заказа</th>
+<th>Процент выполнения</th>
+<th>Статус</th>
+</thead>
+<tbody>
+<tr>
+<td>#637283e2</td>
+<td>Заказ по кораблям модели 34r2</td>
+<td><progress id="progressBar" max="100" value="60"></progress>
+<span id="progressValue">60</span>%</td>
+<td>Заморожен</td>
+</tr>
+<tr>
+<td>#637283e2</td>
+<td>Заказ по кораблям модели 34r2</td>
+<td><progress id="progressBar" max="100" value="20"></progress>
+<span id="progressValue">20</span>%</td>
+<td>Заморожен</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="plan">
+<h3 class="plan-title" id="plan3">План №2</h3>
+<progress id="progressWhole" max="100" value="70"></progress>
+<!-- Выполнение заказаов -->
+<table class="sub-projects">
+<thead>
+<th>Спец код</th>
+<th>Название заказа</th>
+<th>Процент выполнения</th>
+<th>Статус</th>
+</thead>
+<tbody>
+<tr>
+<td>#637283e2</td>
+<td>Заказ по кораблям модели 34r2</td>
+<td><progress id="progressBar" max="100" value="60"></progress>
+<span id="progressValue">70</span>%</td>
+<td>Заморожен</td>
+</tr>
+<tr>
+<td>#637283e2</td>
+<td>Заказ по кораблям модели 34r2</td>
+<td><progress id="progressBar" max="100" value="20"></progress>
+<span id="progressValue">20</span>%</td>
+<td>Заморожен</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="plan">
+<h3 class="plan-title">План №3</h3>
+<progress id="progressWhole" max="100" value="20"></progress>
+<!-- Выполнение заказаов -->
+<table class="sub-projects">
+<thead>
+<th>Спец код</th>
+<th>Название заказа</th>
+<th>Процент выполнения</th>
+<th>Статус</th>
+</thead>
+<tbody>
+<tr>
+<td>#637283e2</td>
+<td>Заказ по кораблям модели 34r2</td>
+<td><progress id="progressBar" max="100" value="70"></progress>
+<span id="progressValue">70</span>%</td>
+<td>Заморожен</td>
+</tr>
+<tr>
+<td>#637283e2</td>
+<td>Заказ по кораблям модели 34r2</td>
+<td><progress id="progressBar" max="100" value="20"></progress>
+<span id="progressValue">20</span>%</td>
+<td>Заморожен</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </div>
 </div>
 <!--нижняя панель управления виджетом-->
-<div class="widget-images-panel">
-<img alt="Иконка настроек" class="settings-icon" src="../../img/settings_2.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/planirovanie.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/proizvodstvo.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/phone.svg"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/search.png"/>
-</div>
+<!-- <div class="widget-images-panel">
+  <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
+   <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
+</div> -->
 <div class="resize-handle"></div>
 </div>
 <!--нижняя панель управления виджетом-->
 <!--Виджет чего -то-->
-<div class="resizable-widget" id="widget2">
+<div class="resizable-widget active-widget" id="widget2">
 <div class="widget-header">
 <span class="blockName">Схема цехов</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
 <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
 </div>
 <div class="factory-map">
-<div class="workshop backGround-color-yellow">
-<div class="workshop-name">Цех 1</div>
-<div class="workshop-info">Выполнено: 75%</div>
-</div>
-<div class="workshop backGround-color-red">
-<div class="workshop-name">Цех 2</div>
-<div class="workshop-info">Выполнено: 50%</div>
-</div>
-<div class="workshop backGround-color-green">
-<div class="workshop-name">Цех 3</div>
-<div class="workshop-info">Выполнено: 90%</div>
-</div>
-<div class="workshop backGround-color-red">
-<div class="workshop-name">Цех 4</div>
-<div class="workshop-info">Выполнено: 25%</div>
-</div>
-<div class="workshop backGround-color-red">
-<div class="workshop-name">Цех 5</div>
-<div class="workshop-info">Выполнено: 25%</div>
-</div>
-<div class="workshop backGround-color-green">
-<div class="workshop-name">Цех 6</div>
-<div class="workshop-info">Выполнено: 85%</div>
-</div>
-<div class="workshop backGround-color-green">
-<div class="workshop-name">Цех 7</div>
-<div class="workshop-info">Выполнено: 85%</div>
-</div>
-</div>
+<div class="workshop backGround-color-yellow"><div class="workshop-name">Цех 1</div><div class="workshop-info">Выполнено: 75%</div></div><div class="workshop backGround-color-red"><div class="workshop-name">Цех 2</div><div class="workshop-info">Выполнено: 50%</div></div><div class="workshop backGround-color-green"><div class="workshop-name">Цех 3</div><div class="workshop-info">Выполнено: 90%</div></div></div>
 <!--нижняя панель управления виджетом-->
-<div class="widget-images-panel">
-<img alt="Иконка настроек" class="settings-icon" src="../../img/settings_2.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/planirovanie.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/proizvodstvo.png"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/phone.svg"/>
-<img alt="Иконка настроек" class="settings-icon" src="../../img/search.png"/>
-</div>
+<!-- <div class="widget-images-panel">
+  <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
+  <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
+   <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
+</div> -->
 <div class="resize-handle"></div>
 </div>
 </div>
 <!--Конец контейнера виджетов -->
 <!-- чат -->
-<!--   
-  <div class="chat-widget-container"  >
-    
-    <div class="chat-widget "  id="widgetChat"   >
-      <div class="widget-header">
-        <span class="blockName">чат</span>
-        <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
-      </div>
+<div class="resizable-widget" id="widgetChat">
+<div class="widget-header">
+<span class="blockName">Чат</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+<button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
+</div>
+<div class="person-selector">
+<div class="persons">
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Виталий Алексеевич</span>
+<div class="unread-badge">3</div> <!-- Это серый овал с цифрой -->
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Дмитрий Викторович</span>
+<div class="unread-badge">53</div>
+</button>
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+<div class="unread-badge">34</div> <!-- Это серый овал с цифрой -->
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+</button>
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+<div class="unread-badge">4</div>
+</button>
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+<div class="unread-badge">11</div> <!-- Это серый овал с цифрой -->
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+</button>
+</div>
+<div class="chat-container">
+<div class="chat-messages">
+<div class="message">
+<div class="message-avatar">
+<img src="../../img/avatar.png"/>
+</div>
+<div class="message-content">
+<div class="message-sender"> Виктор</div>
+<div class="message-text">Приветики</div>
+<div class="message-timestamp">19.42.42</div>
+</div>
+</div>
+</div>
+<form class="chat-input-form">
+<input class="chat-input" placeholder="Введите сообщение" required="" type="text"/>
+<button class="button send-button" type="submit">Отправить</button>
+</form>
+</div>
+</div>
+<div class="resize-handle"></div>
+</div>
 
-      <div class="chat-content">
-        <ul class="messages-list">
-          <li class="message user">
-            <div class="message-content">
-              <p>Привет! Как дела?</p>
-            </div>
-            <img src="../../img/avatar.png" alt="User Avatar" class="avatar">
-          </li>
-          <li class="message bot">
-            <img src="../../img/avatar.png" alt="Bot Avatar" class="avatar">
-            <div class="message-content">
-              <p>Привет! Чем могу помочь?</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="chat-input">
-        <input type="text" id="messageInput" placeholder="Введите сообщение">
-        <button id="sendButton">Отправить</button>
-      </div>
-      <div class="resize-handle"></div>
-    </div>
-    <div class="chat-widget-toggle" id="chatIconContainer">
-      <img src="../../img/chat.png" alt="Chat Icon" class="chat-icon">
-    </div>
-   
-  </div>
-   -->
 <!--Конец чата-->
 <!--Футор-->
 <div class="footer">
@@ -336,6 +484,8 @@
 <!--Футор-->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../scripts/directorScript_v2.js"></script>
+<script src="../scripts/chatScript.js"></script>
 <script src="../scripts/directorScript_v2.js"></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>

@@ -22,6 +22,19 @@
 
       <!--Полоска виджетов-->
       <div class="vidgetLine">
+      
+
+        <!-- Горизонтальное выпадающее меню с виджетами -->
+       <div class="widget-dropdown">
+         <select id="widget-select" class="horizontal">
+           <option value="widget1" >Ежедневник</option>
+           <option value="widget2">Схема цехов</option>
+           <option value="widget3">Список сотрудников цеха</option>
+           <option value="widget4">Планирование</option>
+           <option value="widgetChat">Чат</option>
+           <!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
+         </select>
+       </div>
 
         <!-- Горизонтальное выпадающее меню с виджетами -->
        <div class="widget-dropdown">
@@ -207,7 +220,7 @@
  <!--виджет управления персоналом-->
 
 
-<div class="resizable-widget" id="widget3">
+<div class="resizable-widget active-widget" id="widget3">
   <div class="widget-header">
     <span class="blockName">Список сотрудников цеха</span>
     <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
@@ -410,7 +423,7 @@
 
      <!--Виджет чего -то-->
 
-     <div class="resizable-widget" id="widget2">
+     <div class="resizable-widget active-widget" id="widget2">
       <div class="widget-header">
         <span class="blockName">Схема цехов</span>
         <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
@@ -419,34 +432,7 @@
       </div>
 
       <div class="factory-map">
-        <div class="workshop backGround-color-yellow">
-          <div class="workshop-name">Цех 1</div>
-          <div class="workshop-info">Выполнено: 75%</div>
-        </div>
-        <div class="workshop backGround-color-red">
-          <div class="workshop-name">Цех 2</div>
-          <div class="workshop-info">Выполнено: 50%</div>
-        </div>
-        <div class="workshop backGround-color-green">
-          <div class="workshop-name">Цех 3</div>
-          <div class="workshop-info">Выполнено: 90%</div>
-        </div>
-        <div class="workshop backGround-color-red">
-          <div class="workshop-name">Цех 4</div>
-          <div class="workshop-info">Выполнено: 25%</div>
-        </div>
-        <div class="workshop backGround-color-red">
-          <div class="workshop-name">Цех 5</div>
-          <div class="workshop-info">Выполнено: 25%</div>
-        </div>
-        <div class="workshop backGround-color-green">
-          <div class="workshop-name">Цех 6</div>
-          <div class="workshop-info">Выполнено: 85%</div>
-        </div>
-        <div class="workshop backGround-color-green">
-          <div class="workshop-name">Цех 7</div>
-          <div class="workshop-info">Выполнено: 85%</div>
-        </div>
+   
       </div>
       
       <!--нижняя панель управления виджетом-->

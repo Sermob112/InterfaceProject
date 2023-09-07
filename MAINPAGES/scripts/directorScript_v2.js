@@ -27,6 +27,7 @@ function setupWidget(widgetId) {
     initialY = e.clientY - parseFloat(getComputedStyle(widget).top); // Store initial cursor position for dragging
     e.preventDefault();
   });
+  
 
   document.addEventListener('mousemove', (e) => {
     if (isResizing) {
@@ -220,23 +221,51 @@ widgetSelect.addEventListener('change', function () {
 
 
 
-
+const initialWidgetState = {};
 // Функция для разворачивания виджета на весь экран
 function expandWidget(widgetId) {
   const widget = document.getElementById(widgetId);
 
-  // Добавляем класс для развернутого состояния
+  // Сохраняем начальные размеры и положение виджета перед раскрытием
+  initialWidgetState[widgetId] = {
+    width: widget.style.width,
+    height: widget.style.height,
+    top: widget.style.top,
+    left: widget.style.left,
+  };
+
+  // Устанавливаем новые размеры и положение для раскрытого виджета
   widget.classList.add('expanded');
+  widget.style.width = '100%';
+  widget.style.height = '100%';
+  widget.style.top = '0';
+  widget.style.left = '0';
+  // Другие стили раскрытого виджета
 }
+
+
 
 // Функция для сворачивания виджета обратно в исходное состояние
 function collapseWidget(widgetId) {
   const widget = document.getElementById(widgetId);
 
-  // Удаляем класс для развернутого состояния
-  widget.classList.remove('expanded');
-}
+  // Восстанавливаем начальные размеры и положение виджета перед раскрытием
+  const initialState = initialWidgetState[widgetId];
+  if (initialState) {
+    widget.style.width = initialState.width;
+    widget.style.height = initialState.height;
+    widget.style.top = initialState.top;
+    widget.style.left = initialState.left;
+  }
 
+  // Удаляем запись о начальном состоянии
+  delete initialWidgetState[widgetId];
+
+  // Убираем класс раскрытия
+  widget.classList.remove('expanded');
+  // Другие стили для свернутого виджета
+}
+//bcghfddktybz
 // Функция для переключения состояния виджета при клике на кнопку
 function toggleFullscreen(widgetId) {
   const widget = document.getElementById(widgetId);
@@ -246,6 +275,8 @@ function toggleFullscreen(widgetId) {
   } else {
     expandWidget(widgetId);
   }
+
+
 }
 
 // Назначаем обработчик клика на кнопку разворачивания/сворачивания
@@ -272,5 +303,6 @@ widgets.forEach(widget => {
     widget.style.zIndex = '2'; // Изменяем z-index для активного виджета
   });
 });
+
 
 
