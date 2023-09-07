@@ -35,10 +35,11 @@
 
 .widget-container {
   position: relative;
-  display: flex;
+
   align-items: flex-start;
   padding: 10px;
   display: grid;
+
 
 }
 
@@ -60,9 +61,10 @@
 #widget4 {
   grid-column: 1;
   grid-row: 3;
+
 }
 
-#widget5 {
+#widgetChat {
   grid-column: 2;
   grid-row: 3;
 }
@@ -1492,8 +1494,8 @@ body {
 
 #widgetChat.resizable-widget {
   /* Ваши стили для виджета с id "widgetChat" */
-  width: 60%; /* Например, уменьшим ширину до половины */
-  min-width: 680px;
+  width: 50%; /* Например, уменьшим ширину до половины */
+  min-width: 880px;
   height: 60%;
   min-height: 680px;
   /* Другие стили по вашему выбору */
