@@ -204,7 +204,6 @@
             <status>Работает</status>
             <employeeID>Табельный номер 2</employeeID>
         </employee>
-        <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
     </employees>
  </employeeList>
 <workshops>
