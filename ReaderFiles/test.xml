@@ -1,5 +1,5 @@
 <data>
-  <item>
+  <!-- <item>
     <to>Директору</to>
     <from>Перв. Зам</from>
     <status>Активно</status>
@@ -140,73 +140,1767 @@
         </subProject>
         
     </subProjects>
-</plan>
+</plan> -->
+
 <employeeList>
-    <brigadeText>Бригада 4</brigadeText>
-    <brigadeCount>Количество сотрудников в бригаде: 8</brigadeCount>
-    <workshopName>Цех 3</workshopName> <!-- Добавьте эту строку -->
+ <workshopName>Отдел бухгалтерского учета</workshopName> <!-- Изменено название -->
+<brigadeList>
+    <brigadeText>Главная бухгалтерия</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
     <employees>
         <employee>
-            <name>Имя сотрудника 1</name>
+            <name>секретарь-референт</name>
             <status>Работает</status>
             <employeeID>Табельный номер 1</employeeID>
         </employee>
+
         <employee>
-            <name>Имя сотрудника 2</name>
+            <name>Главная бухгалтерия. Специалист</name>
             <status>Работает</status>
-            <employeeID>Табельный номер 2</employeeID>
+            <employeeID>Табельный номер 3</employeeID>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
         </employee>
          <employee>
-            <name>Имя сотрудника 2</name>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
             <status>Работает</status>
-            <employeeID>Табельный номер 2</employeeID>
+            <employeeID>Табельный номер 5</employeeID>
         </employee>
-         <employee>
-            <name>Имя сотрудника 2</name>
+        <employee>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
             <status>Работает</status>
-            <employeeID>Табельный номер 2</employeeID>
-        </employee>
-         <employee>
-            <name>Имя сотрудника 2</name>
-            <status>Работает</status>
-            <employeeID>Табельный номер 2</employeeID>
+            <employeeID>Табельный номер 5</employeeID>
         </employee>
         <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
     </employees>
- </employeeList>
- <employeeList>
-    <brigadeText>Бригада 4</brigadeText>
-    <brigadeCount>Количество сотрудников в бригаде: 8</brigadeCount>
-    <workshopName>Цех 3</workshopName> <!-- Добавьте эту строку -->
+</brigadeList>
+<brigadeList>
+      <brigadeText>Главная бухгалтерия</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+      <employees>
+        <employee>
+            <name>секретарь-референт</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+        </employee>
+         <employee>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+        </employee>
+        <employee>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
+            <status >Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+        </employee>
+        <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
+    </employees>
+    </brigadeList>
+     <brigadeList>
+    <brigadeText>Отдел технического контроля</brigadeText>
+<brigadeCount>Количество сотрудников в отделе: 5</brigadeCount>
+<employees>
+    <employee>
+        <name>Начальник отдела</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 1</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист отдела технического контроля</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 2</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист отдела технического контроля</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 3</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист отдела технического контроля</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 4</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист отдела технического контроля</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 5</employeeID>
+    </employee>
+</employees>
+</brigadeList>
+  <brigadeList>
+
+  <brigadeText>Группа размерного контроля</brigadeText>
+<brigadeCount>Количество сотрудников в отделе: 14</brigadeCount>
+<employees>
+    <employee>
+        <name>Руководитель ГРК</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 1</employeeID>
+    </employee>
+    <employee>
+        <name>Заместитель руководителя ГРК</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 2</employeeID>
+    </employee>
+    <employee>
+        <name>1-я бригада контроля корпусных конструкций. Старший инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 3</employeeID>
+    </employee>
+    <employee>
+        <name>1-я бригада контроля корпусных конструкций. Инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 4</employeeID>
+    </employee>
+    <employee>
+        <name>2-я бригада контроля корпусных конструкций. Старший инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 5</employeeID>
+    </employee>
+    <employee>
+        <name>3-я бригада контроля корпусных конструкций. Инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 6</employeeID>
+    </employee>
+    <employee>
+        <name>Бригада контроля трубообработки, насыщения и оперативных измерений. Старший инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 7</employeeID>
+    </employee>
+    <employee>
+        <name>Бригада контроля трубообработки, насыщения и оперативных измерений. Инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 8</employeeID>
+    </employee>
+    <employee>
+        <name>Бригада контроля листового и профильного проката. Старший инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 9</employeeID>
+    </employee>
+    <employee>
+        <name>Бригада контроля листового и профильного проката. Инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 10</employeeID>
+    </employee>
+    <employee>
+        <name>Бригада контроля станков. Старший инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 11</employeeID>
+    </employee>
+    <employee>
+        <name>Бригада контроля станков. Инженер</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 12</employeeID>
+    </employee>
+</employees>
+</brigadeList>
+<brigadeList>
+<brigadeText>Испытательная лаборатория</brigadeText>
+<brigadeCount>Количество сотрудников в отделе: 3</brigadeCount>
+<employees>
+    <employee>
+        <name>Начальник лаборатории</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 13</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист испытательной лаборатории</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 14</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист испытательной лаборатории</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 15</employeeID>
+    </employee>
+</employees>
+</brigadeList>
+</employeeList>
+
+<employeeList>
+<workshopName>Отдел развития(модернизации)			
+</workshopName> 
+<brigadeList>
+    
+<brigadeText>Отдел кадров</brigadeText>
+<brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+<employees>
+    <employee>
+        <name>Начальник отдела</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 16</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист отдела кадров</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 17</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист отдела кадров</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 18</employeeID>
+    </employee>
+    <employee>
+        <name>Специалист отдела кадров</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 19</employeeID>
+    </employee>
+</employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел профессиональной подготовки</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
     <employees>
         <employee>
-            <name>Имя сотрудника 1</name>
+            <name>Начальник отдела</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 20</employeeID>
+        </employee>
+        <employee>
+            <name>Специалист отдела профессиональной подготовки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 21</employeeID>
+        </employee>
+        <employee>
+            <name>Специалист отдела профессиональной подготовки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 22</employeeID>
+        </employee>
+        <employee>
+            <name>Специалист отдела профессиональной подготовки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 23</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Руководитель проекта развития</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Руководитель проекта развития</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 24</employeeID>
+        </employee>
+        <employee>
+            <name>Руководитель проекта развития</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 25</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+
+
+
+<employeeList>
+<workshopName>Производство</workshopName> 
+ <brigadeList>
+    <brigadeText>Отдел производства</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 5</brigadeCount>
+    <employees>
+     <employee>
+            <name>Директор  судостроения</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 26</employeeID>
+        </employee>
+        <employee>
+            <name>Заместитель директора по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 26</employeeID>
+        </employee>
+        <employee>
+            <name>Секретарь БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 27</employeeID>
+        </employee>
+        <employee>
+            <name>Табельщик БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 28</employeeID>
+        </employee>
+        <employee>
+            <name>Специалист архива РКиТД БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 29</employeeID>
+        </employee>
+        <employee>
+            <name>Специалист архива РКиТД БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 30</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Производственно-диспетчерский отдел по судостроению</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник отдела</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 31</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 32</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 33</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 34</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 35</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 36</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 37</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Производственно-диспетчерский отдел БКЦ по судостроению</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник отдела</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 41</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО БКЦ по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 42</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО БКЦ по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 43</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО БКЦ по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 44</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО БКЦ по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 45</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО БКЦ по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 46</employeeID>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО БКЦ по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 47</employeeID>
+        </employee>
+    </employees>
+     <brigadeList>
+        <brigadeText>Корпусообрабатывающий цех. Начальник КОЦ</brigadeText>
+        <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+        <employees>
+            <employee>
+                <name>Заместитель начальника КОЦ</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 51</employeeID>
+            </employee>
+        </employees>
+    </brigadeList>
+    <brigadeList>
+        <brigadeText>Корпусообрабатывающий цех. Мастер участка</brigadeText>
+        <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+        <employees>
+            <employee>
+                <name>Мастер участка 1</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 52</employeeID>
+            </employee>
+            <employee>
+                <name>Мастер участка 2</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 53</employeeID>
+            </employee>
+        </employees>
+    </brigadeList>
+    <brigadeList>
+        <brigadeText>Корпусообрабатывающий цех. Участок резки листового и профильного металлопроката. Мастер участка</brigadeText>
+        <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+        <employees>
+            <employee>
+                <name>Мастер участка</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 54</employeeID>
+            </employee>
+        </employees>
+    </brigadeList>
+    <brigadeList>
+        <brigadeText>Корпусообрабатывающий цех. Участок гибки металлопроката. Мастер участка</brigadeText>
+        <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+        <employees>
+            <employee>
+                <name>Мастер участка</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 55</employeeID>
+            </employee>
+        </employees>
+    </brigadeList>
+    <brigadeList>
+        <brigadeText>Сборочно-сварочное производство. Начальник ССП</brigadeText>
+        <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+        <employees>
+            <employee>
+                <name>Заместитель начальника ССП</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 56</employeeID>
+            </employee>
+        </employees>
+    </brigadeList>
+    <brigadeList>
+        <brigadeText>Сборочно-сварочное производство. Мастер участка</brigadeText>
+        <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+        <employees>
+            <employee>
+                <name>Мастер участка 1</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 57</employeeID>
+            </employee>
+            <employee>
+                <name>Мастер участка 2</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 58</employeeID>
+            </employee>
+            <employee>
+                <name>Мастер участка 3</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 59</employeeID>
+            </employee>
+            <employee>
+                <name>Мастер участка 4</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 60</employeeID>
+            </employee>
+        </employees>
+    </brigadeList>
+    <brigadeList>
+        <brigadeText>Сборочно-сварочное производство. Кладовая сварочного оборудования и сварочных материалов.</brigadeText>
+        <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+        <employees>
+            <employee>
+                <name>Кладовщик-оператор</name>
+                <status>Работает</status>
+                <employeeID>Табельный номер 61</employeeID>
+            </employee>
+        </employees>
+    </brigadeList>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Корпусостроительное производство (стапельный цех). Начальник производства</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <name>Заместитель начальника КСП</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 62</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Корпусостроительное производство (стапельный цех). Участок изготовления блоков. </brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник участка</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 63</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Корпусостроительное производство (стапельный цех). Зона формирования корпуса судна. </brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Мастер участка 1</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 64</employeeID>
+        </employee>
+        <employee>
+            <name>Мастер участка 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 65</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Корпусостроительное производство (стапельный цех). Участок изготовления блоков.Существующий эллинг.</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник участка</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 66</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Корпусостроительное производство (стапельный цех). Участок изготовления блоков.Существующий эллинг. </brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <name>Мастер участка</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 67</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Корпусостроительное производство (стапельный цех). Зона формирования корпуса судна. Существующий эллинг. </brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 3</brigadeCount>
+    <employees>
+        <employee>
+            <name>Мастер участка 1</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 68</employeeID>
+        </employee>
+        <employee>
+            <name>Мастер участка 2</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 69</employeeID>
+        </employee>
+        <employee>
+            <name>Мастер участка 3</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 70</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Трубообрабатывающее производство</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник производства</name>
             <status>Работает</status>
             <employeeID>Табельный номер 1</employeeID>
         </employee>
         <employee>
-            <name>Имя сотрудника 2</name>
-            <status>Работает</status>
-            <employeeID>Табельный номер 2</employeeID>
-        </employee>
-         <employee>
-            <name>Имя сотрудника 2</name>
-            <status>Работает</status>
-            <employeeID>Табельный номер 2</employeeID>
-        </employee>
-         <employee>
-            <name>Имя сотрудника 2</name>
-            <status>Работает</status>
-            <employeeID>Табельный номер 2</employeeID>
-        </employee>
-         <employee>
-            <name>Имя сотрудника 2</name>
+            <name>Заместитель начальника производства</name>
             <status>Работает</status>
             <employeeID>Табельный номер 2</employeeID>
         </employee>
     </employees>
- </employeeList>
-<workshops>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Окрасочное производство</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник производства</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+        <employee>
+            <name>Заместитель начальника производства</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+        <employee>
+            <name>Главный механик ОП (камер очистки и окраски)</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+        </employee>
+        <employee>
+            <name>Мастер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+        </employee>
+        <employee>
+            <name>Машинное отделение № 1. Механик</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+        </employee>
+        <employee>
+            <name>Мастер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 6</employeeID>
+        </employee>
+        <employee>
+            <name>Машинное отделение № 2. Механик</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Кладовые ЛКМ. Кладовщик-оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 8</employeeID>
+        </employee>
+        <employee>
+            <name>Пост СИП ОП</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 9</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Достроечное производство. Начальник производства</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Заместитель начальника производства</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+        <employee>
+            <name>Участок изделий и деталей из листовых и плиточных материалов. Мастер участка</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+        <employee>
+            <name>Участок изделий и деталей из древесины. Мастер участка</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+        </employee>
+        <employee>
+            <name>Участок пластин и деталей изоляции набора судовых помещений. Мастер участка</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+        </employee>
+        <employee>
+            <name>Участок шаблонов. Мастер участка</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Электромонтажное производство. Начальник производства</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 8</brigadeCount>
+    <employees>
+        <employee>
+            <name>Склад кабельной продукции и материалов (3 зоны). Кладовщик-оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 6</employeeID>
+        </employee>
+        <employee>
+            <name>Участок изготовления бирок. Мастер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Электромонтажный участок. Мастер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 8</employeeID>
+        </employee>
+        <employee>
+            <name>Кладовая электрооборудования. Кладовщик-оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 9</employeeID>
+        </employee>
+        <employee>
+            <name>Подготовительные работы на судне. Мастер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 10</employeeID>
+        </employee>
+        <employee>
+            <name>Прокладка кабелей на судне. Мастер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 11</employeeID>
+        </employee>
+        <employee>
+            <name>Регулировочно-сдаточные работы. Мастер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 12</employeeID>
+        </employee>
+        <employee>
+            <name>Пост СИП КОЦ № 1. 1 пролет. Участок первичной обработки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 13</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Механомонтажное производство. Начальник производства</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 10</brigadeCount>
+    <employees>
+        <employee>
+            <name>Заместитель начальника производства</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+        <employee>
+            <name>Участок механообработки. Начальник механообработки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+        <employee>
+            <name>Механообрабатывающий станок с ЧПУ. Оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+        </employee>
+        <employee>
+            <name>Механообрабатывающий станок с ЧПУ. Оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+        </employee>
+        <employee>
+            <name>Механообрабатывающий станок с ЧПУ. Оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+        </employee>
+        <employee>
+            <name>Механообрабатывающий станок с ЧПУ. Оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 6</employeeID>
+        </employee>
+        <employee>
+            <name>Механообрабатывающий станок с ЧПУ. Оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Механообрабатывающий станок с ЧПУ. Оператор</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 8</employeeID>
+        </employee>
+        <employee>
+            <name>Монтажный участок сборки и монтажа оборудования на судах</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 9</employeeID>
+        </employee>
+        <employee>
+            <name>Главный строитель</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 10</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Главный строитель</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел главного строителя. Главный строитель заказа</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 11</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел главного строителя. Главный строитель заказа</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 12</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел главного строителя. Главный строитель заказа</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 13</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел главного строителя. Главный строитель заказа</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 14</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Главный сварщик</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 3</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел главного сварщика. Специалист ССК СП</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 15</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел главного сварщика. Специалист ССК СП</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 16</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел главного сварщика. Специалист ССК СП</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 17</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+<employeeList>
+<workshopName>Отдел Судоремонта		
+</workshopName> 
+<brigadeList>
+    <brigadeText>Производственно-диспетчерский отдел по судоремонту. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 3</brigadeCount>
+    <employees>
+        <employee>
+            <name>Производственно-диспетчерский отдел по судоремонту. Специалист-диспетчер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+        </employee>
+        <employee>
+            <name>Производственно-диспетчерский отдел по судоремонту. Специалист-диспетчер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел эксплуатации наземного транспорта. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 3</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел эксплуатации наземного транспорта. Табельщик</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел эксплуатации наземного транспорта. Специалист-диспетчер по транспорту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел эксплуатации наземного транспорта. Специалист-диспетчер по транспорту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел эксплуатации флота. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел эксплуатации флота. Специалист-диспетчер по флоту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 6</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел эксплуатации флота. Специалист-диспетчер по флоту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+
+<employeeList>
+<workshopName>Отдел Безопасности
+</workshopName> 
+<brigadeList>
+    <brigadeText>Отдел режима и защиты информации. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел режима и защиты информации. Специалист отдела режима</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел режима и защиты информации. Специалист отдела режима</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел информационной безопасности. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 9</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел информационной безопасности. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел информационной безопасности. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел информационной безопасности. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел информационной безопасности. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Группа администрирования ИИСЦП и смежного ПО. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Группа администрирования ИИСЦП и смежного ПО. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Группа администрирования ЦОД. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Группа администрирования ЦОД. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Группа администрирования ЦОД. Специалист-администратор сети</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел экономической безопасности. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел экономической безопасности. Специалист отдела</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел экономической безопасности. Специалист отдела</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел экономической безопасности. Специалист отдела</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел экономической безопасности. Специалист отдела</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Специалист по гражданской обороне</brigadeText>
+    <brigadeCount>Количество сотрудников: 1</brigadeCount>
+    <employees>
+        <employee>
+            <name>Специалист по гражданской обороне</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Специалист по связям с общественностью</brigadeText>
+    <brigadeCount>Количество сотрудников: 1</brigadeCount>
+    <employees>
+        <employee>
+            <name>Специалист по связям с общественностью</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+<employeeList>
+<workshopName>Экономика и финансы</workshopName> 
+<brigadeList>
+    <brigadeText>Финансово-экономический отдел. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Финансово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Финансово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Финансово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Планово-экономический отдел. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 6</brigadeCount>
+    <employees>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел труда и заработной платы. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел труда и заработной платы. Специалист ОТиЗ</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел труда и заработной платы. Специалист ОТиЗ</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел труда и заработной платы. Специалист ОТиЗ</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел труда и заработной платы. Специалист ОТиЗ</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Экономический отдел БКЦ. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Экономический отдел БКЦ. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Экономический отдел БКЦ. Специалист ОТиЗ</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел закупок. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел закупок. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел закупок. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел закупок. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел закупок. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел конкурсных закупок. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел конкурсных закупок. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел конкурсных закупок. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел снабжения. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 14</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел снабжения. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-экономист</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Отдел снабжения. Специалист-логистики</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Отдел складского хозяйства. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 13</brigadeCount>
+    <employees>
+        <employee>
+            <name>Автоматизированный склад судового оборудования и дельных вещей. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Автоматизированный склад материалов и метизов. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Автоматизированный склад кабельной продукции. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Автоматизированный склад электротехнической продукции. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Кладовая арматуры и крепежных изделий. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Кладовая контрольно-измерительного оборудования. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Кладовая оборудования системы учета и прослеживания материалов. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Склад сварочного оборудования и сварочных материалов. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Склад изоляционных материалов и ЛКМ. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Склад ГСМ. Кладовщик-оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Программно-аппаратный комплекс автоматизации учета ТМЦ. Оператор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Программно-аппаратный комплекс автоматизации учета ТМЦ. Администратор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+        <employee>
+            <name>Программно-аппаратный комплекс автоматизации учета ТМЦ. Администратор</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+
+<employeeList>
+<workshopName>Технический отдел</workshopName> 
+<brigadeList>
+    <brigadeText>Конструкторско-технологический отдел. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 6</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 1</employeeID>
+            <name>инженер-конструктор 3D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 2</employeeID>
+            <name>инженер-конструктор 3D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 3</employeeID>
+            <name>инженер-конструктор 3D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 4</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 5</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 6</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Отдел технологической подготовки производства.</brigadeText>
+    <brigadeCount>Количество сотрудников в бюро: 18</brigadeCount>
+    <employees>
+    <employee>
+            <employeeID>Табельный номер 1</employeeID>
+            <name> Начальник бюро</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 1</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+
+        <employee>
+            <employeeID>Табельный номер 2</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 3</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 4</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 5</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 6</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 7</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 8</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 9</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 10</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 11</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 12</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 13</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 14</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 15</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 16</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 17</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Конструкторско-технологический отдел БКЦ. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 12</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 1</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 2</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 3</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 4</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 5</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 6</employeeID>
+            <name>инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 7</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 8</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 9</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 10</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 11</employeeID>
+            <name>инженер подготовки производства</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 12</employeeID>
+            <name>инженер-конструктор. Специалист PLM</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Отдел информационного обеспечения. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 1</employeeID>
+            <name>группа конструкторской документации (архив РКД и ТД). Специалист PLM</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 2</employeeID>
+            <name>группа конструкторской документации (архив РКД и ТД). Специалист PLM</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 3</employeeID>
+            <name>группа конструкторской документации (архив РКД и ТД). Специалист PLM</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 4</employeeID>
+            <name>группа конструкторской документации (архив РКД и ТД). Специалист PLM</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 5</employeeID>
+            <name>Группа имитационного моделирования. Специалист имитационного моделирования</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 6</employeeID>
+            <name>Группа имитационного моделирования. Специалист имитационного моделирования</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 7</employeeID>
+            <name>Группа имитационного моделирования. Специалист имитационного моделирования</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+</employeeList>
+
+<employeeList>
+<workshopName>Инженерный отдел отдел</workshopName> 
+
+
+<brigadeList>
+    <brigadeText>Участок инженерных сетей и насосных станций</brigadeText>
+    <brigadeCount>Количество сотрудников в участке: 1</brigadeCount>
+    <employees>
+    
+      <employee>
+            <employeeID>Табельный номер 2</employeeID>
+            <name>Заместитель Главного энергетика</name>
+            <status>Работает</status>
+        </employee>
+           <employee>
+            <employeeID>Табельный номер 1</employeeID>
+            <name>Главный энергетик</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 3</employeeID>
+            <name>Специалист. Терминал ТОиР</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Энергетическая служба</brigadeText>
+    <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 4</employeeID>
+            <name>Специалист. Терминал  АСКУЭ/АСТУЭ</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Энергетическая служба БКЦ</brigadeText>
+    <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 5</employeeID>
+            <name>Специалист. Терминал РАСКУЭ/АСТУЭ</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Механическая служба. Специалист автоматизированных линий. Терминал ТОиР</brigadeText>
+    <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
+    <employees>
+            <employee>
+            <employeeID>Табельный номер 7</employeeID>
+            <name>Заместитель Главного механика</name>
+            <status>Работает</status>
+        </employee>
+          <employee>
+            <employeeID>Табельный номер 6</employeeID>
+            <name>Главный механик</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 8</employeeID>
+            <name>Специалист автоматизированных линий. Терминал ТОиР</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Механическая служба. Специалист станков ЧПУ. Терминал ТОиР</brigadeText>
+    <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 9</employeeID>
+            <name>Специалист станков ЧПУ. Терминал ТОиР</name>
+            <status>Работает</status>
+        </employee>
+         <employee>
+            <employeeID>Табельный номер 10</employeeID>
+            <name>Специалист станков ЧПУ. Терминал ТОиР</name>
+            <status>Работает</status>
+        </employee>
+       
+    </employees>
+</brigadeList>
+
+
+<brigadeList>
+    <brigadeText>Механическая служба. Служба подъемно-транспортного оборудования. Терминал ТОиР</brigadeText>
+    <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 11</employeeID>
+            <name>Специалист. Служба подъемно-транспортного оборудования. Терминал ТОиР</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 12</employeeID>
+            <name>Специалист. Служба подъемно-транспортного оборудования. Терминал ТОиР</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+
+<brigadeList>
+    <brigadeText>Административно-хозяйственный отдел.</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 11</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 13</employeeID>
+            <name>Начальник АХО</name>
+            <status>Работает</status>
+        </employee>
+         <employee>
+            <employeeID>Табельный номер 14</employeeID>
+            <name>Зам. Начальника АХО</name>
+            <status>Работает</status>
+        </employee>
+        
+        <employee>
+            <employeeID>Табельный номер 15</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 16</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 17</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 15</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 16</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 17</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 15</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 16</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 17</employeeID>
+            <name>Специалист</name>
+            <status>Работает</status>
+        </employee>
+        <!-- Добавьте остальных сотрудников по аналогии -->
+   
+    </employees>
+</brigadeList>
+
+
+<brigadeList>
+    <brigadeText>Отдел охраны труда, техники безопасности и охраны окружающей среды. Специалисты ООТ,ТБ,ООС</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+     <employee>
+            <employeeID>Табельный номер 18</employeeID>
+            <name>Начальник ООТ,ТБ,ООС</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 19</employeeID>
+            <name>Специалист ООТ,ТБ</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 20</employeeID>
+            <name>Специалист ООС</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+ </data>
+
+<!-- <workshops>
   <workshop class="backGround-color-yellow">
     <workshopName>Цех 1</workshopName>
     <workshopInfo>Выполнено: 75%</workshopInfo>
@@ -219,6 +1913,7 @@
     <workshopName>Цех 3</workshopName>
     <workshopInfo>Выполнено: 90%</workshopInfo>
   </workshop>
-  <!-- Добавьте остальные цеха здесь как новые элементы workshop с соответствующими классами -->
-</workshops>
-</data>
+ Добавьте остальные цеха здесь как новые элементы workshop с соответствующими классами -->
+<!-- </workshops>  -->
+
+
