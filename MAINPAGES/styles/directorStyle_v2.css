@@ -68,6 +68,12 @@
   grid-column: 2;
   grid-row: 3;
 }
+#widgetGraph{
+  min-width: 600px;
+ 
+  grid-column: 1;
+  grid-row: 4;
+}
 .resizable-widget:hover {
   /* transform: scale(1.01); */
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
@@ -735,43 +741,40 @@
 /* Мтили карты цехов */
 .factory-map {
   width: 97%;
-  height: 50vh;
+  height: 100%;
   padding: 10px;
   border: 1px solid #e0dde0;
   border-radius: 10px;
   position: relative;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Создает автоматическую сетку с минимальной шириной элемента 200px */
-  gap: 20px; /* Расстояние между элементами */
-  justify-content: space-between;
+
   overflow: scroll;
 }
 .workshop {
-  width: 80px;
-  height: 80px;
-  border: 2px solid #222222; /* Добавляем обводку */
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #222222;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-
+  justify-content: center; /* Выравнивание текста по вертикали по центру */
+  align-items: center; /* Выравнивание текста по горизонтали по центру */
   font-weight: bold;
   cursor: pointer;
-  padding: 10px;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+.workshop-name{
+
+}
+
 .workshop:hover {
   background-color: #bebebe;
   transform: translateY(-5px);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.workshop-name {
-  align-self: flex-start;
-  margin-bottom: 5px;
-}
+
 .workshop-info {
   font-size: 12px;
   align-self: center;
@@ -780,7 +783,29 @@
   padding: 10px;
 }
 
+.workshop-tooltip {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
 
+.workshop .show-tooltip {
+  display: block;
+  /* Установите нужное положение подсказки рядом с элементом .workshop */
+  /* Например, top: 30px; left: 30px; */
+  top: 30px;
+  left: 30px;
+}
+
+.graph
+{
+ overflow: scroll;
+}
 /* """"""""""""Виджет сотрудников"""""""""""""""""""" */
 
 .WorkersBlock {
@@ -857,7 +882,12 @@
   font-family: Arial, sans-serif;
   padding: 10px;
   margin-bottom: 60px;
-  overflow: hidden;
+  overflow: scroll;
+
+}
+.tab-content
+{
+width: 600px;
 
 }
 

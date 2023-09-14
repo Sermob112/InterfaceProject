@@ -429,11 +429,7 @@ body {
     }
 
 
-.workshop-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-   font-size: 18px;
-}
+
 
 .workshop-employees {
   color: gray;
@@ -549,7 +545,8 @@ body {
   margin-bottom: 0.15rem;
   position: relative;
   cursor: pointer;
-  height: 20px;
+  height: 50px;
+
 }
 
 .dropdown1 {

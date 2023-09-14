@@ -7,6 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../styles/directorStyle_v2.css" rel="stylesheet"/>
 <link href="../styles/style.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
 <!-- логотипы -->
@@ -26,6 +27,7 @@
 <option value="widget3">Список сотрудников цеха</option>
 <option value="widget4">Планирование</option>
 <option value="widgetChat">Чат</option>
+<option value="widgetGraph">График</option>
 <!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
 </select>
 </div>
@@ -399,15 +401,85 @@
 <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
 </div>
 <div class="factory-map">
+<img alt="Иконка настроек" src="../../img/карта завода 2.png"/>
+<div class="workshop backGround-color-green" data-tooltip="Судостроительный цех №1. Работает." style="top: 270px; left: 250px;">
+<div class="workshop-name">1</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
 </div>
-<!--нижняя панель управления виджетом-->
-<!-- <div class="widget-images-panel">
-  <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
-  <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
-  <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
-  <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
-   <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
-</div> -->
+<div class="workshop backGround-color-yellow" data-tooltip="Судостроительный цех №2.  Работает." style="top: 200px; left: 500px;">
+<div class="workshop-name">2</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-green" data-tooltip="Стапель №1. Задержка." style="top: 160px; left: 760px;">
+<div class="workshop-name">3</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-green" data-tooltip="Стапель №2. Работает." style="top: 130px; left: 1000px;">
+<div class="workshop-name">4</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-green" data-tooltip="Трубомонтажный цех.  Работает." style="top: 340px; left: 700px;">
+<div class="workshop-name">5</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-red" data-tooltip="Малярно-изоляционный цех.  Работает." style="top: 400px; left: 700px;">
+<div class="workshop-name">6</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-green" data-tooltip="Электромонтажный цех.  Работает." style="top: 300px; left: 800px;">
+<div class="workshop-name">7</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-yellow" data-tooltip="Малярно-изоляционный цех.  Не работает." style="top: 350px; left:840px;">
+<div class="workshop-name">8</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-yellow" data-tooltip="Механосборочный цех. Работает." style="top: 300px; left:1040px;">
+<div class="workshop-name">9</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-green" data-tooltip="Отдел технического контроля №1. Работает." style="top: 300px; left:1120px;">
+<div class="workshop-name">10</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-red" data-tooltip=" Производственно-диспетчерский отдел.  Работает." style="top: 250px; left:1100px;">
+<div class="workshop-name">11</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+<div class="workshop backGround-color-green" data-tooltip="Автотранспортная служба.  Работает." style="top: 460px; left:480px;">
+<div class="workshop-name">12</div>
+<!-- <div class="workshop-info">Выполнено: 90%</div> -->
+</div>
+</div>
+<div class="resize-handle"></div>
+</div>
+<div class="resizable-widget active-widget" id="widgetGraph">
+<div class="widget-header">
+<span class="blockName">График заказа</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+<button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
+</div>
+<ul class="nav nav-tabs" id="graphTabs">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#tab1">Заказ 1</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#tab2">Заказ 2</a>
+</li>
+<!-- Добавьте вкладки по мере необходимости -->
+</ul>
+<div class="widget-content tab-content">
+<div class="tab-pane fade show active" id="tab1">
+<!-- Место для первого графика -->
+<canvas id="graphCanvas1"></canvas>
+</div>
+<div class="tab-pane fade" id="tab2">
+<!-- Место для второго графика -->
+<canvas id="graphCanvas2"></canvas>
+</div>
+<!-- Добавьте вкладки и графики по мере необходимости -->
+</div>
 <div class="resize-handle"></div>
 </div>
 <!--Конец контейнера виджетов -->
@@ -509,8 +581,13 @@
 <!--Футор-->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../scripts/directorScript_v2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../scripts/chatScript.js"></script>
+<script src="../scripts/director_workshops.js"></script>
+<script src="../scripts/director_graph.js"></script>
 <script src="../scripts/directorScript_v2.js"></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>

@@ -1897,10 +1897,7 @@
     </employees>
 </brigadeList>
 </employeeList>
-
- </data>
-
-<!-- <workshops>
+<workshops>
   <workshop class="backGround-color-yellow">
     <workshopName>Цех 1</workshopName>
     <workshopInfo>Выполнено: 75%</workshopInfo>
@@ -1913,7 +1910,8 @@
     <workshopName>Цех 3</workshopName>
     <workshopInfo>Выполнено: 90%</workshopInfo>
   </workshop>
- Добавьте остальные цеха здесь как новые элементы workshop с соответствующими классами -->
-<!-- </workshops>  -->
+ </workshops> 
+ </data>
+
 
 
