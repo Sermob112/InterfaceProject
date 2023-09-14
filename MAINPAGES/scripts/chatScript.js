@@ -1,24 +1,23 @@
 // Функция для отправки сообщения
-function sendMessage(messageText) {
-  const chatMessages = document.querySelector(".chat-messages");
-  const message = document.createElement("div");
-  message.className = "message";
-  message.innerHTML = `
-      <div class="message-avatar">
-          <img src="../../img/avatar.png">
-      </div>
-      <div class="message-content message-user">
-          <div class="message-sender">Вы</div>
-          <div class="message-text">${messageText}</div>
-          <div class="message-timestamp">${getCurrentTime()}</div>
-      </div>
-  `;
-  chatMessages.appendChild(message);
-  
-  // Очистите поле ввода после отправки сообщения
-  const chatInput = document.querySelector(".chat-input");
-  chatInput.value = "";
-}
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const employeeTable = document.querySelector('.employee-table');
+//   const widgetChat = document.querySelector('#widgetChat');
+
+//   employeeTable.addEventListener('click', function () {
+//       // При нажатии на таблицу, отображаем виджет
+//       widgetChat.style.display = 'block';
+//   });
+// });
+
+
+
+
+
+
+
+
 
 // Функция для получения текущего времени в формате "чч:мм:сс"
 function getCurrentTime() {
@@ -69,6 +68,7 @@ personButtons.forEach(button => {
         displayChatWithUser(userName);
     });
 });
+
 // Функция для отправки сообщения и получения ответа
 function sendMessageAndReceiveResponse(messageText) {
   const chatMessages = document.querySelector(".chat-messages");

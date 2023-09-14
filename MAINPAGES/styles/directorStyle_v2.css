@@ -53,7 +53,7 @@
   grid-row: 2;
 }
 
-#widget2 {
+#widgetChat {
   grid-column: 2;
   grid-row: 2;
 }
@@ -64,7 +64,7 @@
 
 }
 
-#widgetChat {
+#widget2 {
   grid-column: 2;
   grid-row: 3;
 }

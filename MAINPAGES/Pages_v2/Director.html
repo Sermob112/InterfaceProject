@@ -242,18 +242,17 @@
                       <ul class="sub-projects1">
                         <table class="employee-table">
                           <thead>
-                            <tr>
-                              <th>Имя сотрудника</th>
+                            <tr >
+                              <th >Имя сотрудника</th>
                               <th>Статус</th>
                               <th>Табельный номер</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>Имя пользователя</td>
-                              <td class="highlight-yellow"><span>Работает/span></td>
-                              <td>Табельный номер</td>
-                
+                            <tr data-employee-name="Иванов Иван">
+                              <td>Иванов Иван</td>
+                              <td class="highlight-yellow" data-dialog-target="Тест Тестеров"><span>Работает</span></td>
+                              <td>123</td>
                             </tr>
                             <tr>
                               <td>Имя пользователя</td>
@@ -278,10 +277,10 @@
                       <ul class="sub-projects1">
                         <table class="employee-table">
                           <thead>
-                            <tr>
-                              <th>Имя сотрудника</th>
-                              <th>Статус</th>
-                              <th>Табельный номер</th>
+                            <tr data-employee-name="Иванов Иван">
+                              <td>Иванов Иван</td>
+                              <td class="highlight-yellow" data-dialog-target="Тест Тестеров"><span>Работает</span></td>
+                              <td>123</td>
                             </tr>
                           </thead>
                           <tbody>
@@ -557,7 +556,7 @@
 <!--Конец контейнера виджетов -->
   <!-- чат -->
 
-    <div class="resizable-widget" id="widgetChat">
+    <div class="resizable-widget active-widget" id="widgetChat">
       <div class="widget-header">
         <span class="blockName">Чат</span>
         <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
@@ -568,46 +567,22 @@
    
         <div class="person-selector">
           <div class="persons">
-            <button class="button person-selector-button active-person" id="john-selector">
+            <button class="button person-selector-button active-person" >
               <img src="../../img/avatar.png" alt="Аватар Виталия">
               <span>Виталий Алексеевич</span>
               <div class="unread-badge">3</div> <!-- Это серый овал с цифрой -->
             </button>
-            <button class="button person-selector-button" id="jane-selector">
+            <button class="button person-selector-button" >
               <img src="../../img/avatar.png" alt="Аватар Дмитрия">
               <span>Дмитрий Викторович</span>
               <div class="unread-badge">53</div> 
             </button>
-            <button class="button person-selector-button active-person" id="john-selector">
-              <img src="../../img/avatar.png" alt="Аватар Виталия">
-              <span>Иван Иванов</span>
-              <div class="unread-badge">34</div> <!-- Это серый овал с цифрой -->
-            </button>
-            <button class="button person-selector-button" id="jane-selector">
+            <button class="button person-selector-button" id = "ThisButtom" >
               <img src="../../img/avatar.png" alt="Аватар Дмитрия">
-              <span>Иван Иванов</span>
-    
+              <span>Тест Тестеров</span>
+              <div class="unread-badge">3</div> 
             </button>
-            <button class="button person-selector-button active-person" id="john-selector">
-              <img src="../../img/avatar.png" alt="Аватар Виталия">
-              <span>Иван Иванов</span>
-              
-            </button>
-            <button class="button person-selector-button" id="jane-selector">
-              <img src="../../img/avatar.png" alt="Аватар Дмитрия">
-              <span>Иван Иванов</span>
-              <div class="unread-badge">4</div> 
-            </button>
-            <button class="button person-selector-button active-person" id="john-selector">
-              <img src="../../img/avatar.png" alt="Аватар Виталия">
-              <span>Иван Иванов</span>
-              <div class="unread-badge">11</div> <!-- Это серый овал с цифрой -->
-            </button>
-            <button class="button person-selector-button" id="jane-selector">
-              <img src="../../img/avatar.png" alt="Аватар Дмитрия">
-              <span>Иван Иванов</span>
-           
-            </button>
+       
           </div>
   
           <div class="chat-container">
@@ -617,11 +592,7 @@
                   <div class="message-avatar">
                     <img src="../../img/avatar.png">
                   </div>
-                  <div class="message-content">
-                    <div class="message-sender"> Виктор</div>
-                    <div class="message-text">Приветики</div>
-                    <div class="message-timestamp">19.42.42</div>
-                  </div>
+                 
                 </div>
               </div>
       
