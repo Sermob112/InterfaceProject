@@ -58,16 +58,23 @@ is_script_running = True
 def on_click(x, y, button, pressed):
     pass
 
-# Функция для преобразования абсолютных координат в относительные
-def absolute_to_relative(x, y, screen_resolution, target_resolution):
-    relative_x = x * target_resolution[0] / screen_resolution[0]
-    relative_y = y * target_resolution[1] / screen_resolution[1]
-    return int(relative_x), int(relative_y)
-
 screen_resolution = (1920, 1080)
+target_resolution = (1920, 1080)
+targx = target_resolution[0] / screen_resolution[0]
+tatgy =  target_resolution[1] / screen_resolution[1]
+# Функция для преобразования абсолютных координат в относительные
 
-# Разрешение целевого экрана
-target_resolution = (3840, 2160)
+def absolute_to_relative_move(x, y):
+    relative_x = x * targx
+    relative_y = y * tatgy 
+    if keyboard.is_pressed('esc'):
+            stop_script()
+    pyautogui.moveTo(relative_x, relative_y, duration=0.5)
+    pyautogui.click()
+    time.sleep(1.5)
+    
+    # return int(relative_x), int(relative_y)
+
 
 def script_thread(start_x, start_y, end_x, end_y, num_steps):
     global is_script_running
@@ -98,36 +105,42 @@ def script_thread(start_x, start_y, end_x, end_y, num_steps):
 
 # Запускаем скрипт в отдельном потоке
 
-def bezier_curve(t, p0, p1, p2):
-    # Формула кривой Безье
-    return (1 - t) ** 2 * p0 + 2 * (1 - t) * t * p1 + t ** 2 * p2
+# def bezier_curve(t, p0, p1, p2):
+#     # Формула кривой Безье
+#     return (1 - t) ** 2 * p0 + 2 * (1 - t) * t * p1 + t ** 2 * p2
 
-def move_and_click_with_bezier(x, y, num_points):
-    start_x, start_y = pyautogui.position()
-    control_x = (start_x + x) // 2  # Выберите координату X для контрольной точки
-    control_y = (start_y + y) // 2  # Выберите координату Y для контрольной точки
+# def move_and_click_with_bezier(x, y, num_points):
+#     start_x, start_y = pyautogui.position()
+#     control_x = (start_x + x) // 2  # Выберите координату X для контрольной точки
+#     control_y = (start_y + y) // 2  # Выберите координату Y для контрольной точки
     
-    # Создание массива значений t для интерполяции
-    t_values = np.linspace(0, 1, num_points)
+#     # Создание массива значений t для интерполяции
+#     t_values = np.linspace(0, 1, num_points)
     
-    for t in t_values:
-        # Вычисление координат на кривой Безье
-        current_x = int(bezier_curve(t, start_x, control_x, x))
-        current_y = int(bezier_curve(t, start_y, control_y, y))
+#     for t in t_values:
+#         # Вычисление координат на кривой Безье
+#         current_x = int(bezier_curve(t, start_x, control_x, x))
+#         current_y = int(bezier_curve(t, start_y, control_y, y))
         
-        pyautogui.moveTo(current_x, current_y)
-        time.sleep(0)
+#         pyautogui.moveTo(current_x, current_y)
+#         time.sleep(0)
     
-    pyautogui.click()
+#     pyautogui.click()
 
-# Вызов функции с использованием кривой Безье
-move_and_click_with_bezier(972, 555, 100)
+# pyautogui.moveTo(100, 100, duration=0.5)
 
+# # Вызов функции с использованием кривой Безье
+# move_and_click_with_bezier(972, 555, 100)
+
+# absolute_to_relative_move(972,555)
 
 # //Авторизация
-move_and_click(972, 555, 30)
-move_and_click(982, 627, 10)
-move_and_click(982, 701, 10)
+print(pyautogui.size())
+absolute_to_relative_move(972, 555)
+absolute_to_relative_move(982, 627)
+absolute_to_relative_move(982, 701)
+pyautogui.mouseDown()
+pyautogui.mouseUp() 
 # Директор
 move_and_click(180, 130, 60)
 move_and_click(320, 130, 10)

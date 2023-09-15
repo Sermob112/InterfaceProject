@@ -4,11 +4,28 @@
 document.addEventListener('DOMContentLoaded', function () {
   const employeeTable = document.querySelector('.employee-table');
   const widgetChat = document.querySelector('#widgetChat');
+  const widget2 = document.querySelector('#widget2');
   const personRows = document.querySelectorAll('.person-row'); // Выбираем все элементы с классом "person-row"
 
   personRows.forEach(row => {
     row.addEventListener('click', function () {
-      // При нажатии на элемент "person-row", отображаем виджет
+      // При нажатии на элемент "person-row", меняем местами виджеты
+      const widgetChatStyle = getComputedStyle(widgetChat);
+      const widget2Style = getComputedStyle(widget2);
+
+      const widgetChatGridColumn = widgetChatStyle.getPropertyValue('grid-column');
+      const widgetChatGridRow = widgetChatStyle.getPropertyValue('grid-row');
+
+      const widget2GridColumn = widget2Style.getPropertyValue('grid-column');
+      const widget2GridRow = widget2Style.getPropertyValue('grid-row');
+
+      widgetChat.style.gridColumn = widget2GridColumn;
+      widgetChat.style.gridRow = widget2GridRow;
+
+      widget2.style.gridColumn = widgetChatGridColumn;
+      widget2.style.gridRow = widgetChatGridRow;
+
+      // Отображаем виджет
       widgetChat.style.display = 'block';
     });
   });

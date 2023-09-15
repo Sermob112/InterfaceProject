@@ -57,7 +57,7 @@
   grid-row: 2;
 }
 
-#widgetChat {
+#widget2{
   grid-column: 2;
   grid-row: 2;
 }
@@ -67,8 +67,7 @@
   grid-row: 3;
 
 }
-
-#widget2 {
+#widgetChat  {
   grid-column: 2;
   grid-row: 3;
 }
@@ -1200,7 +1199,7 @@ width: 600px;
 }
 
 .footer-logo img {
-  width: 100px;
+  width: 70px;
   height: auto;
   border-radius: 10px; /* Скругление углов логотипа */
 }
@@ -1236,6 +1235,7 @@ width: 600px;
 }
 
 .footer-bottom {
+  background-color:#8ac3fc ;
   text-align: center;
   margin-top: 20px;
   font-size: 14px;

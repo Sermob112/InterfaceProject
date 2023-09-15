@@ -3,9 +3,9 @@ import os
 from bs4 import BeautifulSoup
 
 # Загрузка XML файла
-tree = ET.parse('./ReaderFiles/test.xml')
+tree = ET.parse('./ReaderFiles/test2.xml')
 root = tree.getroot()
-tree2 = ET.parse('./ReaderFiles/test2.xml')
+tree2 = ET.parse('./ReaderFiles/test.xml')
 root2 = tree2.getroot()
 
 #Роль Директор
@@ -367,6 +367,6 @@ updated_html = soup.prettify()
 
 
 # Сохраните измененный HTML обратно в файл
-with open('./Mainpages/Pages_v2/director_new.html', 'w', encoding='utf-8') as html_file:
+with open('./Mainpages/Pages_v2/production_director.html', 'w', encoding='utf-8') as html_file:
     html_file.write(str(soup))
 
