@@ -69,7 +69,7 @@ def absolute_to_relative_move(x, y):
     relative_y = y * tatgy 
     if keyboard.is_pressed('esc'):
             stop_script()
-    pyautogui.moveTo(relative_x, relative_y, duration=0.5)
+    pyautogui.moveTo(relative_x, relative_y, duration=0.8)
     pyautogui.click()
     time.sleep(1.5)
     
@@ -136,38 +136,64 @@ def script_thread(start_x, start_y, end_x, end_y, num_steps):
 
 # //Авторизация
 print(pyautogui.size())
+
 absolute_to_relative_move(972, 555)
 absolute_to_relative_move(982, 627)
 absolute_to_relative_move(982, 701)
-pyautogui.mouseDown()
-pyautogui.mouseUp() 
-# Директор
-move_and_click(180, 130, 60)
-move_and_click(320, 130, 10)
-move_and_click(447, 130, 10)
-move_and_click(670, 130, 30)
-move_and_click(670, 130, 0)
-move_and_click(447, 130, 10)
-move_and_click(320, 130, 10)
-#Виджет Ежедневник
-move_and_click(500, 320,10)
-move_and_click(500, 370, 10)
-move_and_click(500, 370, 0)
-move_and_click(447, 130, 30)
-move_and_click(1400, 240,60)
-move_and_click(1400, 300,10)
-move_and_click(1400, 365,10)
-move_and_click(1400, 260,10)
-move_and_click(1868, 196,60)
-move_and_click(670, 130,60)
-move_and_click(1130, 285,60)
-move_and_click(1868, 196,60)
-move_and_click(1869, 962, 60)
-move_and_click(1736, 595, 60)
 
-thread1 = threading.Thread(target=script_thread, args=(1736, 637, 600, 600, 60))
-thread1.start()
-move_and_click(734, 596, 10)
+#Виджет Ежедневник
+
+absolute_to_relative_move(659,325)
+absolute_to_relative_move(659,383)
+#Карта завода
+pyautogui.scroll(-360)
+
+absolute_to_relative_move(940,472)
+absolute_to_relative_move(1190,400)
+absolute_to_relative_move(1387,594)
+#Список сотрудников
+absolute_to_relative_move(501,375)
+absolute_to_relative_move(477,477)
+absolute_to_relative_move(513,561)
+absolute_to_relative_move(1434,662)
+keyboard.write("Жду вас у себя", delay=0.1)
+absolute_to_relative_move(1634,660)
+absolute_to_relative_move(477,477)
+absolute_to_relative_move(501,375)
+absolute_to_relative_move(359,479)
+absolute_to_relative_move(424,684)
+absolute_to_relative_move(423,777)
+absolute_to_relative_move(1434,662)
+keyboard.write("Подойдите ко мне сейчас!", delay=0.1)
+absolute_to_relative_move(1634,660)
+absolute_to_relative_move(1051,426)
+#Закрыть чат и виджет сотрудников
+absolute_to_relative_move(1685,158)
+absolute_to_relative_move(871,158)
+#перетаскиваем график
+absolute_to_relative_move(363,856)
+pyautogui.moveTo(363,856, duration=1)
+pyautogui.mouseDown()
+pyautogui.moveTo(363,162,duration=1)
+pyautogui.mouseUp() 
+absolute_to_relative_move(204,374)
+absolute_to_relative_move(292,373)
+absolute_to_relative_move(188,203)
+absolute_to_relative_move(213,343)
+absolute_to_relative_move(622,158)
+
+#Открываем виджет Планирования
+pyautogui.scroll(360)
+absolute_to_relative_move(210,155)
+absolute_to_relative_move(196,246)
+absolute_to_relative_move(176,626)
+pyautogui.scroll(-360)
+absolute_to_relative_move(176,451)
+absolute_to_relative_move(177,680)
+
+# thread1 = threading.Thread(target=script_thread, args=(1736, 637, 600, 600, 60))
+# thread1.start()
+# move_and_click(734, 596, 10)
 # Ожидаем, пока не будет нажата определенная клавиша для остановки скрипта
 while is_script_running:
     if keyboard.is_pressed('esc'):

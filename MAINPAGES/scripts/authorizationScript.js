@@ -36,7 +36,7 @@ const Button = document.getElementById('loginButton');
 // Добавляем обработчик события на нажатие кнопки
 Button.addEventListener('click', function() {
   // Переходим на другую страницу
-  window.location.href = 'director.html';
+  window.location.href = 'director_new.html';
 });
 
 

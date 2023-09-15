@@ -7,26 +7,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const widget2 = document.querySelector('#widget2');
   const personRows = document.querySelectorAll('.person-row'); // Выбираем все элементы с классом "person-row"
 
+  let clicked = false; // Флаг, отслеживающий был ли уже клик
+
   personRows.forEach(row => {
     row.addEventListener('click', function () {
-      // При нажатии на элемент "person-row", меняем местами виджеты
-      const widgetChatStyle = getComputedStyle(widgetChat);
-      const widget2Style = getComputedStyle(widget2);
+      if (!clicked) {
+        // При первом клике меняем местами виджеты
+        const widgetChatStyle = getComputedStyle(widgetChat);
+        const widget2Style = getComputedStyle(widget2);
 
-      const widgetChatGridColumn = widgetChatStyle.getPropertyValue('grid-column');
-      const widgetChatGridRow = widgetChatStyle.getPropertyValue('grid-row');
+        const widgetChatGridColumn = widgetChatStyle.getPropertyValue('grid-column');
+        const widgetChatGridRow = widgetChatStyle.getPropertyValue('grid-row');
 
-      const widget2GridColumn = widget2Style.getPropertyValue('grid-column');
-      const widget2GridRow = widget2Style.getPropertyValue('grid-row');
+        const widget2GridColumn = widget2Style.getPropertyValue('grid-column');
+        const widget2GridRow = widget2Style.getPropertyValue('grid-row');
 
-      widgetChat.style.gridColumn = widget2GridColumn;
-      widgetChat.style.gridRow = widget2GridRow;
+        widgetChat.style.gridColumn = widget2GridColumn;
+        widgetChat.style.gridRow = widget2GridRow;
 
-      widget2.style.gridColumn = widgetChatGridColumn;
-      widget2.style.gridRow = widgetChatGridRow;
+        widget2.style.gridColumn = widgetChatGridColumn;
+        widget2.style.gridRow = widgetChatGridRow;
 
-      // Отображаем виджет
-      widgetChat.style.display = 'block';
+        // Отображаем виджет
+        widgetChat.style.display = 'block';
+
+        clicked = true; // Устанавливаем флаг в true, чтобы предотвратить дополнительные обмены при последующих кликах
+      }
     });
   });
 });
