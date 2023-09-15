@@ -14,6 +14,10 @@
   margin-right: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 } */
+.selected {
+  background-color: #f0f0f0; /* Цвет подсветки */
+  transition: background-color 0.3s; /* Плавное изменение цвета */
+}
 
 .resizable-widget {
   position: relative;
@@ -476,8 +480,8 @@
     height: 20px;
     justify-content: space-between;
     align-items: center;
-    padding: 0Px; /* Уменьшаем вертикальный отступ */
-    border-bottom: 1px solid #ccc;
+    /* padding: 0Px; /* Уменьшаем вертикальный отступ */
+    /*border-bottom: 1px solid #ccc; */
   }
   
   .chat-content {
@@ -539,7 +543,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -1393,15 +1397,14 @@ body {
   max-width: 800px; /* Максимальная ширина контейнера */
   height: 99%;
   margin-right:15px;
-  padding: 20px; /* Добавим немного внутренних отступов для контента */
-}
-.chat-header {
-  margin-bottom: 1em;
-  color: #636363;
+  padding: 0px; /* Добавим немного внутренних отступов для контента */
 }
 
+
 .chat-header h2 {
-  font-size: 1.25em;
+  margin-bottom: 2.5rem;
+  margin-top: 10px;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -1410,7 +1413,7 @@ body {
   margin-top: 10px;
   height: 400px;
   overflow-y: scroll;
-  padding: 10px; /* Добавим внутренние отступы для контейнера сообщений */
+  padding: 20px; /* Добавим внутренние отступы для контейнера сообщений */
 }
 
 .message {

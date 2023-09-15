@@ -1,22 +1,72 @@
 // Функция для отправки сообщения
 
+//Открыть чат
+document.addEventListener('DOMContentLoaded', function () {
+  const employeeTable = document.querySelector('.employee-table');
+  const widgetChat = document.querySelector('#widgetChat');
+  const personRows = document.querySelectorAll('.person-row'); // Выбираем все элементы с классом "person-row"
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const employeeTable = document.querySelector('.employee-table');
-//   const widgetChat = document.querySelector('#widgetChat');
+  personRows.forEach(row => {
+    row.addEventListener('click', function () {
+      // При нажатии на элемент "person-row", отображаем виджет
+      widgetChat.style.display = 'block';
+    });
+  });
+});
 
-//   employeeTable.addEventListener('click', function () {
-//       // При нажатии на таблицу, отображаем виджет
-//       widgetChat.style.display = 'block';
+//Открыть диалог
+// const personRows = document.querySelectorAll(".person-row");
+
+// personRows.forEach(row => {
+//   row.addEventListener("click", () => {
+//     personRows.forEach(row => row.classList.remove("selected"));
+
+//     // Добавляем класс .selected к элементу, на котором был клик
+//     row.classList.add("selected");
+
+//     const userName = row.querySelector("td").textContent;
+//     selectedUserName = userName; // Сохраняем выбранное имя
+//     displayChatWithUser(userName);
 //   });
 // });
+const personRows = document.querySelectorAll(".person-row");
+const personsContainer = document.querySelector(".persons");
+
+personRows.forEach(row => {
+  row.addEventListener("click", () => {
+
+    personRows.forEach(row => row.classList.remove("selected"));
 
 
+    row.classList.add("selected");
+
+    const userName = row.querySelector("td").textContent;
+    selectedUserName = userName; 
+    displayChatWithUser(userName);
 
 
+    const existingButton = Array.from(personsContainer.querySelectorAll(".person-selector-button span")).find(span => span.textContent === userName);
+
+    if (!existingButton) {
+
+      const button = document.createElement("button");
+      button.className = "button person-selector-button";
+      button.innerHTML = `
+        <img src="../../img/avatar.png" alt="Аватар ${userName}">
+        <span>${userName}</span>
+      `;
 
 
+      button.addEventListener("click", () => {
 
+        displayChatWithUser(userName);
+      });
+
+   
+      personsContainer.appendChild(button);
+    }
+  });
+});
 
 
 // Функция для получения текущего времени в формате "чч:мм:сс"
@@ -34,15 +84,13 @@ function displayChatWithUser(userName) {
   // Очистите текущий чат
   clearChat();
 
-  // Создайте заголовок чата с именем пользователя
   const chatHeader = document.createElement("div");
   chatHeader.className = "chat-header";
   chatHeader.innerHTML = `<h2>${userName}</h2>`;
   const chatMessages = document.querySelector(".chat-messages");
   chatMessages.appendChild(chatHeader);
 
-  // Здесь вы можете добавить код для отображения переписки с выбранным пользователем
-  // Например, загрузить историю чата или начать новый чат с этим пользователем
+
 }
 
 // Очистка текущего чата
@@ -140,12 +188,12 @@ function createMessageElement(sender, messageText, senderAvatar, timestamp) {
 // Функция для генерации ответа (вы можете настроить ее по своему усмотрению)
 const responses = {
   "Виталий Алексеевич": [
-    "Привет, как я могу вам помочь?",
-    "Чем я могу быть полезен?",
+    "Хорошо, сейчас подойду",
+    "Ок",
   ],
   "Дмитрий Викторович": [
     "Здравствуйте!",
-    "Чем могу помочь?",
+    "Да, понял, буду через 10 минут у вас",
   ],
   // Добавьте другие имена и соответствующие им ответы здесь
 };
@@ -156,7 +204,7 @@ function generateResponse(userMessage, userName) {
     const randomIndex = Math.floor(Math.random() * userResponses.length);
     return userResponses[randomIndex];
   } else {
-    return "Извините, я не знаю, как на это ответить.";
+    return "Все понял, буду";
   }
 }
 

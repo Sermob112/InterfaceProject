@@ -242,20 +242,34 @@
                       <ul class="sub-projects1">
                         <table class="employee-table">
                           <thead>
-                            <tr >
-                              <th >Имя сотрудника</th>
+                            <tr  >
+                              <th >Тест Тестеров</th>
                               <th>Статус</th>
                               <th>Табельный номер</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr data-employee-name="Иванов Иван">
-                              <td>Иванов Иван</td>
-                              <td class="highlight-yellow" data-dialog-target="Тест Тестеров"><span>Работает</span></td>
+                            <tr class="person-row">
+                              <td>Виталий Алексеевич</td>
+                              <td class="highlight-yellow"><span>Работает</span></td>
                               <td>123</td>
                             </tr>
-                            <tr>
-                              <td>Имя пользователя</td>
+                            <tr class="person-row">
+                              <td>Тест Тестеров</td>
+                              <td><span class="highlight-yellow">Работает</span></td>
+                              <td>Табельный номер</td>
+                
+                            </tr>
+                            <tr class="person-row">
+                              <td>Дмитрий Викторович
+                              </td>
+                              <td><span class="highlight-yellow">Работает</span></td>
+                              <td>Табельный номер</td>
+                
+                            </tr>
+                            <tr class="person-row">
+                              <td>Тест
+                              </td>
                               <td><span class="highlight-yellow">Работает</span></td>
                               <td>Табельный номер</td>
                 
@@ -338,7 +352,7 @@
     <div class="plans">
         <ul class="plan-contents">
           <li class="plan">
-            <h4 class="plan-title">План №1</h4>
+            <h4 class="plan-title">Заказ №21080-13</h4>
             <progress id="progressWhole" value="81" max="100"></progress>
             <!-- Выполнение заказаов -->
             <table class="sub-projects">
@@ -368,7 +382,7 @@
             </table>
           </li>
           <li class="plan">
-            <h3 class="plan-title" id="plan3">План №2</h3>
+            <h3 class="plan-title" id="plan3">Заказ №21080-14</h3>
             <progress id="progressWhole" value="70" max="100"></progress>
             <!-- Выполнение заказаов -->
             <table class="sub-projects">
@@ -398,7 +412,7 @@
             </table>
           </li>
           <li class="plan">
-            <h3 class="plan-title" >План №3</h3>
+            <h3 class="plan-title" >Заказ №19121-54-9</h3>
             <progress id="progressWhole" value="20" max="100"></progress>
             <!-- Выполнение заказаов -->
             <table class="sub-projects">
@@ -529,10 +543,10 @@
       </div>
       <ul class="nav nav-tabs" id="graphTabs">
         <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#tab1">Заказ 1</a>
+          <a class="nav-link active" data-toggle="tab" href="#tab1">Заказ №21080-13</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#tab2">Заказ 2</a>
+          <a class="nav-link" data-toggle="tab" href="#tab2">Заказ №21080-14</a>
         </li>
         <!-- Добавьте вкладки по мере необходимости -->
       </ul>
@@ -556,7 +570,7 @@
 <!--Конец контейнера виджетов -->
   <!-- чат -->
 
-    <div class="resizable-widget active-widget" id="widgetChat">
+    <div class="resizable-widget " id="widgetChat">
       <div class="widget-header">
         <span class="blockName">Чат</span>
         <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
@@ -570,17 +584,17 @@
             <button class="button person-selector-button active-person" >
               <img src="../../img/avatar.png" alt="Аватар Виталия">
               <span>Виталий Алексеевич</span>
-              <div class="unread-badge">3</div> <!-- Это серый овал с цифрой -->
+              <!-- <div class="unread-badge">3</div> Это серый овал с цифрой -->
             </button>
             <button class="button person-selector-button" >
               <img src="../../img/avatar.png" alt="Аватар Дмитрия">
               <span>Дмитрий Викторович</span>
-              <div class="unread-badge">53</div> 
+              <!-- <div class="unread-badge">53</div>  -->
             </button>
             <button class="button person-selector-button" id = "ThisButtom" >
               <img src="../../img/avatar.png" alt="Аватар Дмитрия">
               <span>Тест Тестеров</span>
-              <div class="unread-badge">3</div> 
+              <!-- <div class="unread-badge">3</div>  -->
             </button>
        
           </div>

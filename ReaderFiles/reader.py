@@ -305,7 +305,7 @@ for employee_list in root.findall(".//employeeList"):
 
         # Заполняем таблицу данными
         for data in employee_data:
-            tr_employee = soup.new_tag("tr")
+            tr_employee = soup.new_tag("tr", attrs={"class": "person-row"})
             td_employee_name = soup.new_tag("td")
             td_employee_name.string = data["name"]
             td_employee_status = soup.new_tag("td",  attrs={"class": "highlight-green"})
