@@ -231,13 +231,17 @@ function generateResponse(userMessage, userName) {
   }
 }
 
-// Обработчик события для отправки сообщения
 const chatInputForm = document.querySelector(".chat-input-form");
 chatInputForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const messageText = e.target.querySelector(".chat-input").value;
+  const messageInput = e.target.querySelector(".chat-input");
+  const messageText = messageInput.value;
+  
   if (messageText.trim() !== "") {
-      sendMessageAndReceiveResponse(messageText);
+    sendMessageAndReceiveResponse(messageText);
+    
+    // Очищаем поле ввода после отправки сообщения
+    messageInput.value = "";
   }
 });
 const messageHistory = {};

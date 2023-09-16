@@ -287,12 +287,12 @@
         <employeeID>Табельный номер 6</employeeID>
     </employee>
     <employee>
-        <name>Бригада контроля трубообработки, насыщения и оперативных измерений. Старший инженер</name>
+        <name>Бригада контроля трубообработки. Старший инженер</name>
         <status>Работает</status>
         <employeeID>Табельный номер 7</employeeID>
     </employee>
     <employee>
-        <name>Бригада контроля трубообработки, насыщения и оперативных измерений. Инженер</name>
+        <name>Бригада контроля трубообработки. Инженер</name>
         <status>Работает</status>
         <employeeID>Табельный номер 8</employeeID>
     </employee>
@@ -566,7 +566,7 @@
         </employees>
     </brigadeList>
     <brigadeList>
-        <brigadeText>Корпусообрабатывающий цех. Участок резки листового и профильного металлопроката. Мастер участка</brigadeText>
+        <brigadeText>Корпусообрабатывающий цех. Мастер участка</brigadeText>
         <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
         <employees>
             <employee>
@@ -577,7 +577,7 @@
         </employees>
     </brigadeList>
     <brigadeList>
-        <brigadeText>Корпусообрабатывающий цех. Участок гибки металлопроката. Мастер участка</brigadeText>
+        <brigadeText>Корпусообрабатывающий цех.  Мастер участка</brigadeText>
         <brigadeCount>Количество сотрудников в отделе: 1</brigadeCount>
         <employees>
             <employee>
@@ -659,7 +659,7 @@
     </employees>
 </brigadeList>
 <brigadeList>
-    <brigadeText>Корпусостроительное производство (стапельный цех). Зона формирования корпуса судна. </brigadeText>
+    <brigadeText>Корпусостроительное производство . Зона формирования корпуса судна. </brigadeText>
     <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
     <employees>
         <employee>
@@ -1751,7 +1751,7 @@
 </brigadeList>
 
 <brigadeList>
-    <brigadeText>Механическая служба. Специалист автоматизированных линий. Терминал ТОиР</brigadeText>
+    <brigadeText>Механическая служба. Специалист автоматизированных линий.</brigadeText>
     <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
     <employees>
             <employee>
@@ -1797,12 +1797,12 @@
     <employees>
         <employee>
             <employeeID>Табельный номер 11</employeeID>
-            <name>Специалист. Служба подъемно-транспортного оборудования. Терминал ТОиР</name>
+            <name>Специалист. Терминал ТОиР</name>
             <status>Работает</status>
         </employee>
         <employee>
             <employeeID>Табельный номер 12</employeeID>
-            <name>Специалист. Служба подъемно-транспортного оборудования. Терминал ТОиР</name>
+            <name>Специалист. Терминал ТОиР</name>
             <status>Работает</status>
         </employee>
     </employees>

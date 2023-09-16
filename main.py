@@ -138,7 +138,9 @@ def script_thread(start_x, start_y, end_x, end_y, num_steps):
 print(pyautogui.size())
 
 absolute_to_relative_move(972, 555)
+keyboard.write("login", delay=0.1)
 absolute_to_relative_move(982, 627)
+keyboard.write("password", delay=0.1)
 absolute_to_relative_move(982, 701)
 
 #Виджет Ежедневник

@@ -12,7 +12,7 @@
 <body>
 <!-- логотипы -->
 <div class="frame">
-<div class="director-title">Директор</div>
+<div class="director-title">Директор по подготовке производства</div>
 <div class="logo-vidget-container">
 <img alt="Logo" class="logo" src="../../img/logo.png"/>
 <img alt="Logo" class="logo-2" src="../../img/logo.png"/>
@@ -28,6 +28,7 @@
 <option value="widget4">Планирование</option>
 <option value="widgetChat">Чат</option>
 <option value="widgetGraph">График</option>
+<option value="ControlWidget">Контроль </option>  
 <!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
 </select>
 </div>
@@ -182,98 +183,14 @@
 <!--виджет управления персоналом-->
 <div class="resizable-widget active-widget" id="widget3">
 <div class="widget-header">
-<span class="blockName">Список сотрудников цеха</span>
+<span class="blockName">Список сотрудников</span>
 <button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
 <button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
 <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
 </div>
 <div class="container">
-<div class="TaskWorkShop workshop-title1">
-<div class="icon-and-text">
-<img class="arrow-picture" src="../../img/Arrowdown.png"/>
-<p class="TaskBasicText icon-text">Сюда вписать Цех</p>
-</div>
-</div>
-<ul class="projects1">
-<li class="project1">
-<div class="TaskWorkShopList projects_name_list">
-<div class="icon-and-text">
-<img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/>
-<p class="TaskBasicText Brigade-text">Сюда Бригаду</p>
-</div>
-<p class="TaskBasicText Brigade-Count">Сюда количество человек в бригаде</p>
-</div>
-<ul class="sub-projects1">
-<table class="employee-table">
-<thead>
-<tr>
-<th>Тест Тестеров</th>
-<th>Статус</th>
-<th>Табельный номер</th>
-</tr>
-</thead>
-<tbody>
-<tr class="person-row">
-<td>Виталий Алексеевич</td>
-<td class="highlight-yellow"><span>Работает</span></td>
-<td>123</td>
-</tr>
-<tr class="person-row">
-<td>Тест Тестеров</td>
-<td><span class="highlight-yellow">Работает</span></td>
-<td>Табельный номер</td>
-</tr>
-<tr class="person-row">
-<td>Дмитрий Викторович
-                              </td>
-<td><span class="highlight-yellow">Работает</span></td>
-<td>Табельный номер</td>
-</tr>
-<tr class="person-row">
-<td>Тест
-                              </td>
-<td><span class="highlight-yellow">Работает</span></td>
-<td>Табельный номер</td>
-</tr>
-<!-- Вставьте остальные сотрудники здесь как новые строки таблицы -->
-</tbody>
-</table>
-</ul>
-</li>
-<li class="project1">
-<div class="TaskWorkShopList projects_name_list">
-<div class="icon-and-text">
-<img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/>
-<p class="TaskBasicText Brigade-text">Сюда Бригаду</p>
-</div>
-<p class="TaskBasicText Brigade-Count">Сюда количество человек в бригаде</p>
-</div>
-<ul class="sub-projects1">
-<table class="employee-table">
-<thead>
-<tr data-employee-name="Иванов Иван">
-<td>Иванов Иван</td>
-<td class="highlight-yellow" data-dialog-target="Тест Тестеров"><span>Работает</span></td>
-<td>123</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Имя пользователя</td>
-<td><span class="highlight-yellow">Работает</span></td>
-<td>Табельный номер</td>
-</tr>
-<tr>
-<td>Имя пользователя</td>
-<td><span class="highlight-yellow">Работает</span></td>
-<td>Табельный номер</td>
-</tr>
-<!-- Вставьте остальные сотрудники здесь как новые строки таблицы -->
-</tbody>
-</table>
-</ul>
-</li>
-</ul>
+
+
 <div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Производство</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Отдел производства</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 5</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Директор  судостроения</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 26</td></tr><tr class="person-row"><td>Заместитель директора по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 26</td></tr><tr class="person-row"><td>Секретарь БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 27</td></tr><tr class="person-row"><td>Табельщик БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 28</td></tr><tr class="person-row"><td>Специалист архива РКиТД БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 29</td></tr><tr class="person-row"><td>Специалист архива РКиТД БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 30</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Производственно-диспетчерский отдел по судостроению</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 7</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Начальник отдела</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 31</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 32</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 33</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 34</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 35</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 36</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 37</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Производственно-диспетчерский отдел БКЦ по судостроению</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 7</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Начальник отдела</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 41</td></tr><tr class="person-row"><td>Диспетчер ПДО БКЦ по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 42</td></tr><tr class="person-row"><td>Диспетчер ПДО БКЦ по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 43</td></tr><tr class="person-row"><td>Диспетчер ПДО БКЦ по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 44</td></tr><tr class="person-row"><td>Диспетчер ПДО БКЦ по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 45</td></tr><tr class="person-row"><td>Диспетчер ПДО БКЦ по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 46</td></tr><tr class="person-row"><td>Диспетчер ПДО БКЦ по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 47</td></tr><tr class="person-row"><td>Заместитель начальника КОЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 51</td></tr><tr class="person-row"><td>Мастер участка 1</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 52</td></tr><tr class="person-row"><td>Мастер участка 2</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 53</td></tr><tr class="person-row"><td>Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 54</td></tr><tr class="person-row"><td>Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 55</td></tr><tr class="person-row"><td>Заместитель начальника ССП</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 56</td></tr><tr class="person-row"><td>Мастер участка 1</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 57</td></tr><tr class="person-row"><td>Мастер участка 2</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 58</td></tr><tr class="person-row"><td>Мастер участка 3</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 59</td></tr><tr class="person-row"><td>Мастер участка 4</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 60</td></tr><tr class="person-row"><td>Кладовщик-оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 61</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусообрабатывающий цех. Начальник КОЦ</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Заместитель начальника КОЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 51</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусообрабатывающий цех. Мастер участка</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 2</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Мастер участка 1</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 52</td></tr><tr class="person-row"><td>Мастер участка 2</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 53</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусообрабатывающий цех. Участок резки листового и профильного металлопроката. Мастер участка</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 54</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусообрабатывающий цех. Участок гибки металлопроката. Мастер участка</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 55</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Сборочно-сварочное производство. Начальник ССП</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Заместитель начальника ССП</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 56</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Сборочно-сварочное производство. Мастер участка</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 4</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Мастер участка 1</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 57</td></tr><tr class="person-row"><td>Мастер участка 2</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 58</td></tr><tr class="person-row"><td>Мастер участка 3</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 59</td></tr><tr class="person-row"><td>Мастер участка 4</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 60</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Сборочно-сварочное производство. Кладовая сварочного оборудования и сварочных материалов.</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Кладовщик-оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 61</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусостроительное производство (стапельный цех). Начальник производства</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Заместитель начальника КСП</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 62</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусостроительное производство (стапельный цех). Участок изготовления блоков. </p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Начальник участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 63</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусостроительное производство (стапельный цех). Зона формирования корпуса судна. </p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 2</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Мастер участка 1</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 64</td></tr><tr class="person-row"><td>Мастер участка 2</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 65</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусостроительное производство (стапельный цех). Участок изготовления блоков.Существующий эллинг.</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Начальник участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 66</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусостроительное производство (стапельный цех). Участок изготовления блоков.Существующий эллинг. </p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 67</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Корпусостроительное производство (стапельный цех). Зона формирования корпуса судна. Существующий эллинг. </p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 3</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Мастер участка 1</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 68</td></tr><tr class="person-row"><td>Мастер участка 2</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 69</td></tr><tr class="person-row"><td>Мастер участка 3</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 70</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Трубообрабатывающее производство</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 7</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Начальник производства</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td></tr><tr class="person-row"><td>Заместитель начальника производства</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 2</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Окрасочное производство</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 7</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Начальник производства</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td></tr><tr class="person-row"><td>Заместитель начальника производства</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 2</td></tr><tr class="person-row"><td>Главный механик ОП (камер очистки и окраски)</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td></tr><tr class="person-row"><td>Мастер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td></tr><tr class="person-row"><td>Машинное отделение № 1. Механик</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td></tr><tr class="person-row"><td>Мастер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 6</td></tr><tr class="person-row"><td>Машинное отделение № 2. Механик</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td></tr><tr class="person-row"><td>Кладовые ЛКМ. Кладовщик-оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 8</td></tr><tr class="person-row"><td>Пост СИП ОП</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 9</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Достроечное производство. Начальник производства</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 4</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Заместитель начальника производства</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td></tr><tr class="person-row"><td>Участок изделий и деталей из листовых и плиточных материалов. Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 2</td></tr><tr class="person-row"><td>Участок изделий и деталей из древесины. Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td></tr><tr class="person-row"><td>Участок пластин и деталей изоляции набора судовых помещений. Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td></tr><tr class="person-row"><td>Участок шаблонов. Мастер участка</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Электромонтажное производство. Начальник производства</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 8</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Склад кабельной продукции и материалов (3 зоны). Кладовщик-оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 6</td></tr><tr class="person-row"><td>Участок изготовления бирок. Мастер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td></tr><tr class="person-row"><td>Электромонтажный участок. Мастер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 8</td></tr><tr class="person-row"><td>Кладовая электрооборудования. Кладовщик-оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 9</td></tr><tr class="person-row"><td>Подготовительные работы на судне. Мастер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 10</td></tr><tr class="person-row"><td>Прокладка кабелей на судне. Мастер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 11</td></tr><tr class="person-row"><td>Регулировочно-сдаточные работы. Мастер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 12</td></tr><tr class="person-row"><td>Пост СИП КОЦ № 1. 1 пролет. Участок первичной обработки</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 13</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Механомонтажное производство. Начальник производства</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 10</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Заместитель начальника производства</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td></tr><tr class="person-row"><td>Участок механообработки. Начальник механообработки</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 2</td></tr><tr class="person-row"><td>Механообрабатывающий станок с ЧПУ. Оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td></tr><tr class="person-row"><td>Механообрабатывающий станок с ЧПУ. Оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td></tr><tr class="person-row"><td>Механообрабатывающий станок с ЧПУ. Оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td></tr><tr class="person-row"><td>Механообрабатывающий станок с ЧПУ. Оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 6</td></tr><tr class="person-row"><td>Механообрабатывающий станок с ЧПУ. Оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td></tr><tr class="person-row"><td>Механообрабатывающий станок с ЧПУ. Оператор</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 8</td></tr><tr class="person-row"><td>Монтажный участок сборки и монтажа оборудования на судах</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 9</td></tr><tr class="person-row"><td>Главный строитель</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 10</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Главный строитель</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 4</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Отдел главного строителя. Главный строитель заказа</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 11</td></tr><tr class="person-row"><td>Отдел главного строителя. Главный строитель заказа</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 12</td></tr><tr class="person-row"><td>Отдел главного строителя. Главный строитель заказа</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 13</td></tr><tr class="person-row"><td>Отдел главного строителя. Главный строитель заказа</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 14</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Главный сварщик</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 3</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th></tr></thead><tbody><tr class="person-row"><td>Отдел главного сварщика. Специалист ССК СП</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 15</td></tr><tr class="person-row"><td>Отдел главного сварщика. Специалист ССК СП</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 16</td></tr><tr class="person-row"><td>Отдел главного сварщика. Специалист ССК СП</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 17</td></tr></tbody></table></ul></li></ul></div>
 <!--нижняя панель управления виджетом-->
 <!--нижняя панель управления виджетом-->
@@ -491,7 +408,7 @@
 </div>
 <div class="resize-handle"></div>
 </div>
-<!--Конец контейнера виджетов -->
+
 <!-- чат -->
 <div class="resizable-widget" id="widgetChat">
 <div class="widget-header">
@@ -534,8 +451,75 @@
 </div>
 <div class="resize-handle"></div>
 </div>
+<!--Виджет зам производства -->
+
+<div class="resizable-widget active-widget " id="ControlWidget">
+  <div class="widget-header">
+  <span class="blockName">Контроль качества</span>
+  <button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+  <button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+  <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
+  </div>
+  <div class="widget-columns">
+  <div class="widget-table-column">
+  <table class="widget-table">
+    <thead>
+      <tr>
+        <th>Название судна</th>
+        <th>Номер судна</th>
+        <th>Номер заказа</th>
+        <th>Параметр</th>
+        <th>Значение</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Судно "Морская звезда"</td>
+        <td>12345</td>
+        <td>7890</td>
+        <td class="highlight-yellow"><span>Не активно</span></td>
+        <td>Длина судна</td>
+        <td>150 метров</td>
+       
+      </tr>
+      <tr>
+        <td>Судно "Океанская гроза"</td>
+        <td>67890</td>
+        <td>5432</td>
+        <td class="highlight-green"><span>Aктивно</span></td>
+        <td>Водоизмещение</td>
+     
+        <td>10 000 тонн</td>
+      </tr>
+      <tr>
+        <td>Судно "Ветер перемен"</td>
+        <td>54321</td>
+        <td>1234</td>
+        <td class="highlight-green"><span>Aктивно</span></td>
+        <td>Максимальная скорость</td>
+    
+        <td>20 узлов</td>
+      </tr>
+      <tr>
+        <td>Судно "Морской орел"</td>
+        <td>98765</td>
+        <td>2468</td>
+        <td class="highlight-red"><span>Не активно</span></td>
+        <td>Мощность двигателя</td>
+        <td>10 000 лошадиных сил</td>
+      </tr>
+      <!-- Добавьте другие параметры и их значения для других судов -->
+    </tbody>
+  </table>
 </div>
-<!--Конец чата-->
+</div>
+  <div class="resize-handle"></div>
+  </div>
+
+
+</div>
+<!--Конец контейнера виджетов -->
 <!--Футор-->
 <div class="footer">
 <div class="footer-content">
@@ -570,7 +554,7 @@
 <script src="../scripts/chatScript.js"></script>
 <script src="../scripts/director_workshops.js"></script>
 <script src="../scripts/director_graph.js"></script>
-<script src="../scripts/directorScript_v2.js"></script>
+<script src="../scripts/productDirectorScript.js"></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
