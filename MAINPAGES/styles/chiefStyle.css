@@ -1,0 +1,128 @@
+
+.lineOfEquipment_chief{
+    overflow: initial;
+}
+
+
+.tsech№, .WhichPlan{
+    font-family: "RobotoFlex", sans-serif;
+    font-size: 16px;
+}
+
+.TsekhMap_chief{
+    height: 500px;
+}
+
+.sub-projects {
+    display: none;
+    list-style: none;
+  }
+  
+.sub-projects.active {
+    display: block;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+
+.tsechDiscription{
+    display: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tsechDiscription.activeBlock{
+    display: block;
+    width: 70%;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.widget-columns_chief{
+    width: 95%;
+}
+
+.imgCircle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: #000 solid 2px;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+#myTableWorker span{
+    vertical-align: super;
+}
+
+#myTableWorker tr:hover{
+    background-color: aliceblue;
+}
+.ShechMap{
+}
+
+.workshop:nth-child(2){
+    margin-left:0px;
+}
+
+.workshop:nth-child(3){
+    margin-left:31px;
+}
+
+.workshop:nth-child(4){    
+    margin-left: -10px;
+
+}
+
+.workshop:nth-child(5){    
+    margin-left: 88px;
+
+}
+
+.workshop:nth-child(6){    
+    left: -1215px;
+    top: 388px;
+}
+
+.workshop:nth-child(7){    
+    left: -1038px;
+    top: 345px;
+
+}
+
+.equipmentIcon{
+    position: relative;
+    left: -748px;
+    top: 125px;
+}
+
+.hight-light_yellow.active{
+    background-color: yellow;
+}
+
+.kran.active{
+    background-color: yellow;
+}
+
+.stanok275.active{
+    background-color: yellow;
+}
+
+.press4.active{
+    background-color: yellow;
+}
+
+.press22.active{
+    background-color: yellow;
+}
+
+.press375.active{
+    background-color: yellow;
+}
+
+.eq li{
+    list-style-type: disc;
+}
