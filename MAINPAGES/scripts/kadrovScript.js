@@ -53,7 +53,7 @@ function setupWidget(widgetId) {
   });
 }
 
-const widgetIds = ['widget1','widget2','widgetChat'];
+const widgetIds = ['widget1','widget2','widget3','widgetChat'];
 
 widgetIds.forEach(widgetId => {
   setupWidget(widgetId);
@@ -90,16 +90,16 @@ function getRowData(index) {
   // Возвращаем данные в зависимости от индекса строки
   if (index === 0) {
     return {
-      title: 'Заголовок для первой строки',
-      content: 'Содержимое первой строки...'
+      title: 'Прошу рассмотреть..... ',
+      content: 'Вашу служебную записку....'
     };
   } else if (index === 1) {
     return {
-      title: 'Заголовок для второй строки',
-      content: 'Содержимое второй строки...'
+      title: 'Прошу рассмотреть...',
+      content: 'Вашу служебную записку...'
     };
   }
-
+  // И так далее...
 }
 
 //Выпадающий список работников

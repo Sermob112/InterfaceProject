@@ -5,9 +5,11 @@
   <title>DirectorShow</title>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="../styles/ConstructStyle.css">
+  <link rel="stylesheet" href="../styles/directorStyle_Const.css">
+  <link rel="stylesheet" href="../styles/ITSecurityDirectorStyle.css">
 
-  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/styleConst.css">
+  <link rel="stylesheet" href="../styles/Chat.css">
 
 </head>
 <body>
@@ -26,6 +28,7 @@
             <option value="widget1" >Ежедневник</option>
             <option value="widget2">Перечень файлов от проектантов</option>
             <option value="widget3">Список вопросов</option>
+            <option value="widgetChat">Чат</option>
             <!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
           </select>
         </div>
@@ -36,23 +39,18 @@
 </div>
 
         <!-- Аватарка и имя пользователя -->
-        
+
     <div class="user-profile">
-    
-      <!-- <div class="search-container">
-      <input type="text" class="search-input" placeholder="Поиск">
-        <img src="../../img/search.png" alt="Картинка" class="search-icon"> 
-     </div> -->
+
      <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
      <img src="../../img/avatar.png" alt="Аватар пользователя" class ="avatar">
      <span class="user-name">Имя пользователя</span>
      <img src="../../img/Arrowdown.png" alt="Иконка шеврон" class="chevron-icon">
-    
+
     </div>
     <!--Полоска виджетов-->
-    
+
 </div>
-   </div>
 
   <!--Область окон-->
             <div class="vidgetContext">
@@ -69,10 +67,12 @@
   <div class="resizable-widget active-widget" id="widget1">
     <div class="widget-header">
       <span class="blockName">Ежедневник</span>
+        <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+        <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
       <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
     </div>
 
-    <div class="widget-columns"> 
+    <div class="widget-columns">
       <div class="widget-table-column">
       <table class="widget-table">
         <thead>
@@ -87,7 +87,7 @@
         </thead>
         <tbody>
           <tr >
-            <td><input type="checkbox"></td> 
+            <td><input type="checkbox"></td>
             <td>Директору</td>
             <td>Перв. Зам</td>
             <td class="highlight-green"><span>Активно</span></td>
@@ -96,7 +96,7 @@
           </tr>
           <!-- <tr  class="green-row"> -->
             <tr  >
-            <td><input type="checkbox"></td> 
+            <td><input type="checkbox"></td>
             <td>Перв. зам</td>
             <td>Директор</td>
             <td class="highlight-yellow"><span>Не активно</span></td>
@@ -104,7 +104,7 @@
             <td>Поручение</td>
           </tr>
           <tr  >
-            <td><input type="checkbox"></td> 
+            <td><input type="checkbox"></td>
             <td>Перв. зам</td>
             <td>Директор</td>
             <td class="highlight-green"><span>Aктивно</span></td>
@@ -112,7 +112,7 @@
             <td>Поручение</td>
           </tr>
           <tr  >
-            <td><input type="checkbox"></td> 
+            <td><input type="checkbox"></td>
             <td>Перв. зам</td>
             <td>Директор</td>
             <td class="highlight-red"><span>Не активно</span></td>
@@ -140,85 +140,29 @@
 
 
   </div>
-   <!--нижняя панель управления виджетом-->
-  <!-- <div class="widget-images-panel">
-    <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
-    <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
-    <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
-    <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
-     <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
-  </div> -->
 
     <div class="resize-handle"></div>
 
 
   </div>
-  
- <!--виджет списка с вопросами-->
-
-<div class="resizable-widget" id="widget3">
-  <div class="widget-header">
-    <span class="blockName">Список вопросов</span>
-    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
-  </div>
-
-      <!-- Widget content goes here -->
-        <ul class="question-list">
-            <li>
-                <div class="question-title">Как улучшить производственный процесс?</div>
-                <div class="question-details">Цех: Цех 1, Ответ: Ожидается</div>
-            </li>
-            <li>
-                <div class="question-title">Какие новые материалы можно применить?</div>
-                <div class="question-details">Цех: Цех 2, Ответ: Отправлен</div>
-            </li>
-            <li>
-                <div class="question-title">План обновления оборудования</div>
-                <div class="question-details">Цех: Цех 3, Ответ: Принят</div>
-            </li>
-            <!-- Добавьте дополнительные вопросы по аналогии -->
-        </ul>
-        <div class="button-container">
-            <button class="action-button-question">Ответить цеху</button>
-            <button class="action-button-question">Создать вопрос</button>
-            <button class="action-button-question">Отправить вопрос проектанту</button>
-            <button class="action-button-question">Редактировать</button>
-        </div>
 
 
-        
-
-   <!--нижняя панель управления виджетом-->
-   <!--нижняя панель управления виджетом-->
- <!-- <div class="widget-images-panel">
-  <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
-  <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
-  <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
-  <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
-   <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
-</div> -->
-
-  <div class="resize-handle"></div>
-</div>
  <!--виджет управления персоналом-->
 
 
    <!--Виджет финансов-->
 
 
-
-
-
-
    <!--нижняя панель управления виджетом-->
-
 
 
      <!--Виджет чего -то-->
 
-     <div class="resizable-widget active-widget" id="widget2">
+     <div class="resizable-widget" id="widget2">
       <div class="widget-header">
         <span class="blockName">Перечень файлов от проектантов</span>
+          <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+        <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
         <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
       </div>
 
@@ -227,7 +171,7 @@
             <div class="widget-columns">
                 <div class="kanban-container">
                     <div class="kanban-column">
-                        <div class="column-title">To Do (<span class="task-count">0</span>)</div>
+                        <div class="column-title">К выполнению (<span class="task-count">0</span>)</div>
                         <ul class="task-list">
                             <li class="task-item">
                                 Задача 1
@@ -248,7 +192,7 @@
                         </ul>
                     </div>
                     <div class="kanban-column">
-                        <div class="column-title">In Progress (<span class="task-count">0</span>)</div>
+                        <div class="column-title">В процессе (<span class="task-count">0</span>)</div>
                         <ul class="task-list">
                             <!-- Здесь будут задачи в работе -->
                             <li class="task-item">
@@ -257,7 +201,7 @@
                         </ul>
                     </div>
                     <div class="kanban-column">
-                        <div class="column-title">Done (<span class="task-count">0</span>)</div>
+                        <div class="column-title">Завершено (<span class="task-count">0</span>)</div>
                         <ul class="task-list">
                             <!-- Здесь будут выполненные задачи -->
                             <li class="task-item">
@@ -286,48 +230,136 @@
                 </div>
             </div>
         </div>
-      
+
       <!--нижняя панель управления виджетом-->
 
       <div class="resize-handle"></div>
     </div>
-</div>
 
-<!--Футор-->
-<div class="footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="../../img/logo.png" alt="Логотип">
+
+        <!--виджет списка с вопросами-->
+
+    <div class="resizable-widget" id="widget3">
+      <div class="widget-header">
+        <span class="blockName">Список вопросов</span>
+                  <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+            <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+        <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+      </div>
+
+          <!-- Widget content goes here -->
+            <ul class="question-list">
+                <li>
+                    <div class="question-title">Как улучшить производственный процесс?</div>
+                    <div class="question-details">Цех: Цех 1, Ответ: Ожидается</div>
+                </li>
+                <li>
+                    <div class="question-title">Какие новые материалы можно применить?</div>
+                    <div class="question-details">Цех: Цех 2, Ответ: Отправлен</div>
+                </li>
+                <li>
+                    <div class="question-title">План обновления оборудования</div>
+                    <div class="question-details">Цех: Цех 3, Ответ: Принят</div>
+                </li>
+                <!-- Добавьте дополнительные вопросы по аналогии -->
+            </ul>
+            <div class="button-container">
+                <button class="action-button-question">Ответить цеху</button>
+                <button class="action-button-question">Создать вопрос</button>
+                <button class="action-button-question">Отправить вопрос проектанту</button>
+                <button class="action-button-question">Редактировать</button>
+            </div>
+
+      <div class="resize-handle"></div>
     </div>
-    <div class="footer-links">
-      <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </div>
-    <div class="footer-social">
-      <!-- <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
-      <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
-      <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a> -->
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2023. Все права защищены.</p>
-  </div>
+
+<!-- чат -->
+<div class="resizable-widget" id="widgetChat">
+<div class="widget-header">
+<span class="blockName">Чат</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+<button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
 </div>
+<div class="person-selector">
+<div class="persons">
+<button class="button person-selector-button active-person">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Виталий Алексеевич</span>
+<!-- <div class="unread-badge">3</div> Это серый овал с цифрой -->
+</button>
+<button class="button person-selector-button">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Дмитрий Викторович</span>
+<!-- <div class="unread-badge">53</div>  -->
+</button>
+
+</div>
+<div class="chat-container">
+<div class="chat-messages">
+<div class="message">
+<div class="message-avatar">
+<img src="../../img/avatar.png"/>
+</div>
+</div>
+</div>
+<form class="chat-input-form">
+<input class="chat-input" placeholder="Введите сообщение" required="" type="text"/>
+<button class="button send-button" type="submit">Отправить</button>
+</form>
+</div>
+</div>
+<div class="resize-handle"></div>
+</div>
+</div>
+<!--Конец чата-->
+
+    <!--Футор-->
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../../img/logo.png" alt="Логотип">
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023. Все права защищены.</p>
+      </div>
+    </div>
 <!--Футор-->
 
 
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../scripts/constructorScript.js" ></script>
+<script src="../scripts/constr.js" ></script>
 <script src="../scripts/constructorScripts.js" ></script>
-
+<script src="../scripts/chatScript.js"></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 <!-- <script src="scripts/WorkshopTask.js"></script>  -->
+<script>
+  const delayInMilliseconds = (1 * 24 * 1000);
+  
+  // Функция для перехода на другую страницу после задержки
+  function redirectToPage() {
+      // Замените "URL_СЮДА" на адрес страницы, на которую вы хотите перейти
+      window.location.href = "ITSecurityDirector.html";
+  }
+  
+  // Запускаем функцию после задержки
+  setTimeout(redirectToPage, delayInMilliseconds);
+  </script>
+
 </html>

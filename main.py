@@ -10,8 +10,8 @@ import keyboard
 from pynput.mouse import Controller, Listener, Button
 import threading
 
-file_path = os.path.abspath("Mainpages/pages_v2/chief.html")
-# file_path = os.path.abspath("Mainpages/pages_v2/Director.html")
+file_path = os.path.abspath("Mainpages/pages_v2/Authorization.html")
+# file_path = os.path.abspath("Mainpages/pages_v2/Director.html")login
 webbrowser.open("file://" + file_path)
 pyautogui.MINIMUM_DURATION = 0 
 
@@ -20,7 +20,7 @@ def stop_script():
     is_script_running = False
     print("Script stopped.")
     exit()
-time.sleep(1)
+time.sleep(3)
 
 
 def move_and_click(x, y,num_steps):
@@ -136,106 +136,195 @@ def script_thread(start_x, start_y, end_x, end_y, num_steps):
 
 # //Авторизация
 # print(pyautogui.size())
+while(is_script_running == True):
+    absolute_to_relative_move(972, 485)
+    keyboard.write("login", delay=0.1)
+    absolute_to_relative_move(982, 557)
+    keyboard.write("password", delay=0.1)
+    absolute_to_relative_move(982, 631)
 
-# absolute_to_relative_move(972, 485)
-# keyboard.write("login", delay=0.1)
-# absolute_to_relative_move(982, 557)
-# keyboard.write("password", delay=0.1)
-# absolute_to_relative_move(982, 631)
+    # # //Директор
+    # #Виджет Ежедневник
 
-# # //Директор
-# #Виджет Ежедневник
+    absolute_to_relative_move(659,255)
+    absolute_to_relative_move(659,313)
+    #Карта завода
+    pyautogui.scroll(-360)
 
-# absolute_to_relative_move(659,255)
-# absolute_to_relative_move(659,313)
-# #Карта завода
-# pyautogui.scroll(-360)
+    absolute_to_relative_move(940,422)
+    absolute_to_relative_move(1190,350)
+    absolute_to_relative_move(1387,544)
+    #Список сотрудников
+    absolute_to_relative_move(501,325)
+    absolute_to_relative_move(477,427)
+    absolute_to_relative_move(513,511)
+    absolute_to_relative_move(1434,612)
+    keyboard.write("Жду вас у себя", delay=0.1)
+    absolute_to_relative_move(1634,610)
+    absolute_to_relative_move(477,427)
+    absolute_to_relative_move(501,325)
+    absolute_to_relative_move(359,429)
+    absolute_to_relative_move(424,634)
+    absolute_to_relative_move(423,727)
+    absolute_to_relative_move(1434,612)
+    keyboard.write("Подойдите ко мне сейчас!", delay=0.1)
+    absolute_to_relative_move(1634,610)
+    absolute_to_relative_move(1051,376)
+    #Закрыть чат и виджет сотрудников
+    absolute_to_relative_move(1685,108)
+    absolute_to_relative_move(871,108)
+    #перетаскиваем график
+    absolute_to_relative_move(363,806)
+    pyautogui.moveTo(363,806, duration=1)
+    pyautogui.mouseDown()
+    pyautogui.moveTo(363,112,duration=1)
+    pyautogui.mouseUp() 
+    absolute_to_relative_move(204,324)
+    absolute_to_relative_move(292,323)
+    absolute_to_relative_move(299,153)
+    absolute_to_relative_move(213,293)
+    absolute_to_relative_move(622,108)
 
-# absolute_to_relative_move(940,422)
-# absolute_to_relative_move(1190,350)
-# absolute_to_relative_move(1387,544)
-# #Список сотрудников
-# absolute_to_relative_move(501,325)
-# absolute_to_relative_move(477,427)
-# absolute_to_relative_move(513,511)
-# absolute_to_relative_move(1434,612)
-# keyboard.write("Жду вас у себя", delay=0.1)
-# absolute_to_relative_move(1634,610)
-# absolute_to_relative_move(477,427)
-# absolute_to_relative_move(501,325)
-# absolute_to_relative_move(359,429)
-# absolute_to_relative_move(424,634)
-# absolute_to_relative_move(423,727)
-# absolute_to_relative_move(1434,612)
-# keyboard.write("Подойдите ко мне сейчас!", delay=0.1)
-# absolute_to_relative_move(1634,610)
-# absolute_to_relative_move(1051,376)
-# #Закрыть чат и виджет сотрудников
-# absolute_to_relative_move(1685,108)
-# absolute_to_relative_move(871,108)
-# #перетаскиваем график
-# absolute_to_relative_move(363,806)
-# pyautogui.moveTo(363,806, duration=1)
-# pyautogui.mouseDown()
-# pyautogui.moveTo(363,112,duration=1)
-# pyautogui.mouseUp() 
-# absolute_to_relative_move(204,324)
-# absolute_to_relative_move(292,323)
-# absolute_to_relative_move(299,153)
-# absolute_to_relative_move(213,293)
-# absolute_to_relative_move(622,108)
-
-# #Открываем виджет Планирования
-# pyautogui.scroll(360)
-# absolute_to_relative_move(210,105)
-# absolute_to_relative_move(196,196)
-# absolute_to_relative_move(176,576)
-# pyautogui.scroll(-360)
-# absolute_to_relative_move(176,401)
-# absolute_to_relative_move(177,630)
-
-# //Начальник цеха
-#Виджет Ежедневник
-absolute_to_relative_move(659,290)
-absolute_to_relative_move(659,313)
+    #Открываем виджет Планирования
+    pyautogui.scroll(360)
+    absolute_to_relative_move(210,105)
+    absolute_to_relative_move(196,196)
+    absolute_to_relative_move(176,576)
+    pyautogui.scroll(-360)
+    absolute_to_relative_move(176,401)
+    absolute_to_relative_move(177,630)
+    time.sleep(3)
 
 
-pyautogui.scroll(-360)
-#Схема цеха 
-absolute_to_relative_move(903,445)
-absolute_to_relative_move(903,445)
-absolute_to_relative_move(1027,445)
-absolute_to_relative_move(1027,445)
-pyautogui.moveTo(1677,426, duration=1)
-pyautogui.mouseDown()
-pyautogui.moveTo(1680,627,duration=1)
-pyautogui.mouseUp() 
-absolute_to_relative_move(991,411)
-absolute_to_relative_move(975,532)
-#Список сотрудников
-absolute_to_relative_move(324,174)
-absolute_to_relative_move(324,217)
-absolute_to_relative_move(372,319)
-#Чат сотрудников
-absolute_to_relative_move(1151,613)
-keyboard.write("Подойдите ко мне!", delay=0.1)
-#Чат закрываю все окна
-absolute_to_relative_move(1465,615)
-absolute_to_relative_move(1518,113)
-absolute_to_relative_move(1853,644)
-absolute_to_relative_move(1213,112)
+    # # //Начальник цеха
+    #Виджет Ежедневник
+    absolute_to_relative_move(659,290)
+    absolute_to_relative_move(659,313)
 
-#График
-pyautogui.moveTo(1239,794, duration=1)
-pyautogui.mouseDown()
-pyautogui.moveTo(651,790,duration=1)
-pyautogui.mouseUp() 
 
-absolute_to_relative_move(209,617)
-absolute_to_relative_move(286,634)
-absolute_to_relative_move(287,466)
-absolute_to_relative_move(209,617)
-absolute_to_relative_move(286,634)
+    pyautogui.scroll(-360)
+    #Схема цеха 
+    absolute_to_relative_move(903,445)
+    absolute_to_relative_move(903,445)
+    absolute_to_relative_move(1027,445)
+    absolute_to_relative_move(1027,445)
+    pyautogui.moveTo(1677,426, duration=1)
+    pyautogui.mouseDown()
+    pyautogui.moveTo(1680,627,duration=1)
+    pyautogui.mouseUp() 
+    absolute_to_relative_move(991,411)
+    absolute_to_relative_move(975,532)
+    #Список сотрудников
+    absolute_to_relative_move(324,174)
+    absolute_to_relative_move(324,217)
+    absolute_to_relative_move(372,319)
+    #Чат сотрудников
+    absolute_to_relative_move(1151,613)
+    keyboard.write("Подойдите ко мне!", delay=0.1)
+    #Чат закрываю все окна
+    absolute_to_relative_move(1465,615)
+    absolute_to_relative_move(1518,113)
+    absolute_to_relative_move(1853,644)
+    absolute_to_relative_move(1213,112)
+
+    #График
+    pyautogui.moveTo(1239,794, duration=1)
+    pyautogui.mouseDown()
+    pyautogui.moveTo(651,790,duration=1)
+    pyautogui.mouseUp() 
+
+    absolute_to_relative_move(209,617)
+    absolute_to_relative_move(286,634)
+    absolute_to_relative_move(287,466)
+    absolute_to_relative_move(209,617)
+    absolute_to_relative_move(286,634)
+    # time.sleep(3)
+
+    # #//Конструктор
+    #Виджет Ежедневник
+    absolute_to_relative_move(659,290)
+    absolute_to_relative_move(659,313)
+    #Перечь файлов от проектантов
+    #Движение к выпадающему меню
+    absolute_to_relative_move(275,110)
+    absolute_to_relative_move(275,155)
+    absolute_to_relative_move(1006,591)
+    absolute_to_relative_move(600,695)
+    absolute_to_relative_move(1865,475)
+    #Список вопросов 
+    #Движение к выпадающему меню
+    absolute_to_relative_move(275,110)
+    absolute_to_relative_move(275,175)
+    time.sleep(3)
+    #//Директор по безопасности 
+    #Виджет Ежедневник
+    absolute_to_relative_move(659,290)
+    absolute_to_relative_move(659,313)
+    #ПОтдел режима безопасности
+    #Движение к выпадающему меню
+    # absolute_to_relative_move(275,110)
+    # absolute_to_relative_move(275,142)
+    absolute_to_relative_move(1353,524)
+    absolute_to_relative_move(1128,592)
+    pyautogui.scroll(-360)
+    absolute_to_relative_move(1111,553)
+    absolute_to_relative_move(1128,592)
+    pyautogui.scroll(360)
+    #Движение к выпадающему меню
+    absolute_to_relative_move(275,110)
+    absolute_to_relative_move(275,158)
+    time.sleep(3)
+
+    # //Кадровик
+    #Виджет Ежедневник
+    absolute_to_relative_move(659,290)
+    absolute_to_relative_move(659,313)
+    #Список сотрудникво
+    #Движение к выпадающему меню
+    # absolute_to_relative_move(275,110)
+    # absolute_to_relative_move(275,142)
+    absolute_to_relative_move(1353,524)
+    absolute_to_relative_move(1307,638)
+    absolute_to_relative_move(1307,638)
+    pyautogui.scroll(-360)
+    absolute_to_relative_move(1111,553)
+    absolute_to_relative_move(1111,553)
+    pyautogui.scroll(360)
+    #Движение к выпадающему меню
+    absolute_to_relative_move(275,110)
+    absolute_to_relative_move(275,158)
+    #Учет тзапросов
+    absolute_to_relative_move(1865,475)
+    absolute_to_relative_move(1815,488)
+    absolute_to_relative_move(931,239)
+    absolute_to_relative_move(931,239)
+
+    absolute_to_relative_move(1001,323)
+    absolute_to_relative_move(1001,323)
+
+    absolute_to_relative_move(1001,396)
+    absolute_to_relative_move(1887,174)
+    time.sleep(3)
+    # //Работник
+    #Виджет Ежедневник
+    absolute_to_relative_move(659,290)
+    absolute_to_relative_move(659,313)
+    #Список сотрудникво
+    #Движение к выпадающему меню
+    # absolute_to_relative_move(275,110)
+    # absolute_to_relative_move(275,142)
+    #Движение к выпадающему меню
+    absolute_to_relative_move(175,110)
+    absolute_to_relative_move(175,141)
+    #Задания
+
+    absolute_to_relative_move(978,247)
+    absolute_to_relative_move(978,500)
+    absolute_to_relative_move(1852,165)
+    time.sleep(3)
+
+
+
 
 # thread1 = threading.Thread(target=script_thread, args=(1736, 637, 600, 600, 60))
 # thread1.start()

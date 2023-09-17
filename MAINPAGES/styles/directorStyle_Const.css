@@ -1,3 +1,4 @@
+
 .resizable-widget {
   position: relative;
 
@@ -12,19 +13,16 @@
   display: flex;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
+  overflow-y: auto;
   z-index: 1;
-  
 }
-
 
 .widget-container {
   position: relative;
-
+  overflow-y: auto;
   align-items: flex-start;
   padding: 10px;
   display: grid;
-
-
 }
 
 #widget1 {
@@ -37,7 +35,7 @@
   grid-row: 2;
 }
 
-#widget2 {
+#widget2{
   grid-column: 2;
   grid-row: 2;
 }
@@ -47,13 +45,24 @@
   grid-row: 3;
 
 }
-
-#widgetChat {
+#widgetChat  {
   grid-column: 2;
   grid-row: 3;
 }
+#widgetGraph{
+  min-width: 600px;
+
+  grid-column: 1;
+  grid-row: 4;
+}
+#ControlWidget{
+
+  grid-column: 2;
+  grid-row: 4;
+}
+
 .resizable-widget:hover {
-  /* transform: scale(1.01); */
+  transform: translateY(-5px);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -75,7 +84,6 @@
   background: none;
   border: none;
   padding: 0;
-  margin-left: 10px; /* Изменяем отступ с левой стороны */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -88,6 +96,7 @@
 .close-button:hover {
   transform: scale(1.2);
 }
+
 .collapse-button {
   background: none;
   border: none;
@@ -123,7 +132,6 @@
 .uncollapse-button:hover {
   transform: scale(1.2);
 }
-
 
 /* Стили для нижней панели управления виджетом */
 .widget-images-panel {
@@ -165,12 +173,12 @@
     width: 150px;
     padding: 10px;
   }
-  
+
 
   .resizable-widget {
     display: none;
   }
-  
+
   .active-widget {
     display: block;
   }
@@ -182,7 +190,7 @@
     width: 98%;
     height: 98%;
   }
-  
+
   .widget-table-column {
     width: 100%;
     overflow: auto;
@@ -194,7 +202,7 @@
     background-color: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .widget-table {
     font-family: "RobotoFlex", sans-serif;
     font-size: 16px;
@@ -204,17 +212,17 @@
     border-radius: 10px;
     overflow: hidden;
   }
-  
+
   .widget-table th,
   .widget-table td {
     padding: 12px 16px;
     text-align: center;
   }
-  
+
   .widget-table th {
     position: relative;
   }
-  
+
   .widget-table th::after {
     content: "";
     position: absolute;
@@ -224,48 +232,54 @@
     height: 2px;
     background-color: #ccc;
   }
-  
+
   .widget-table th:nth-child(1),
   .widget-table td:nth-child(1) {
     width: 20px;
   }
-  
+
   .widget-table th:nth-child(2),
   .widget-table td:nth-child(2) {
     width: 120px;
   }
-  
+
   .widget-table tbody tr {
     border-bottom: 1px solid #d1d1d1;
     transition: background-color 0.3s ease-in-out;
   }
-  
+
   .widget-table tbody tr:hover {
     background-color: #f5f5f5;
   }
-  
+
   .widget-table tbody tr:last-child {
     border-bottom: none;
   }
-  
+
   .widget-table th,
   .widget-table td {
     border: none;
   }
-  
+
   .widget-table td.green-row {
     background-color: #e6f3ec;
   }
-  
+
   .widget-table td.highlight {
     position: relative;
   }
-  
+
 
   .widget-table tr.red-row {
     background-color: #fca3a3;
   }
+ /* .highlight{
+  background-color: aqua;
+  line-height: 1;
+  margin: 0;
 
+  border-radius: 5px;
+ } */
 
 
 
@@ -293,17 +307,15 @@
   .red-row {
     background-color: rgb(238, 13, 13);
   }
-  
+
   .green-row {
     background-color: rgb(161, 245, 161);
     border-radius: 2px;
   }
-  
+
   .yellow-row {
     background-color: rgb(252, 252, 168);
   }
-
-  
 
   .widget-columns {
     display: flex;
@@ -311,7 +323,7 @@
     width: 98%;
     height: 98%;
   }
-  
+
   .widget-table-column {
     width: 100%;
     overflow: auto; /* Добавляем прокрутку при необходимости */
@@ -320,10 +332,10 @@
     border-radius: 10px; /* Скругление углов */
     border: 1px solid #ccc; /* Обводка */
     height: 80%; /* Добавляем высоту 100% */
-    
+
 
   }
-  
+
   .widget-text-column {
     width: 39%;
     padding: 10px;
@@ -346,19 +358,19 @@
     transform: translateY(-5px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   }
-  
+
   .widget-text-top {
     padding: 15px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .widget-text-top h4 {
     font-size: 18px;
     margin-bottom: 5px;
   }
-  
+
   .widget-text-content {
     flex-grow: 1;
     padding: 10px;
@@ -366,14 +378,15 @@
     color: #555555;
     line-height: 1.4;
   }
-  
+
   .widget-text-bottom {
     flex-grow: 1;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
+    justify-content: center
   }
-  
+
   .file-panel {
     padding: 10px;
     background-color: #f5f5f5;
@@ -384,18 +397,17 @@
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .file-panel h4 {
     font-size: 16px;
   }
-  
+
   .file-panel img {
     width: 20px;
     height: 20px;
   }
-  
+
   .widget-images-panel {
-    width: flex;
     border: 1px solid #ccc;
     background-color: #ffffff;
     padding: 10px;
@@ -410,12 +422,12 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Анимации */
     transform: translateY(0); /* Начальное состояние */
   }
-  
+
   .widget-images-panel:hover {
     transform: translateY(-3px); /* Изменение положения при наведении */
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   }
-  
+
   .file-panel {
     width: 100%;
     text-align: left;
@@ -426,13 +438,12 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    
     display: none;
   }
 
   .chat-widget {
     width: 400px;
-    height: 400px;
+    height: 390px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -442,7 +453,6 @@
     position: relative;
   }
 
-    
   .chat-header {
     display: flex;
     height: 20px;
@@ -451,12 +461,12 @@
     padding: 0Px; /* Уменьшаем вертикальный отступ */
     border-bottom: 1px solid #ccc;
   }
-  
+
   .chat-content {
     padding: 10px;
-    
+
   }
-  
+
   .chat-widget-toggle {
     display: flex;
     align-items: center;
@@ -528,9 +538,13 @@
 }
 
 .message {
+  /* padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  max-width: 70%; */
   display: flex;
   align-items: flex-end;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .user {
@@ -597,23 +611,17 @@
   margin-right: auto;
 }
 
-
-
-/* Стиль сообщений, полученных от других пользователей */
-.message-content.message-user {
-  background-color: #94f7c6;
-}
-
-/* Стиль сообщений, полученных от других пользователей */
-.message-content:not(.message-user) {
-  max-width: 99%;
-  padding: 10px;
+.message-content {
+  max-width: 70%;
+  padding: 10px; /* Добавляем отступ вокруг контента сообщения */
   border-radius: 10px;
-  background-color: #e0e0e0;
+  background-color: #e0e0e0; /* Цвет фона контента сообщения */
   position: relative;
-  display: flex;
-  align-items: center;
+  animation: messageWidthAnimation 1s linear;
+  display: flex; /* Добавляем flex-контейнер */
+  align-items: center; /* Выравниваем элементы вертикально */
 }
+
 @keyframes messageWidthAnimation {
   from {
     max-width: 100%; /* Исходная ширина сообщения */
@@ -623,8 +631,16 @@
   }
 }
 
+.user .message-content {
+  margin-left: auto; /* Сдвигаем контент пользователя вправо */
+  background-color: #94f7c6;
+  flex-direction: row-reverse;
+}
 
-
+.bot .message-content {
+  margin-right: auto; /* Сдвигаем контент бота влево */
+  flex-direction: row;
+}
 
 /* """"""""""""Виджет цехов"""""""""""""""""""" */
 .equipmentIcon {
@@ -836,7 +852,18 @@
 }
 
 /* Стиль для заголовков с тенью */
-
+.workshop-title1, .projects_name_list, .TaskWorkShopTask.tasks_name_list {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
+}
 
 .workshop-title1 {
   height: 10px; /* Устанавливаем высоту 40px */
@@ -892,6 +919,7 @@
 
 /* Стили для описания задач и даты выполнения */
 .tasks-info, .task-info {
+
   list-style: none;
   padding-left: 20px;
   display: none;
@@ -925,7 +953,20 @@
 .user-details {
   display: flex;
   flex-direction: column;
-  margin-right: 10px; 
+  margin-right: 10px; /* Отступ между аватаркой и деталями пользователя */
+}
+
+.user-name{
+  margin: 0;
+  color: #000000; /* Изменяем цвет имени пользователя */
+
+}
+
+.user-status {
+  color: #2c2c2c; /* Цвет для статуса */
+}
+.user-text-color {
+  color: #050505; /* Замените на желаемый цвет */
 }
 .user-id {
   margin: 0;
@@ -950,11 +991,6 @@
   margin: 0; /* Убираем отступы по умолчанию у параграфа */
 
 }
-.TaskBasicText.Brigade-text {
-  font-size: 16px;
-  margin: 0; /* Убираем отступы по умолчанию у параграфа */
-  align-items: right;
-}
 
 .arrow-picture {
   width: 20px; /* Устанавливаем ширину 20px */
@@ -967,6 +1003,11 @@
   align-items: flex-start;
   padding-left: 520px; /* Добавьте нужный вам отступ слева */
 }
+.logo-vidget-container {
+  display: flex;
+  align-items: center;
+}
+
 
 .frame {
   background-color: #ffffff;
@@ -978,31 +1019,6 @@
   position: relative;
 }
 
-
-.logo-vidget-container {
-  display: flex; /* Включаем flex контейнер для логотипов */
-  align-items: center; /* Выравниваем их по вертикали */
-}
-
-.user-profile {
-  display: flex; /* Включаем flex контейнер для .user-profile */
-  align-items: center;
-  padding-right: 80px;
-   /* Выравниваем по вертикали по центру */
-}
-
-.director-title {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px; /* Размер шрифта */
-  font-weight: bold; /* Жирный шрифт */
-  color: #505050; /* Цвет текста */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Тень текста */
-
-}
-
 /* """""""""""""""""""""""""""""Стили планов""""""""""""""""""""""""""""""""""""""""" */
 .plans {
   width: 100%;
@@ -1012,9 +1028,7 @@
   border-radius: 10px;
   height: 99%;
   margin-bottom: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 
 .plan-content {
@@ -1035,10 +1049,6 @@
 
 .plan-title:hover {
   color: #768efa; /* Измените цвет по вашему желанию */
-}
-
-#progressWhole{
-  display:inline-block;
 }
 
 .progress-container {
@@ -1067,14 +1077,8 @@
   color: #555555;
 }
 
-.center-table{
-  display: flex;
-  justify-content: center;
-}
-
 .sub-projects {
   width: 100%;
-  margin:auto;
   margin-top: 20px;
   font-size: 16px;
   color: #333333;
@@ -1084,6 +1088,7 @@
 
 .sub-projects th, .sub-projects td {
   padding: 10px;
+  text-align: left;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -1094,18 +1099,10 @@
 .sub-projects td:last-child {
   text-align: center;
 }
-.sub-projects .active{
-  display: table;
-  animation: fadeIn 0.5s ease-in-out;
-}
-.visible {
-  display: table;
-  animation: fadeIn 0.5s ease-in-out;
-}
 
-.robotnikTaskDescription{
-  max-width: 300px; 
-  text-align: justify;
+.visible {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -1121,26 +1118,282 @@
 
 .plan {
   margin-bottom: 20px; /* Добавляем нижний отступ для отступа от панели */
-  text-align: center;
 }
 
 #draggableHeader {
   cursor: grab;
 }
-.director-title {
-  text-align: center; /* Выравнивание текста по центру */
-  font-size: 24px; /* Размер шрифта, который вы можете настроить */
-  font-weight: bold; /* Жирный шрифт, если нужно */
-  margin-top: 20px; /* Расстояние от верхней границы */
+
+/* Виджет список вопросов */
+  .question-list {
+      list-style-type: none;
+      padding: 10px;
+  }
+  .question-list li:hover {
+      background-color: #f0f0f0; /* Цвет подсветки при наведении */
+  }
+  .question-list li {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      cursor: pointer;
+  }
+  .question-title {
+      font-weight: bold;
+      padding-left: 10px;
+  }
+  .question-details {
+      font-size: 12px;
+      color: #666;
+      padding-left: 10px;
+  }
+
+  .widget-heading {
+    padding-left: 10px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+
+    .action-button {
+    padding: 8px 12px;
+    background-color: #ddd;
+    color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+    .action-button-question {
+    padding: 8px 12px;
+    background-color: #ddd;
+    color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .action-button:hover {
+      background-color: #f0f0f0; /* Цвет подсветки при наведении */
+  }
+
+  .main-container {
+      display: flex;
+  }
+
+  .task-info {
+      /*flex: 1;*/
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin: 0 10px;
+      display: none;
+      width: 500px;
+      box-sizing: border-box;
+      flex-direction: column;
+      height: 80%;
+      overflow: hidden;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      transform: translateY(0);
+  }
+
+    .task-info.active {
+      display: block;
+    }
+
+    .task-info h4 {
+        margin-top: 0;
+    }
+
+    /* Конец Виджет список вопросов */
+
+/* Виджет перечень файлов от проектантов */
+    .kanban-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      flex: 0 0 60%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-left: 10px;
+      align-items: baseline;
+      flex-grow: 1;
+  }
+  .kanban-column {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      margin: 0 10px;
+      border-radius: 10px;
+  }
+  .column-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  .task-list {
+      list-style-type: none;
+      padding: 0;
+  }
+  .task-item {
+      position: relative;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      cursor: pointer;
+      border-radius: 10px;
+  }
+  .task-item:hover {
+      background-color: #e1e1e1;
+  }
+  .task-details {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 300px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+  }
+  .task-item:hover .task-details {
+      display: block;
+  }
+  .task-actions {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .task-action {
+      background-color: #ddd;
+      color: #666;
+      cursor: pointer;
+      padding: 10px;
+      margin: 10px;
+  }
+
+  .task-action:hover {
+      background-color: #f0f0f0; /* Цвет подсветки при наведении */
+  }
+
+  /* Конец Виджет перечень файлов от проектантов */
+
+    /* Стили для названия задачи */
+    .task-item {
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .task-item.active {
+        background-color: #a7e6a4;
+    }
+
+/* Стили для горизонтального выпадающего меню */
+.widget-dropdown {
+  display: inline-block;
+  position: relative;
+  font-family: Arial, sans-serif; /* Шрифт, на ваш выбор */
+  margin-top: 10px;
 }
+
+.widget-dropdown select {
+  width: 300px; /* Увеличиваем ширину для умещения длинных названий */
+  padding: 5px 10px; /* Отступы */
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 4px; /* Скругленные углы */
+  background-color: #fff; /* Фон */
+  cursor: pointer; /* Изменение курсора при наведении */
+  appearance: none; /* Убираем стандартное стилизированное отображение в некоторых браузерах */
+  font-size: 16px; /* Увеличиваем размер шрифта */
+}
+
+/* Скрываем стрелку стандартного выпадающего списка */
+.widget-dropdown select::-ms-expand {
+  display: none;
+}
+
+/* Скрытые опции меню */
+.widget-dropdown select option:not(:first-child) {
+  padding: 5px 10px; /* Отступы */
+  cursor: pointer; /* Изменение курсора */
+  background-color: #fff; /* Фон */
+  color: #333; /* Цвет текста */
+  font-size: 16px; /* Увеличиваем размер шрифта */
+}
+
+/* Стили для опций меню при наведении */
+.widget-dropdown select option:not(:first-child):hover {
+  background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+/* При выборе опции меню */
+.widget-dropdown select option:not(:first-child):checked {
+  background-color: #f0f0f0; /* Цвет фона для выбранной опции */
+}
+
+
+/* Стили для виджета в развернутом состоянии */
+.resizable-widget.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height:  100%;
+  z-index: 99; /* Устанавливаем виджет поверх остальных элементов */
+  margin-top: 70px;
+  max-height: calc(100% - 300px);
+  margin-left: 10px;
+  max-width: calc(100% - 10px);
+  transform: none; /* Убираем трансформацию */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Устанавливаем для body минимальную высоту, чтобы футер всегда был внизу */
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   background-color: #b9d5f1;
   color: #555; /* Темно-серый текст */
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   border-top-left-radius: 5px; /* Скругление верхних углов */
   border-top-right-radius: 5px;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2); /* Тень внизу */
   transition: background-color 0.3s ease-in-out; /* Анимация смены цвета фона */
+}
+
+/* Оставляем flex-контейнеру футера свободное пространство внизу и уменьшаем высоту футера */
+.footer {
+    bottom: 0;
+    position: absolute;
+    margin-top: auto;
+    width: 100%;
 }
 
 .footer:hover {
@@ -1157,7 +1410,7 @@
 }
 
 .footer-logo img {
-  width: 100px;
+  width: 70px;
   height: auto;
   border-radius: 10px; /* Скругление углов логотипа */
 }
@@ -1198,318 +1451,16 @@
   font-size: 14px;
 }
 
-
-
-.workshop-title1,
-.projects_name_list,
-.TaskWorkShopTask.tasks_name_list {
-  cursor: pointer;
-  background-color: #f2f2f2;
-  padding: 10px;
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
-  border-radius: 5px; /* Добавляем скругление углов */
-}
-
-.employee-table {
-  width: 100%;
-  border-collapse: separate; /* Убираем сетку */
-  border-spacing: 0; /* Убираем промежутки между ячейками */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
-  border-radius: 5px; /* Добавляем скругление углов */
-}
-
-.employee-table th,
-.employee-table td {
-  border-bottom: 1px solid #ccc; 
-  padding: 8px;
-  text-align: center;
-}
-
-.employee-table th {
-  background-color: #f2f2f2;
-}
-
-
-
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Устанавливаем для body минимальную высоту, чтобы футер всегда был внизу */
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Оставляем flex-контейнеру футера свободное пространство внизу и уменьшаем высоту футера */
-.footer {
-  bottom: 0;
-  position: flex;
-  margin-top: auto;
-  height: 200px;
-  width: 100%;
-}
-
-/*Chat */
-
-.persons{
-  display: block;
-  max-width: 100%; /* Максимальная ширина для .persons */
-  width: 100%; /* Заполняем всю доступную ширину родительского элемента */
-  min-width: 0; 
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  overflow-y: scroll;
-  min-width: 250px;
-}
-
-.person-selector {
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  margin: 15px auto 25px 25px;
-  max-width: 100%;
-  width: 99%;
-}
-.persons button {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  max-width: 95%;
-  text-align: left;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #fdfdfd;
-  color: #666666;
-  font-size: 16px;
-  cursor: pointer;
-  position: relative; /* Добавляем относительное позиционирование для позиционирования точки */
-}
-.persons button img {
-  width: 40px; /* Размер аватарки, который вам подходит */
-  height: 40px; /* Размер аватарки, который вам подходит */
-  margin-right: 10px; /* Расстояние между аватаркой и именем */
-}
-.unread-badge {
-  margin-left: 45px;
-  background-color: #ccc; /* Цвет серого овала */
-  color: #fff;
-  border-radius: 30%; /* Делаем овал круглым */
-  width: 20px; /* Размер овала (можно изменить) */
-  height: 20px; /* Размер овала (можно изменить) */
-  font-size: 12px; /* Размер шрифта внутри овала (можно изменить) */
+.director-title {
   position: absolute;
-/* Располагаем овал по вертикали по середине кнопки */
-  right: 10px; /* Отодвигаем овал от правого края кнопки */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  color: #505050; /* Цвет текста */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Тень текста */
 
-  transform: translateX(30%); /* Корректируем положение овала по вертикали */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.button {
-  border: none;
-  padding: 0.625em;
-  border-radius: 5Px;
-  cursor: pointer;
-}
-
-.button:active {
-  transform: translateY(2px);
 }
 
 
-.person-selector-button {
-  width: 100%;
-  background-color: #3498db; /* Голубой для кнопок */
-  color: #fff;
-  font-size: 1.1em;
-}
-
-.active-person {
-  background: #08529d;
-}
-
-.chat-container {
-  background: #fff; /* Белый фон контейнера */
-  font-family: 'Roboto', sans-serif;
-  border-radius: 15px; /* Увеличим радиус закругления углов для более мягкого вида */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
-  margin: auto;
-  width: 99%; /* Ширина контейнера относительно родительского элемента */
-  max-width: 800px; /* Максимальная ширина контейнера */
-  height: 600px;
-  padding: 20px; /* Добавим немного внутренних отступов для контента */
-}
-.chat-header {
-  margin-bottom: 1em;
-  color: #636363;
-}
-
-.chat-header h2 {
-  font-size: 1.25em;
-  font-weight: bold;
-}
-
-.chat-messages {
-  color: #414040;
-  margin-top: 10px;
-  height: 400px;
-  overflow-y: scroll;
-  padding: 10px; /* Добавим внутренние отступы для контейнера сообщений */
-}
-
-.message {
-  width: 100%;
-  display: flex;
-  margin-bottom: 5px;
-  align-items: flex-end; /* Выравнивание по нижнему краю */
-}
-
-.message-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-bottom: 5px; /* Отступ снизу для аватарки */
-}
-
-.message-content {
-  min-height: 40px;
-  flex-grow: 1;
-  width: 100%;
-  background-color: #f5f5f5; /* Цвет фона сообщения */
-  border-radius: 15px;
-  padding: 15px; /* Увеличим внутренние отступы для увеличения высоты */
-  margin-bottom: 6px; /* Увеличим нижний отступ для отделения сообщений */
-  position: relative;
-  word-wrap: break-word;
-}
-
-.message-sender {
-  font-weight: bold;
-  margin-bottom: 5px;
-  position: absolute;
-  top: 5px;
-  left:  9px;
-}
-
-.message-text {
-  margin-top: 20px;
-  color: #5a5a5a;
-  font-size: 1em;
-  text-align: left; /* Выравнивание текста по центру */
-}
-.message-timestamp {
-  font-size: 0.75em;
-  text-align: right;
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-}
-
-.from-me .message-content {
-  min-height: 30px;
-  flex-grow: 1;
-  width: 100%;
-  background-color: #d1f7d1; /* Зеленоватый фон для Виталия */
-  border-radius: 15px;
-  padding: 15px;
-  margin-bottom: 6px;
-  position: relative;
-  word-wrap: break-word;
-}
-
-
-/* Добавим стили для аватарки, чтобы она выглядела более похожей на Telegram */
-.message-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.message-partner {
-  background-color: #f0f0f0; /* Цвет фона для сообщений партнера */
-  color: #333; /* Цвет текста для сообщений партнера */
-}
-.chat-input-form {
-  display: flex;
-  align-items: center;
-  margin-top: 2em;
-  gap: 0.625em;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.chat-input {
-  padding: 0.625em;
-  border: none;
-  border-radius: 0.5em;
-  background-color: #f5f5f5;
-  color: #333;
-  font-size: 1em;
-  flex-grow: 1;
-}
-
-.send-button {
-  background-color: #1c9bef;
-  color: #fff;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.clear-chat-button {
-  display: block;
-  margin: 2.5em auto;
-}
-.message-sender {
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: right; /* Выравнивание текста отправителя справа */
-  color: blue; /* Цвет текста отправителя */
-}
-
-#widgetChat.resizable-widget {
-  /* Ваши стили для виджета с id "widgetChat" */
-  width: 50%; /* Например, уменьшим ширину до половины */
-  min-width: 880px;
-  height: 60%;
-  min-height: 680px;
-  /* Другие стили по вашему выбору */
-}
-
-/* Раскрытие скрытие виджетов*/
-.resizable-widget.expanded {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height:  100%;
-  z-index: 99; /* Устанавливаем виджет поверх остальных элементов */
-  margin-top: 70px;
-  max-height: calc(100% - 360px);
-  margin-left: 10px;
-  max-width: calc(100% - 10px);
-  transform: none; /* Убираем трансформацию */
-}
-
-.hrrequest{
-  text-align: justify;
-  max-width: 200px;
-}
